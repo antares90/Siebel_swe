@@ -1,0 +1,39 @@
+/*<ORACLECOPYRIGHT>
+* Copyright (C) 1994-2014
+* Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+* Other names may be trademarks of their respective owners.
+* UNIX is a registered trademark of The Open Group.
+*
+* This software and related documentation are provided under a license agreement
+* containing restrictions on use and disclosure and are protected by intellectual property laws.
+* Except as expressly permitted in your license agreement or allowed by law, you may not use, copy,
+* reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish,
+* or display any part, in any form, or by any means. Reverse engineering, disassembly,
+* or decompilation of this software, unless required by law for interoperability, is prohibited.
+*
+* The information contained herein is subject to change without notice and is not warranted to be error-free.
+* If you find any errors, please report them to us in writing.
+*
+* U.S. GOVERNMENT RIGHTS Programs, software, databases, and related documentation and technical data delivered to U.S.
+* Government customers are "commercial computer software" or "commercial technical data" pursuant to the applicable
+* Federal Acquisition Regulation and agency-specific supplemental regulations.
+* As such, the use, duplication, disclosure, modification, and adaptation shall be subject to the restrictions and
+* license terms set forth in the applicable Government contract, and, to the extent applicable by the terms of the
+* Government contract, the additional rights set forth in FAR 52.227-19, Commercial Computer Software License
+* (December 2007). Oracle America, Inc., 500 Oracle Parkway, Redwood City, CA 94065.
+*
+* This software or hardware is developed for general use in a variety of information management applications.
+* It is not developed or intended for use in any inherently dangerous applications, including applications that
+* may create a risk of personal injury. If you use this software or hardware in dangerous applications,
+* then you shall be responsible to take all appropriate fail-safe, backup, redundancy,
+* and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any
+* damages caused by use of this software or hardware in dangerous applications.
+*
+* This software or hardware and documentation may provide access to or information on content,
+* products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and
+* expressly disclaim all warranties of any kind with respect to third-party content, products, and services.
+* Oracle Corporation and its affiliates will not be responsible for any loss, costs,
+* or damages incurred due to your access to or use of third-party content, products, or services.
+</ORACLECOPYRIGHT>*/
+/* 8.1.1.14SIA[23044]PATCHSET7 */
+if(typeof(SiebelAppFacade.SalesPipeLineRenderer)==="undefined"){SiebelJS.Namespace("SiebelAppFacade.SalesPipeLineRenderer");define("siebel/salespipelinerenderer",["siebel/phyrenderer","3rdParty/jsplot/plugins/jqplot.funnelRenderer.js","3rdParty/funnelrenderer-ext.js"],function(){SiebelAppFacade.SalesPipeLineRenderer=(function(){var f=SiebelJS.Dependency("SiebelApp.Constants"),k=f.get("CHART_FUNNEL_DEF_METHOD"),d=f.get("CHART_FUNNEL_DATA_METHOD");var c=20,e=20;var g=20;var i=20;var b=0.2;var h=null;function j(l){SiebelAppFacade.SalesPipeLineRenderer.superclass.constructor.apply(this,arguments)}SiebelJS.Extend(j,SiebelAppFacade.PhysicalRenderer);j.prototype.Init=function(){SiebelAppFacade.SalesPipeLineRenderer.superclass.Init.apply(this,arguments);this.AttachPMBinding("RefreshChart",function(){})};j.prototype.ShowUI=function(){SiebelAppFacade.SalesPipeLineRenderer.superclass.ShowUI.apply(this,arguments);var N=CCFMiscUtil_CreatePropSet();SiebelJS.Log("Invoking FunnelChartDefn");this.GetPM().ExecuteMethod("NotifyServer",k,N);SiebelJS.Log("Invoking ChartData");this.GetPM().ExecuteMethod("NotifyServer",d,N);var K=this.GetPM();var F=[],l=[],t=[],E=[],z=[],C=[],J=[],u=[],L=[],H=[];if(K.Get("RefreshChart")){var r=K.ExecuteMethod("GetChartData","FunctionName");F=K.ExecuteMethod("GetChartData","CategoryColours");l=K.ExecuteMethod("GetChartData","CategoryPercent");t=K.ExecuteMethod("GetChartData","CategoryName");var q=K.ExecuteMethod("GetChartData","AppTitle");var D=K.ExecuteMethod("GetChartData","OutOfString");z=K.ExecuteMethod("GetChartData","Revenue");J=K.ExecuteMethod("GetChartData","Quota");L=K.ExecuteMethod("GetChartData","LegendColors");H=K.ExecuteMethod("GetChartData","LegendText");var n=a.call(this);var w=this.GetPM().Get("GetFullId");var M=(w+"salespipeline");$("#"+w).find(".siebui-funnel-chart").attr("id",M);$.jqplot.config.enablePlugins=true;h=$.jqplot(M,[n],{title:r,seriesColors:F,axesDefaults:{drawBaseline:false,tickOptions:{showGridline:false,showLabel:false},rendererOptions:{drawBaseline:false}},seriesDefaults:{renderer:$.jqplot.FunnelRenderer,rendererOptions:{sectionMargin:10,widthRatio:b,dataLabels:"value",showDataLabels:true,dataLabelThreshold:3,fill:true,varyFunnelColor:false,highlightMouseOver:false}},grid:{drawGridLines:false,background:"white",borderColor:"white",borderWidth:0,shadow:false}});var m=$("#"+M+" span");for(var I=0,o=m.length;I<o;I++){m.eq(I).html(Math.floor(l[I])+"%")}elem=$("#"+M+" canvas.jqplot-event-canvas");var G=h.series[0];var p,B,A;o=0;for(I=0,o=t.length;I<o;I++){p="";E=G._vertices[I];B=(E[0][0]-G.canvas._offsets.left);A=(E[1][1]+G.canvas._offsets.right+16);B=Math.round(B);A=Math.round(A);p=t[I].substring(0,3);if(SiebelApp.S_App.GetDirection()=="rtl"){$('<span class="siebui-funnel-category siebui-funnel-label" style="position:absolute; right:'+B+"px; top: "+A+'px;">'+p+"</span>").insertBefore(elem)}else{$('<span class="siebui-funnel-category siebui-funnel-label" style="position:absolute; left:'+B+"px; top: "+A+'px;">'+p+"</span>").insertBefore(elem)}}$('<div class="siebui-legend"></div>').insertBefore(elem);$("#"+M).bind("jqplotMouseMove",myHandleMove);$("#"+M).bind("jqplotDataMouseOver",function(x,s,v,y){z[v]=Math.floor(parseFloat(z[v])*100)/100;C[v]=z[v];if((z[v])!==0){C[v]=SiebelApp.S_App.LocaleObject.StringToFormatted("number",z[v],"")}u[v]=SiebelApp.S_App.LocaleObject.StringToFormatted("number",J[v],"");$("#s_S_A2_div").attr("title",q+":"+t[v]+"\n"+r+":"+Math.floor(l[v])+"\n("+(C[v])+" "+D+" "+u[v]+")")});$("#"+M).bind("jqplotDataUnhighlight",function(s){$("#s_S_A2_div").attr("title"," ")});$.each(L,function(s,v){$("#"+w).find(".siebui-legend").append('<br><div><div style="display: inline;background-color:'+L[s]+';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>&nbsp;<div style="display: inline;">'+H[s]+"</div></div>")})}};function a(){var q=[[]];var F=this.GetPM();var s=this.GetPM().Get("GetFullId");var E=$("#"+s+"salespipeline").height();var v=$("#"+s+"salespipeline").width();var t,H,x=[],p=[],o=[];var l=v-20,y=E-48;x[0]=l-c-g;var A=y-e-i;var B=x[0]*b;var I=A/2*(x[0]+B);var G=Math.atan((x[0]-B)/2/A);var z,n,r,m=0,D=0.0001;var u=F.ExecuteMethod("GetChartData","NumOfCategories");o=F.ExecuteMethod("GetChartData","CategoryName");for(var C=0;C<u;C++){t=(A/u);z=t*x[C];n=999999;p[C]=z;r=0;while(n>p[C]*D&&r<100){p[C]=t*(x[C]-t*Math.tan(G));n=Math.abs(p[C]-z);x[C+1]=x[C]-(2*t*Math.tan(G));z=p[C];H=(p[C]*100)/I;r++}q[C]=[];q[C][0]=o[C];q[C][1]=H}return q}j.prototype.EndLife=function(){var m=this.GetPM().Get("GetFullId");var l=(m+"salespipeline");if(h!==null){$("#"+l).remove();$(".siebui-legend").children().remove();$(".siebui-legend").remove();h.destroy()}SiebelAppFacade.SalesPipeLineRenderer.superclass.EndLife.call(this)};return j}());return SiebelAppFacade.SalesPipeLineRenderer})};

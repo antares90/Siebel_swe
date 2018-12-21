@@ -1,0 +1,39 @@
+/*<ORACLECOPYRIGHT>
+* Copyright (C) 1994-2014
+* Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+* Other names may be trademarks of their respective owners.
+* UNIX is a registered trademark of The Open Group.
+*
+* This software and related documentation are provided under a license agreement
+* containing restrictions on use and disclosure and are protected by intellectual property laws.
+* Except as expressly permitted in your license agreement or allowed by law, you may not use, copy,
+* reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish,
+* or display any part, in any form, or by any means. Reverse engineering, disassembly,
+* or decompilation of this software, unless required by law for interoperability, is prohibited.
+*
+* The information contained herein is subject to change without notice and is not warranted to be error-free.
+* If you find any errors, please report them to us in writing.
+*
+* U.S. GOVERNMENT RIGHTS Programs, software, databases, and related documentation and technical data delivered to U.S.
+* Government customers are "commercial computer software" or "commercial technical data" pursuant to the applicable
+* Federal Acquisition Regulation and agency-specific supplemental regulations.
+* As such, the use, duplication, disclosure, modification, and adaptation shall be subject to the restrictions and
+* license terms set forth in the applicable Government contract, and, to the extent applicable by the terms of the
+* Government contract, the additional rights set forth in FAR 52.227-19, Commercial Computer Software License
+* (December 2007). Oracle America, Inc., 500 Oracle Parkway, Redwood City, CA 94065.
+*
+* This software or hardware is developed for general use in a variety of information management applications.
+* It is not developed or intended for use in any inherently dangerous applications, including applications that
+* may create a risk of personal injury. If you use this software or hardware in dangerous applications,
+* then you shall be responsible to take all appropriate fail-safe, backup, redundancy,
+* and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any
+* damages caused by use of this software or hardware in dangerous applications.
+*
+* This software or hardware and documentation may provide access to or information on content,
+* products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and
+* expressly disclaim all warranties of any kind with respect to third-party content, products, and services.
+* Oracle Corporation and its affiliates will not be responsible for any loss, costs,
+* or damages incurred due to your access to or use of third-party content, products, or services.
+</ORACLECOPYRIGHT>*/
+/* 8.1.1.14SIA[23044]PATCHSET8 */
+if(typeof(SiebelAppFacade.OKSearchPRenderer)==="undefined"){SiebelJS.Namespace("SiebelAppFacade.OKSearchPRenderer");define("siebel/oksearchprenderer",["siebel/phyrenderer","http://yui.yahooapis.com/3.14.0/build/yui/yui-min.js"],function(){SiebelAppFacade.OKSearchPRenderer=(function(){var b=SiebelJS.Dependency("SiebelApp.Constants");function c(d){SiebelAppFacade.OKSearchPRenderer.superclass.constructor.call(this,d);this._DestoryObjArray=[];this._HeadNode;this._Panel}SiebelJS.Extend(c,SiebelAppFacade.PhysicalRenderer);c.prototype.ShowUI=function(){var h=this;var g=this.GetPM().Get("GetRawRecordSet");if(g.length==0){return}var e=g[0]["Knowledge Management Url"];var d=e+"/apps/infocenter/resources/js/OKWidgets/";var f=$.data($("body")[0],"yuiObj");if(f){a.call(h,f)}else{YUI({modules:{"oracle-knowledge/base":{fullpath:d+"okBaseWidget.js"},"oracle-knowledge/answer-view":{fullpath:d+"answerViewWidget.js"},"oracle-knowledge/ok-utility":{fullpath:d+"okUtility.js"},"oracle-knowledge/answer-list":{fullpath:d+"answerListWidget.js"},okLocale:{fullpath:d+"localeUtility.js"},"oracle-knowledge/search-widget":{fullpath:d+"searchWidget.js"},"oracle-knowledge/result-widget":{fullpath:d+"resultWidget.js"},"oracle-knowledge/facet-tree":{fullpath:d+"facetsWidget.js"}},combine:false,filter:"RAW"}).use("node-event-simulate","panel","transition","oracle-knowledge/base","oracle-knowledge/ok-utility","okLocale","oracle-knowledge/answer-view","oracle-knowledge/answer-list","oracle-knowledge/search-widget","oracle-knowledge/result-widget","oracle-knowledge/facet-tree",function(i){if($.data($("body")[0],"yuiObj")){i.destroy();i=null;a.call(h,$.data($("body")[0],"yuiObj"))}else{$.data($("body")[0],"yuiObj",i);a.call(h,i)}})}SiebelAppFacade.OKSearchPRenderer.superclass.ShowUI.call(this)};function a(h){var C=this.GetPM().Get("GetFullId");var o="#"+C+"_header",M="#"+C+"_overlay",B="#"+C+"_listDetailContainer",E="#"+C+" #ok-list-container",x="#"+C+" #ok-list",N="#"+C+" #ok-search",w="#"+C+" #ok-results",s="#"+C+" #ok-facet";var H='<div id ="'+C+'_header"></div>';$("div:first").before(H);$(o).addClass("yui3-skin-sam");var e='<div id ="'+C+'_overlay"></div>';$(o).append(e);var l='<div id ="'+C+'_listDetailContainer"></div>';$(M).append(l);var j=this.GetPM().Get("GetRawRecordSet");if(j.length==0){return}var y=j[0]["Knowledge Management Url"];var A=y+"/apps/infocenter/resources/js/OKWidgets/";var G=y+"/apps/infocenter/resources/css/oracleKnowledgeWidget";var Q=j[0]["Type"];var v=j[0]["Channel Name"];var z=j[0]["Language"];var P=j[0]["Num Records"];var m=j[0]["Sort By"];if(this.GetPM()!==null){var I=h.one(o),D=h.one(M),f=h.one(w),t=h.one(B),k=h.one(E),F=h.one(x),J=h.one(N),q=h.one(s);var g={};g.baseURL=y;g.widgetDir=A;g.css=G;g.setLocale=z;g.transport="jsonp";g.type="type";try{var i=new h.OracleKnowledge.OKUtility(g);var p=new h.Panel({srcNode:D,width:"50%",height:"90%",zIndex:10,modal:true,visible:false,close:true}).render();p.set("align",{node:I,points:[h.WidgetPositionAlign.TC,h.WidgetPositionAlign.BC]});var K=new h.OracleKnowledge.AnswerView({utility:i}).render(t);K.on("show",function(R){p.show();K.get("closeButton").hide()});var d={};d.answerViewWidget=K;d.utility=i;d.type=Q;d.channelReferenceKey=v;d.pageSize=P;d.sortBy=m;var r=new h.OracleKnowledge.AnswerList(d).render(F);var L=new h.OracleKnowledge.SearchWidget({utility:i,inputType:"text"}).render(J);L.get("searchButton").on("click",function(R){if(L.get("searchField")._node.value!==""){k.hide(true);q.show(true)}});L.on("startOverSearch",function(R){k.show(true)});L.after("searchResultChange",function(R){if(L.get("searchResult").isDocID){O.get("contentBox").hide();n.get("contentBox").hide()}else{O.get("contentBox").show();n.get("contentBox").show()}});var n=new h.OracleKnowledge.ResultWidget({utility:i,searchWidget:L,answerViewWidget:K,showExcerpt:true}).render(f);var O=new h.OracleKnowledge.FacetTree({utility:i,searchWidget:L}).render(q);this._Panel=p;this._HeadNode=I;this._DestoryObjArray.push(O);this._DestoryObjArray.push(n);this._DestoryObjArray.push(L);this._DestoryObjArray.push(r);this._DestoryObjArray.push(K);this._DestoryObjArray.push(i)}catch(u){$(E).html("<p class='siebui-quick-applet-validation-error'>"+SiebelApp.S_App.LocaleObject.GetLocalString("IDS_OK_CONFIG")+"</p>")}}}c.prototype.EndLife=function(){for(var e=0;e<this._DestoryObjArray.length;e++){if(this._DestoryObjArray[e]!=null&&typeof(this._DestoryObjArray[e])!=="undefined"){this._DestoryObjArray[e].destroyWidget();this._DestoryObjArray[e]=null}}if(this._Panel){this._Panel.destroy(true);this._Panel=null}if(this._HeadNode){this._HeadNode.destroy(true);this._HeadNode=null}var d=this.GetPM().Get("GetFullId");var f="#"+d+"_header";$(f).remove();SiebelAppFacade.OKSearchPRenderer.superclass.EndLife.call(this)};return c}());return SiebelAppFacade.OKSearchPRenderer})};

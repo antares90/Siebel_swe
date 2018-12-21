@@ -1,0 +1,35 @@
+﻿<li Id="li_{recNum}">
+    <div id="jquery_jplayer_{recNum}" class="jp-jplayer"></div>
+    <div id="jp_container_{recNum}" class="VoiceRecorder jp-audio" role="application" aria-label="media player">
+        <div class="RecorderTopLine">
+            <div class="RecorderLeft">
+                <span class="RecorderTextLeft RecorderTextFontBold">№{recNum}</span>
+            </div>
+            <div class="RecorderMid">
+                <div class="RecorderTextArea"><span class="RecorderTextMid RecorderTextFont">{textToRead}</span></div>
+            </div>
+            <div class="RecorderRight">
+                <button class="RecorderDoRecordButton RecorderButtonFont jp-record">Начать запись</button>
+                <button class="RecorderDoStopRecordButton RecorderButtonFont jp-record-stop" disabled>Остановить запись</button>
+                <button class="RecorderDoRecordButtonStub RecorderButtonFont jp-record-stub" disabled>Начать запись</button>
+            </div>
+        </div>
+        <div class="RecorderBottomLine">
+            <div class="RecorderLeft">
+                <div class="RecorderTextLeft RecorderTextFont jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                <div class="RecorderTextLeft RecorderTextFont jp-current-time HiddenTimer" role="timer" aria-label="time">&nbsp;</div>
+            </div>
+            <div class="RecorderMid">
+                <div class="RecorderButtonRecordDisabled"></div>
+                <div class="jp-progress">
+                    <div class="jp-seek-bar">
+                        <div class="jp-play-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="RecorderRight">
+                <button class="RecorderDoListenButton RecorderButtonFont jp-play" disabled>Прослушать</button>
+            </div>
+        </div>
+    </div>
+</li>

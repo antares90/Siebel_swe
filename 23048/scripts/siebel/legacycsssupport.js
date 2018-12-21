@@ -1,0 +1,39 @@
+/*<ORACLECOPYRIGHT>
+* Copyright (C) 1994-2014
+* Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+* Other names may be trademarks of their respective owners.
+* UNIX is a registered trademark of The Open Group.
+*
+* This software and related documentation are provided under a license agreement
+* containing restrictions on use and disclosure and are protected by intellectual property laws.
+* Except as expressly permitted in your license agreement or allowed by law, you may not use, copy,
+* reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish,
+* or display any part, in any form, or by any means. Reverse engineering, disassembly,
+* or decompilation of this software, unless required by law for interoperability, is prohibited.
+*
+* The information contained herein is subject to change without notice and is not warranted to be error-free.
+* If you find any errors, please report them to us in writing.
+*
+* U.S. GOVERNMENT RIGHTS Programs, software, databases, and related documentation and technical data delivered to U.S.
+* Government customers are "commercial computer software" or "commercial technical data" pursuant to the applicable
+* Federal Acquisition Regulation and agency-specific supplemental regulations.
+* As such, the use, duplication, disclosure, modification, and adaptation shall be subject to the restrictions and
+* license terms set forth in the applicable Government contract, and, to the extent applicable by the terms of the
+* Government contract, the additional rights set forth in FAR 52.227-19, Commercial Computer Software License
+* (December 2007). Oracle America, Inc., 500 Oracle Parkway, Redwood City, CA 94065.
+*
+* This software or hardware is developed for general use in a variety of information management applications.
+* It is not developed or intended for use in any inherently dangerous applications, including applications that
+* may create a risk of personal injury. If you use this software or hardware in dangerous applications,
+* then you shall be responsible to take all appropriate fail-safe, backup, redundancy,
+* and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any
+* damages caused by use of this software or hardware in dangerous applications.
+*
+* This software or hardware and documentation may provide access to or information on content,
+* products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and
+* expressly disclaim all warranties of any kind with respect to third-party content, products, and services.
+* Oracle Corporation and its affiliates will not be responsible for any loss, costs,
+* or damages incurred due to your access to or use of third-party content, products, or services.
+</ORACLECOPYRIGHT>*/
+/* 8.1.1.14SIA[23044]PATCHSET7 */
+if(typeof(SiebelAppFacade.LegacyCssSupport)==="undefined"){SiebelJS.Namespace("SiebelAppFacade.LegacyCssSupport");define("siebel/legacycsssupport",[],function(){SiebelAppFacade.LegacyCssSupport=(function(){var a={};a["siebui-menu-container"]="ApplicationMenu";a["siebui-menu"]="ui-menubar ui-widget-header";a["siebui-menu-item"]="siebui-appmenu-item ui-menubar-item ui-menu-item bannerDiv";a["siebui-menu-link"]="ui-button ui-widget ui-button-text-only ui-menubar-link";a["siebui-submenu"]="ui-menu ui-widget ui-widget-content";a["siebui-nav-container"]="addshowactivated";a["siebui-sidebar-btn-close"]="sidebarNavButton";a["siebui-nav-scrn"]="siebui-nav-tabs siebui-nav-tabScreen ui-tabs ui-widget ui-widget-content ui-corner-all ui-tabs-collapsible";a["siebui-nav-view"]="siebui-nav-tabView";a["siebui-nav-subview"]="siebui-subview-navs";a["siebui-nav-tab"]="siebui-nav-tabs";a["siebui-nav-link"]="siebui-nav-links ui-tabs-anchor";a["siebui-nav-item"]="siebui-active-navtab ui-state-default ui-corner-top ui-tabs-active ui-state-active";a["siebui-nav-empty"]="siebui-empty-tabs siebui-nav-viewlist";a["siebui-applet-container"]="siebui-collapsible-applet-container";a["siebui-applet-header"]="AppletButtons siebui-form-applet-header siebui-collapsible-applet-header";a["siebui-applet-content"]="siebui-collapsible-applet-content";a["siebui-applet"]="siebui-collapsible-applet";a["siebui-applet-btn-prev"]="siebui-ui-btn-recnav-prev";a["siebui-applet-btn-next"]="next-item-applet siebui-ui-btn-recnav-next";a["siebui-btn-grp"]="siebui-buttons-standard siebui-buttons-optional siebui-buttons-search siebui-buttons-calendar";a["siebui-parent-child"]="SiebelContentDetailContainer";a["siebui-parent-child-grandchild"]="SiebelDetailParentContainerRelatedItemsOuterCont siebui-SiebelDetailParentContainerRelatedItemsOuterCont-sign";a["siebui-parent"]="SiebelDetailParentContainerRelatedItems siebui-SiebelDetailParentContainerRelatedItems-sign";a["siebui-child"]="SiebelContentListContainerRelatedItems siebui-SiebelContentListContainerRelatedItems-sign";a["siebui-grandchild"]="SiebelContentDetailContainerRelatedItems siebui-SiebelContentDetailContainerRelatedItems-sign";a["siebui-grandchild-1"]="SiebelContentDetailContainerRelatedItems1 siebui-SiebelContentDetailContainerRelatedItems1-sign";a["siebui-image"]="siebui-iconMap";a["siebui-form-subsection-1"]="siebui-formappleth1";a["siebui-form-subsection-2"]="siebui-formappleth2";a["siebui-form-subsection-3"]="siebui-formappleth3";a["siebui-form"]="siebui-formapplet-column";a["siebui-ctrl-calc"]="calculator-popup";a["siebui-ctrl-dropdown"]="vis-dropdown";a["siebui-ctrl-row-count"]="siebui-row-counter";a["siebui-icon-left"]="siebui-input-popup";a["siebui-icon-calc"]="applet-form-calculator applet-list-calculator";a["siebui-icon-currency"]="applet-form-currency applet-list-currency";a["siebui-icon-date"]="applet-form-date applet-list-date";a["siebui-icon-datetime"]="applet-form-datetime applet-list-datetime";a["siebui-icon-dropdown"]="applet-form-combo applet-list-combo";a["siebui-icon-effdate"]="applet-form-effdat applet-list-effdat";a["siebui-icon-mvg"]="applet-form-mvg applet-list-mvg";a["siebui-icon-pick"]="applet-form-pick applet-list-pick";a["siebui-icon-phone"]="applet-form-phone";a["siebui-popup-calc"]="calculator-popup";a["siebui-label"]="mceLabel mceGridLabel";a["siebui-value"]="mceField mceGridField";a["siebui-label-btn"]="siebui-file-label";a["siebui-esearch"]="siebui-search-esearch bannerDiv";a["siebui-pdq-container"]="PDQToolbarContainer";a["siebui-pdq"]="PDQWidth";a["siebui-notification"]="header-top";a["siebui-tb-cti"]="com_siebel_applets_toolbar_CSSToolBarApplet_class ui-draggable";a["siebui-error"]="error";a["siebui-mask-overlay"]="siebui-logo";a["siebui-active"]="siebui-applet-active Selected siebui-hilight";a["siebui-align-left"]="siebui-input-align-left";a["siebui-align-center"]="siebui-input-align-center";a["siebui-align-right"]="siebui-input-align-right";a["siebui-ipe-ro"]="siebui-roipe-mode";a["siebui-no-display"]="hidden siebui-invisible-el";a["siebui-rtl"]="container";a["siebui-no-scroll"]="siebui-noscroll";a.miniBtnUICTop="AppletMenu";function d(){}var b=$.fn.addClass;var c=$.fn.removeClass;$.fn.extend({addClass:function(){if(arguments[0]&&(typeof arguments[0]==="string")){var e=arguments[0].trim().split(" ");for(var f=0;f<e.length;f++){if(a[e[f].trim()]){arguments[0]=arguments[0]+" "+a[e[f]]}}}return b.apply(this,arguments)},removeClass:function(){if(arguments[0]&&(typeof arguments[0]==="string")){var e=arguments[0].trim().split(" ");for(var f=0;f<e.length;f++){if(a[e[f].trim()]){arguments[0]=arguments[0]+" "+a[e[f]]}}}return c.apply(this,arguments)}});d.prototype.addLegacyClass=function(e){for(cls in a){if(a.hasOwnProperty(cls)&&e.find("."+cls).length>0){b.call(e.find("."+cls),a[cls])}}};return new d()}());return SiebelAppFacade.LegacyCssSupport})};

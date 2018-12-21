@@ -1,0 +1,61 @@
+//Regenerate using:http://duncanford.github.io/prpm-code-generator/?prpm=PR&object=DesktopForm&name=ATCStringHighlighting&userprops=&comments=Yes&logging=Yes
+if (typeof(SiebelAppFacade.ATCStringHighlightingPR) === "undefined") {
+
+ SiebelJS.Namespace("SiebelAppFacade.ATCStringHighlightingPR");
+ define("siebel/custom/ATCStringHighlightingPR", ["siebel/phyrenderer"],
+  function () {
+   SiebelAppFacade.ATCStringHighlightingPR = (function () {
+
+    function ATCStringHighlightingPR(pm) {
+     SiebelAppFacade.ATCStringHighlightingPR.superclass.constructor.apply(this, arguments);
+    }
+
+    SiebelJS.Extend(ATCStringHighlightingPR, SiebelAppFacade.PhysicalRenderer);
+
+    ATCStringHighlightingPR.prototype.Init = function () {
+     // Init is called each time the object is initialised.
+     // Add code here that should happen before default processing
+     SiebelAppFacade.ATCStringHighlightingPR.superclass.Init.apply(this, arguments);
+     SiebelJS.Log(this.GetPM().Get("GetName")+": ATCStringHighlightingPR:      Init method reached.");
+     // Add code here that should happen after default processing
+    }
+
+    ATCStringHighlightingPR.prototype.ShowUI = function () {
+     // ShowUI is called when the object is initially laid out.
+     // Add code here that should happen before default processing
+     SiebelJS.Log(this.GetPM().Get("GetName")+": ATCStringHighlightingPR:      ShowUI method reached.");
+     SiebelAppFacade.ATCStringHighlightingPR.superclass.ShowUI.apply(this, arguments);
+     // Add code here that should happen after default processing
+    }
+
+    ATCStringHighlightingPR.prototype.BindData = function (bRefresh) {
+     // BindData is called each time the data set changes.
+     // This is where you'll bind that data to user interface elements you might have created in ShowUI
+     // Add code here that should happen before default processing
+     SiebelJS.Log(this.GetPM().Get("GetName")+": ATCStringHighlightingPR:      BindData method reached.");
+     SiebelAppFacade.ATCStringHighlightingPR.superclass.BindData.apply(this, arguments);
+     // Add code here that should happen after default processing
+    }
+
+    ATCStringHighlightingPR.prototype.BindEvents = function () {
+     // BindEvents is where we add UI event processing.
+     // Add code here that should happen before default processing
+     SiebelJS.Log(this.GetPM().Get("GetName")+": ATCStringHighlightingPR:      BindEvents method reached.");
+     SiebelAppFacade.ATCStringHighlightingPR.superclass.BindEvents.apply(this, arguments);
+     // Add code here that should happen after default processing
+    }
+
+    ATCStringHighlightingPR.prototype.EndLife = function () {
+     // EndLife is where we perform any required cleanup.
+     // Add code here that should happen before default processing
+     SiebelJS.Log(this.GetPM().Get("GetName")+": ATCStringHighlightingPR:      EndLife method reached.");
+     SiebelAppFacade.ATCStringHighlightingPR.superclass.EndLife.apply(this, arguments);
+     // Add code here that should happen after default processing
+    }
+
+    return ATCStringHighlightingPR;
+   }()
+  );
+  return "SiebelAppFacade.ATCStringHighlightingPR";
+ })
+}

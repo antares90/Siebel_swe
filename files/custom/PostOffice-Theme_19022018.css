@@ -1,0 +1,2585 @@
+@import "leto-custom-btn.css";
+@import "risk_media.css";
+@import "risk_theme.css";
+@import "jquery.guillotine.css";
+@import "font-awesome.min.css";
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../../fonts/HelveticaNeueCyr-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Lights {
+    background-color: red !important;
+}
+
+select[title="Просмотр"] {
+	background-color: #fafafb;
+}
+
+.header-top .siebui-msgbar-bkgrnd-msg-urgent, .ToolbarButton .siebui-msgbar-bkgrnd-msg-urgent {
+  background-color: #c24839 !important;
+}
+.header-top .siebui-msgbar-bkgrnd-msg-high, .ToolbarButton .siebui-msgbar-bkgrnd-msg-high {
+    background-color: #e2c15f !important;
+}
+.header-top .siebui-msgbar-bkgrnd-msg-normal, .ToolbarButton .siebui-msgbar-bkgrnd-msg-normal {
+    background-color: #1474bf !important;
+}
+
+body {
+	color: #000000 !important;
+}
+
+.vcenter {
+	z-index:1 !important;
+}
+div[title="AFS Аплет формы"] input {
+  display:none;
+}
+div[title="ПФР Аплет формы"] input {
+  display:none;
+}
+div[title="БКИ Аплет формы"] input {
+  display:none;
+}
+.siebui-label, .scLabelRight, .ui-dialog .ui-dialog-content .siebui-popup-label, .siebui-label span, .scLabelRight span, .siebui-send-email .siebui-email-row .siebui-email-label .siebui-ctrl-btn span, .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row1 ul li .siebui-catalog-label, .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row1 ul li .siebui-catalog-label, .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row2 ul li .siebui-catalog-label, .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row2 ul li .siebui-catalog-label, .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 ul li .siebui-catalog-label, .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 ul li .siebui-catalog-label, .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-middle-col .siebui-catalog-tile-description .siebui-catalog-label, .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-time-label, .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell label.siebui-dashboard-element, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-body .siebui-chat-dashboard .siebui-chat-dashboard-item-title .siebui-chat-dashboard-item-name, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-body .siebui-chat-dashboard .siebui-chat-dashboard-item-title .siebui-chat-dashboard-item-colon, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-label, .siebui-telco-view1 .siebui-telco-view1Row1 .siebui-telco-view1Row1Col3 .siebui-applet .siebui-view1-row1col3-hdr .siebui-view1-row1col3-row1 .siebui-view1-row1col3-row1col2 .siebui-view1-row1col3-text, .siebui-send-email .siebui-email-row .siebui-email-label .appletButton span, .siebui-send-email .siebui-email-row .siebui-email-label .appletButtonDis span, .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs .siebui-catalog-eligibility-reason, .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs .siebui-catalog-eligibility-reason, .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-inner-container .siebui-catalog-tile-description .siebui-catalog-label, .siebui-popup-cti-call-from-ui .siebui-popup-cti-call-from-ui-text {
+  font-size: 15px;
+  white-space: pre;
+  color: black !important;
+  font-weight: 200;
+  margin-top: 5px;
+}
+html, body {
+    border: 0;
+    margin: 0;
+    height: 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,"FontAwesome" !important; /*Убран Roboto Font, недоступен в кириллице  и вычищен в стандартном css theme-aurora*/
+    font-size: 12px !important;
+}
+ul.dynatree-container li.dynatree-lastsib .dynatree-active{ 
+    background-color: #CD2652;
+}
+ul.dynatree-container li.dynatree-lastsib .view-tab-deselected{
+    background-color: #4E69BD;
+}
+div [title="Комментарии Аплет формы"] button {
+  margin-top:-10px;
+}
+.Custom_Title {
+  height: 35px;
+ background-color: #fafafb;
+  color: black;
+  font-size: 14px;
+    text-align: left;
+    font-weight: 700;
+    text-transform: uppercase; 
+}
+.siebui-view-multi-column {
+  clear: both;
+  zoom: 1;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+   box-shadow: -2px 1px 2px rgba(0,0,0,0.15), 2px 1px 2px rgba(0,0,0,0.15);
+  background-color: #fafafb;
+}
+.Text_Title {
+  position: relative;
+  top: 7px;
+  left: 8px;
+}
+#PDQToolbar, #s_srch, #siebui-toolbar-toggle-communication-panel{
+  display: none;
+}
+#_sweclient #_swethreadbar {
+  display:none;
+}
+.applicationMenu{
+  
+}
+
+/*Иконки пунктов*/
+.ATCBeginWorkScreen {
+  background-image: url(../../images/icons/home.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ui-dialog-titlebar-close {
+  background-image: url(../../images/icons/close.png);
+      background-repeat: no-repeat;
+}
+.ATCOpportunityInWorkScreen {
+  background-image: url(../../images/icons/eye.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ATCApplicationScanCopyViewKI {
+  background-image: url(../../images/icons/photo.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ATCApplicantProfileViewKI {
+  background-image: url(../../images/icons/anketa.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;  
+}
+.ATCPreviousApplicationScanCopyKIView {
+  background-image: url(../../images/icons/prev.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px; 
+}
+#sidebarOpenButton:after {
+  content: url(../../images/icons/right.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: 7px;
+  top: 7px;
+}
+#sidebarCloseButton:after {
+  content: url(../../images/icons/left.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: 7px;
+  top: 7px;
+}
+.ATCSimilarPersonsView {
+  background-image: url(../../images/icons/face.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;  
+}
+.ATCApplicationAFSReportViewKI {
+  background-image: url(../../images/icons/afs.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ATCApplicationInfoAboutTPGoodsView {
+  background-image: url(../../images/icons/goods.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;  
+}
+.ATCApplicationToDecideViewKI {
+  background-image: url(../../images/icons/finish.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;  
+}
+.ATCOpportunityReportScreen {
+  background-image: url(../../images/icons/report.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ATCApplicationAdminScreenKI {
+  background-image: url(../../images/icons/all_opty.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.SmartScriptPlayerScreen {
+  background-image: url(../../images/icons/smartscripts.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ATCFocusSkillScreen {
+  background-image: url(../../images/icons/settings.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ATCKIMonitoringConstantScreen {
+  background-image: url(../../images/icons/monitoring.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ATCECVScreen {
+  background-image: url(../../images/icons/ecv.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ATCMyOpportunityView {
+ background-image: url(../../images/icons/my_applications.png);
+    width: 20px;
+    height: 20px;
+    float: left;
+    position: relative;
+    left: -15px;
+    background-repeat: no-repeat;
+}
+.ATCOpportunityToConsiderView {
+  background-image: url(../../images/icons/aaa.png);
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.ATCECVViewRiskKI {
+  background-image: url(../../images/icons/applications_list.png);
+  width:16px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}
+#MsgBar:before {
+  content: url(../../images/icons/ding-dong.png) !important;
+}
+.siebui-toolbar-settings .siebui-toolbar-enable::before {
+  content: url(../../images/icons/user.png) !important;
+}
+.siebui-nav-hb.siebui-view-navs .siebui-nav-tabScreen .siebui-nav-hb-btn, .siebui-toolbar-settings .siebui-toolbar .siebui-toolbar-enable, .siebui-toolbar-toggle-communication-panel .siebui-toolbar .siebui-toolbar-enable, .siebui-banner-btn .siebui-msgbar, .siebui-nav-hb.siebui-offline-nav .offline-hb-nav-btn, .siebui-search-esearch .siebui-search-tb-btn, .siebui-dm-log-btn {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box;
+  font-family: 'oracle';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #29303f;
+  border-right: 1px solid #404453;
+  height: 50px;
+  padding: 0;
+  width: 50px;
+}
+#HTMLMessageBar, .siebui-toolbar-settings, .siebui-search-esearch {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+.UserProfileScreen:before {
+  font-size: 20px;
+  content: "\f013";
+  float: left;
+  position: relative;
+  left: -15px;
+}
+.siebui-navigation-tree #_swescrnbar {
+  width: 250px!important;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  top: 51px;
+}
+
+.siebui-navigation-tree #_swecontent {
+  left: 250px!important;
+}
+.siebui-logo {
+  float: left;
+  height: 50px!important;
+  line-height: 40px;
+  background-image: url("../../images/logoPB.png");
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: 0px 0px;
+  width: 250px;
+  white-space: nowrap;
+}
+#_sweclient #_sweappmenu {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #29303f none repeat-x 0 bottom;
+  clear: both;
+  height: 50px;
+}
+#_sweclient #_sweappmenu {
+  background: #1A3C89 none repeat-x 0 bottom;
+}
+.vcenter {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+}
+
+.AppletCustomButtons button{
+    position: relative;
+  left: 10px;
+  /* padding: 2px; */
+  top: 4px;
+  background: #1A3C89 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-image: none !important;
+  border: 0px solid black !important;
+  white-space: nowrap !important;
+  outline: 0 !important;
+  margin-left: 10px;
+  color: #fff !important;
+  /* line-height: 20px !important; */
+  /* border-radius: 4px !important; */
+  padding: 3px 12px;
+}
+
+ul.dynatree-container li ul li span.dynatree-expander:nth-child(1)::before  {
+    content: "\f015";
+}
+
+button[title="Принятие решения:Выдать"] {
+  background-color: #12B78A !important;
+}
+button[title="Принятие решения:Отказать"] {
+  background-color: #D40040 !important;
+}
+
+.siebui-navigation-tree .sidebarNavButton {
+  background-color: #233671;
+  color: white;
+  padding: 4px 2px 4px 7px;
+  width: 17px;
+  font-size:30px;
+  font-weight: bold;
+  line-height: 12px;
+  margin: 0;
+  text-decoration: none;
+  -webkit-transition: all .25s ease 0s;
+  -moz-transition: all .25s ease 0s;
+  transition: all .25s ease 0s;
+    min-width: 100%;
+  height: 45px;
+}
+.siebui-navigation-tree #_swecontent.maxWidth {
+  left: 51px !important;
+}
+#_sweclient #_swescrnbar {
+  background-color: #fafafb;
+}
+.siebui-view {
+  height: 100%;
+  background-color: #fafafb;
+  position: relative;
+  top: -17px;
+}
+.siebui-applet, .jstree-default, .siebui-catalogview-table .siebui-catalogview-col3, .siebui-comm-panel-container {
+  -webkit-box-shadow: 0 0 4px #ddd;
+  -moz-box-shadow: 0 0 4px #ddd;
+  box-shadow: 0 0 4px #ddd;
+  background: #fff;
+  margin: 5px;
+  overflow: hidden;
+  padding: 0 0 4px 0;
+}
+#_sweclient #_swecontent {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 50px;
+  overflow: hidden;
+  position: absolute;
+  clear: both;
+  min-width: 480px;
+  background-color: #F8F8F8;
+  border: none;
+}
+#_sweclient #_swecontent #_sweview {
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+#_
+.ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-sortable {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #727780;
+  font-size: 15px;
+  font-weight: 300;
+  height: 25px!important;
+  line-height: 32px;
+  padding: 0;
+  vertical-align: bottom;
+}
+.ui-jqgrid .ui-jqgrid-hdiv {
+  border-width: 0!important;
+  overflow: hidden;
+}
+/*Область кнопок в правом верхнем углу экрана*/
+#siebui-toolbar-toggle-communication-panel ul li,
+.siebui-search-esearch .siebui-search-tb-btn,
+#HTMLMessageBar .siebui-msgbar,
+#siebui-toolbar-settings ul li {
+  background-color: #233671;
+}
+#siebui-toolbar-toggle-communication-panel ul li:hover,
+#siebui-toolbar-toggle-communication-panel ul li:active,
+.siebui-search-esearch .siebui-search-tb-btn:hover,
+.siebui-search-esearch .siebui-search-tb-btn:active,
+#HTMLMessageBar .siebui-msgbar:hover,
+#HTMLMessageBar .siebui-msgbar:active,
+#siebui-toolbar-settings ul li:hover,
+#siebui-toolbar-settings ul li:active {
+  background-color: #D51254;
+}
+
+#_swescrnbar ul.dynatree-container>li>ul>li ul li a:hover {
+  opacity: 1;
+}
+#_swescrnbar ul.dynatree-container>li>ul>li ul li:hover {
+  opacity: 1;
+}
+.siebui-navigation-tree .siebui-view-navs .dynatree-container li a,
+.siebui-navigation-tree .siebui-view-navs .dynatree-container>li>ul>li>span>a {
+  line-height: 1.2em;
+  padding: 15px 15px 15px 30px;
+  white-space: normal;
+  background-color: #1A3C89;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+/*Область кнопок в правом верхнем углу экрана*/
+.siebui-navigation-tree .siebui-view-navs .dynatree-container li a:hover,
+.siebui-navigation-tree .siebui-view-navs .dynatree-container>li>ul>li>span>a:hover {
+    background-color: #CD2652;
+}
+.siebui-navigation-tree .siebui-view-navs .dynatree-container li a:active,
+.siebui-navigation-tree .siebui-view-navs .dynatree-container>li>ul>li>span>a:active {
+    background-color: #CD2652;
+}
+
+#_swescrnbar ul.dynatree-container>li>ul>li ul{    
+  background-color: #0A2972;
+  opacity: 1;
+}
+#_swescrnbar ul.dynatree-container>li>ul>li ul li a {    
+  background-color: #0A2972;
+  opacity: 0.5;
+  font-weight: 500;
+}
+#_swescrnbar ul.dynatree-container span.dynatree-active a {
+  background-color: #D51254;
+  opacity: 1;
+}
+.dynatree-node .view-tab-deselected .dynatree-exp-c .dynatree-ico-c:hover {
+  background-color: #D51254;
+}
+
+.siebui-tile-container {
+  list-style: none;
+  margin: 0;
+  height: 230px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 45px;
+  position: relative;
+  width: auto;
+  z-index: 1;
+  background-color: #ececed;
+}
+.Custom_Image {
+  border: 1px solid #E0E0E0;
+    margin-left: 20px;
+}
+.Custom_Image_Tile {
+  width: 100%;
+  z-index: 1;
+  text-align:center;
+}
+#controls a {
+  display: inline-block;
+  padding: 0 3%;
+  height: 45px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #B0B2B9;
+}
+#controls a i:hover {
+    color: #D51254;
+}
+.Custom_Tile_Red {
+  color: #CD2652;
+  text-align:center;
+}
+.Custom_Tile_Text {
+  color: black;
+  text-align:center;
+}
+.Custom_Image_Tile img {
+  width: 50%;
+}
+.guillotine-window {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  cursor: grab, move;
+  margin: 0 auto;
+}
+/*Эксперимент с темой*/
+div[title="Дополнительная информация Аплет формы"]{
+    min-height: 306px;    
+}
+div[title="Параметры операции Аплет списка"] .ui-jqgrid-bdiv{
+    min-height: 179px; 
+}
+
+div[title="Документы Аплет списка"] .ui-jqgrid-bdiv{
+    height: auto !important;
+}
+
+#ATC_Birth_Place_Label{
+
+}
+#shadow {
+    box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75) !important;
+    margin-top: -7px;
+}
+div[title = "Комментарии Аплет формы"] {
+  margin-top:0px;
+}
+.Custom_ShowMore{
+  display: inline-block;
+  float: right;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+#controls {
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  top: 363px;
+  bottom: 0px;
+  border-radius: 0px;
+  background-color: #fafafb;
+}
+.container_fluid span {
+  white-space:nowrap;
+}
+.container_fluid input[type="text"] {
+  width:100% !important;
+}
+.container_fluid button[type="button"] {
+  width:100% !important;
+}
+.siebui-ctrl-url-ro {
+  color: #D8225F !important;
+  text-decoration: underline;
+  width:100% !important;
+}
+
+#ATC_Form_Section_3_Label {
+    margin-left: -16px;
+}
+
+.ui-jqgrid .ui-jqgrid-bdiv {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: auto !important;
+}
+
+ input[type="text"]{
+  height: 24px;
+  width: 120px;
+  padding: 5px;
+  border: 1px solid #E0E0E0 !important;
+  background: wite;
+  color: black;
+  border-radius: 4px;
+}
+#Button_Logout {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #233671;
+  right: 0;
+}
+#Button_Logout:hover {
+  background-color:#D51254 !important;
+}
+#logout {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+#Button_Logout a:before{
+  content: url(../../images/icons/user.png) !important;
+}
+
+
+textarea {
+  min-height: 27px !important;
+  padding: 5px !important;
+  border: 1px solid #E0E0E0 !important;
+  background: none !important;
+  color: black !important;
+  border-radius: 4px !important;
+}
+.siebui-form .GridBorder .GridBack .siebui-value input, .siebui-form .GridBorder .GridBack .siebui-value select, .siebui-form .GridBorder .GridBack .siebui-value textarea {
+   height: 24px;
+  width: 120px;
+  padding: 5px;
+  border: 1px solid #E0E0E0 !important;
+  color: black;
+  border-radius: 4px;
+}
+.siebui-extend-ctrl[readonly="readonly"], .siebui-ctrl-calc[readonly="readonly"], .siebui-ctrl-currency[readonly="readonly"], .siebui-ctrl-date[readonly="readonly"], .siebui-ctrl-datetime[readonly="readonly"], .siebui-ctrl-effdate[readonly="readonly"], .siebui-ctrl-pick[readonly="readonly"], .siebui-ctrl-select[readonly="readonly"], .siebui-ctrl-phone[readonly="readonly"], .siebui-ctrl-mailto[readonly="readonly"], .siebui-ctrl-textarea[readonly="readonly"], .siebui-ctrl-input[readonly="readonly"], .siebui-ctrl-url[readonly="readonly"], .siebui-drilldown-input[readonly="readonly"] {
+  color: #727780 !important;
+  background-color: #F8F8F8 !important;
+  border: 1px solid #E0E0E0 !important;
+}
+.mceGridLabel {
+  color: black !important;
+}
+#_sweclient .siebui-button-toolbar {
+    overflow: hidden;
+    clear: both;
+    /* padding: 0 1px; */
+    background: none;
+    border-bottom: none;
+    /* display: block; */
+    visibility: visible;
+    position: absolute;
+    top: 3px;
+    left: 250px;
+}
+#ATC_Number_Child_Label {
+  white-space: nowrap;
+}
+
+div[title="Дополнительный атрибут Аплет формы"] {
+  position:relative;
+  top: -5px;
+  background-color: transparent;
+}
+
+.siebel-inline-block {
+    display: inline-block;
+}
+.siebui-btn-grp-applet {
+  position: absolute;
+  right: 10px;
+}
+.ui-autocomplete.ui-menu .ui-menu-item {
+   padding: 2px 10px 2px 0.6em !important;
+}
+
+#s_6_1_0_0 #controls {
+    top: -100px; 
+}
+
+/*.siebui-nav-hb.siebui-view-navs .siebui-nav-tabScreen .siebui-nav-hb-btn, .siebui-toolbar-settings .siebui-toolbar .siebui-toolbar-enable, .siebui-toolbar-toggle-communication-panel .siebui-toolbar .siebui-toolbar-enable, .siebui-banner-btn .siebui-msgbar, .siebui-nav-hb.siebui-offline-nav .offline-hb-nav-btn, .siebui-search-esearch .siebui-search-tb-btn, .siebui-dm-log-btn{
+    background-color: #3b57a0;
+}*/
+.siebui-view-navs .siebui-nav-tabView, .siebui-subview-navs .siebui-nav-tabView, .siebui-subview-screennavs .siebui-nav-tabView{
+    background-color: #4F7CBD;
+}
+/* Сетка для List Applet */
+.ui-jqgrid .ui-jqgrid-htable {
+    border-top: 1px solid #E2E2E2;
+    border-left: 1px solid #E2E2E2;
+    border-right: 1px solid #E2E2E2;
+}
+
+.ui-tooltip, .arrow:after {
+    background: #F2F2F2;
+  }
+  .ui-tooltip {
+    padding: 10px 20px;
+    color: black;
+    width: 400px;
+    border-radius: 8px;
+    line-height: normal;
+  }
+
+.ui-th-ltr, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr {
+    border-left: 1px solid #E2E2E2 !important;
+}
+.ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-resize {
+    width: 2px!important;
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+    margin-right: 0!important;
+    background-color: #EAEAEA;
+    height: 32px !important;
+}
+.ui-jqgrid .ui-jqgrid-btable {
+    border-top: 1px solid #E2E2E2;
+    border-left: 1px solid #E2E2E2;
+    border-right: 1px solid #E2E2E2;
+	background-color: #fafafb;
+}
+.ui-jqgrid tr.ui-row-ltr, .ui-jqgrid tr.ui-row-rtl {
+    border-bottom: 1px solid #E2E2E2;
+}
+.ui-jqgrid tr.ui-row-ltr td, .ui-jqgrid tr.ui-row-rtl td {
+    border-left: 1px solid #E2E2E2 !important;
+    padding-left: 6px !important;
+}
+.ui-jqgrid .ui-jqgrid-btable tr:nth-child(even) td {
+    border-left: 1px solid #E2E2E2 !important;
+    padding-left: 6px !important;
+}
+.ui-jqgrid .ui-jqgrid-htable th {
+    border-bottom: 0 none !important;
+}
+.ui-jqgrid .ui-widget-content input, .ui-jqgrid .ui-widget-content select, .ui-jqgrid .ui-widget-content textarea {
+    /*padding: 0px 0px 0px 5px !important;*/
+    margin-left: -3px;
+}
+.ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-sortable {
+    color: #000000 !important;
+    font-size: 11px; /*LETO-5859>>dnyudlchiev*/
+    line-height: 25px;
+    padding: 0;
+    vertical-align: bottom;
+    background-color: #dddddf !important;
+}
+.ui-jqgrid .ui-jqgrid-hdiv .ui-jqgrid-hbox, .ui-jqgrid .ui-jqgrid-hdiv .ui-jqgrid-hbox-rtl {
+  padding: 0!important;
+  height: 25px;
+}
+/* Сетка для List Applet */
+.btn-nav, .ui-menu.ui-autocomplete .ui-menu-item, .siebui-view-navs .siebui-nav-tabScreen .ui-tabs-nav .ui-state-hover a, .siebui-subview-navs .siebui-nav-tabScreen .ui-tabs-nav .ui-state-hover a, .siebui-subview-screennavs .siebui-nav-tabScreen .ui-tabs-nav .ui-state-hover a, .siebui-view-navs .siebui-nav-tabScreen .ui-tabs-nav .ui-state-focus a, .siebui-subview-navs .siebui-nav-tabScreen .ui-tabs-nav .ui-state-focus a, .siebui-subview-screennavs .siebui-nav-tabScreen .ui-tabs-nav .ui-state-focus a, .siebui-view-navs .siebui-nav-tabScreen .ui-tabs-nav .ui-tabs-active a, .siebui-subview-navs .siebui-nav-tabScreen .ui-tabs-nav .ui-tabs-active a, .siebui-subview-screennavs .siebui-nav-tabScreen .ui-tabs-nav .ui-tabs-active a, .siebui-view-navs .siebui-nav-tabView .ui-tabs-nav li a, .siebui-subview-navs .siebui-nav-tabView .ui-tabs-nav li a, .siebui-subview-screennavs .siebui-nav-tabView .ui-tabs-nav li a, .siebui-sub-applets .siebui-subview-screennavs .siebui-nav-tabView .ui-tabs-nav .ui-state-hover a, .siebui-sub-applets .siebui-subview-screennavs .siebui-nav-tabView .ui-tabs-nav .ui-state-focus a, .siebui-sub-applets .siebui-subview-screennavs .siebui-nav-tabView .ui-tabs-nav .ui-tabs-active a, .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav .ui-state-hover a, .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav .ui-state-hover a, .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav .ui-tabs-active a, .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav .ui-tabs-active a, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-tab-head-items .siebui-chat-tab-head-item:hover a, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-tab-head-items .siebui-chat-tab-head-item:focus a, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-tab-head-items .siebui-chat-tab-head-item.siebui-chat-tab-head-item-curr a, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-tab-head-items .siebui-chat-tab-head-item:active a{
+    background-color: #4f7cbd;
+} 
+.siebui-applet .siebui-applet-buttons, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-message-cti, .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-unreadmessage, .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-readmessage{
+    border-top: none;
+    border-bottom: none;
+}
+.jstree-default .jstree-anchor {
+    color:black !important;
+}
+.btn-plain, .appletButtonDis, .siebui-toolbar-settings-popup .siebui-tb-item-btn .siebui-ctrl-btn, .siebui-toolbar-mobilesettings-popup .siebui-tb-item-btn .siebui-ctrl-btn, .siebui-view .ui-body-g .ui-btn, .siebui-view-navs .siebui-nav-tabScreen .ui-tabs-nav li a, .siebui-subview-navs .siebui-nav-tabScreen .ui-tabs-nav li a, .siebui-subview-screennavs .siebui-nav-tabScreen .ui-tabs-nav li a, .siebui-nav-hb.siebui-view-navs .siebui-nav-tabView, .siebui-nav-hb.siebui-subview-screennavs .siebui-nav-tabView, .siebui-nav-hb.siebui-subview-navs .siebui-nav-tabScreen, .siebui-nav-hb.siebui-subview-navs .siebui-nav-tabView, .siebui-button-toolbar span.ToolbarButtonOn, .siebui-navigation-tree .siebui-subview-navs .dynatree-container li a, .siebui-toolbar-settings-popup .siebui-tb-item-btn .appletButton, .siebui-toolbar-mobilesettings-popup .siebui-tb-item-btn .appletButton, .siebui-toolbar-settings-popup .siebui-tb-item-btn .appletButtonDis, .siebui-toolbar-mobilesettings-popup .siebui-tb-item-btn .appletButtonDis, .siebui-sub-applets .siebui-subview-screennavs .siebui-nav-tabView .ui-tabs-nav li a, .siebui-button-toolbar span.ToolbarButtonOff, .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav li a, .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav li a, .siebui-button-toolbar .siebui-tb-cti-container .siebui-tb-cti-btn-img-enabled, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-tab-head-items .siebui-chat-tab-head-item a, .siebui-comm-panel-container .siebui-tb-cti-container .siebui-tb-cti .siebui-tb-cti-btn-img-enabled, .siebui-toolbar-custom-settings-popup .siebui-tb-item-btn .siebui-ctrl-btn, .siebui-button-toolbar .siebui-tb-cti-container .siebui-tb-cti-btn-img-disabled, .siebui-comm-panel-container .siebui-tb-cti-container .siebui-tb-cti .siebui-tb-cti-btn-img-disabled {
+    background-color: #EFEFEF;
+    color: #777777;
+}
+.siebui-view-navs .siebui-nav-tabView .ui-tabs-nav li a{
+    color: #E8E8E8;
+    background-color: #4F7CBD;
+    border: 1px solid #404880;
+}
+.siebui-label-btn:active, .miniBtnUIC > button:active, .appletButton:active, .appletButtons:active, .siebui-label-btn.active, .miniBtnUIC > button.active, .appletButton.active, .appletButtons.active, .open .dropdown-toggle.siebui-label-btn, .open .dropdown-toggle.miniBtnUIC > button, .open .dropdown-toggle.appletButton, .open .dropdown-toggle.appletButtons,
+.siebui-label-btn:active, .siebui-ctrl-btn:active, .siebui-label-btn.active, .siebui-ctrl-btn.active,
+.siebui-label-btn:hover, .miniBtnUIC > button:hover, .appletButton:hover, .appletButtons:hover, .siebui-label-btn:focus, .miniBtnUIC > button:focus, .appletButton:focus, .appletButtons:focus, .open .dropdown-toggle.siebui-label-btn, .open .dropdown-toggle.miniBtnUIC > button, .open .dropdown-toggle.appletButton, .open .dropdown-toggle.appletButtons, .siebui-popup-cti-call-from-ui .ui-dialog-buttonpane .ui-dialog-buttonset > button:hover,
+.btn-default, .appletButton, .ui-dialog .ui-dialog-content .AppletButtons .siebui-popup-action a, .siebui-rta-btn, .siebui-ctrl-password ~ .siebui-ctrl-link
+{
+    background-color: #1A3C89;
+}
+.siebui-applet {
+   background-color: #fafafb;
+}
+/*.siebui-applet-content {
+    padding-top: 10px;
+}*/
+@media (min-width: 1200px){
+    .siebui-view-navs .siebui-nav-tabView.siebui-empty-tabs {
+        height: 36px;
+    }
+}
+.siebui-view-navs .siebui-nav-tabView.siebui-empty-tabs {
+    height: 36px;
+}
+.siebui-row-counter {
+    margin-left: 15px;
+}
+
+input[type="radio"]{
+      transform: scale(1.35);
+}
+/*.ui-dialog .ui-dialog-titlebar,*/
+.siebui-applet .siebui-applet-header,
+.siebui-applet .siebui-applet-title,
+.siebui-screen-applet-head{
+  background-color: #8AC8C6;
+    color: #444444;
+    padding-bottom: 8px;
+    margin-top: 8px !important;
+    border-radius: 20px 20px 0 0;
+    padding-left: 20px;
+}
+.ui-dialog .ui-dialog-titlebar  /* для всплывающих окон*/
+{
+  background-color: #8AC8C6 !important; 
+    color: #444444;
+    padding-bottom: 8px;
+    padding-left: 20px;
+}
+.siebui-dialog {
+    background-color: #8AC8C6 !important; 
+}
+
+.applicationMenu  .ui-button-text::before{
+	content: "\e61f";
+}
+.siebui-applet.siebui-active .ui-dialog-titlebar,
+.siebui-applet.siebui-active .siebui-applet-header,
+.siebui-applet.siebui-active .siebui-applet-title{
+    color: #fff;
+    padding-bottom: 7px;
+    border-radius: 20px 20px 0 0;
+    padding-left: 10px !important;
+}
+
+div [title="Выбор позиции Аплет списка"] .siebui-applet-header {
+	background-color:#2F7D92;
+}
+
+div [title="Выбор позиции Аплет списка"] .siebui-applet-title {
+	 position: relative;
+	top: -3px;
+	background-color:#2F7D92;
+	
+}
+
+div [title="Выбор позиции Аплет списка"] .AppletCustomButtons {
+	padding: 0 0px 0 0 !important;
+
+}
+
+div [title="Выбор позиции Аплет списка"] .s_1_1_0_0 {
+	background-color: #00B4F9 !important;
+	  margin-top: -5px;
+
+}
+
+div [title="Выбор позиции Аплет списка"] input{
+	background-color: white !important;
+
+}
+
+div [title="Выбор позиции Аплет списка"] .siebui-row-counter {
+	color: white !important;
+
+}
+
+div [title="Выбор позиции Аплет списка"] .s_1_1_0_0 span {
+	padding: 4px 6px;
+
+
+}
+
+div [title="Выбор позиции Аплет списка"] .siebui-btn-grp-search {
+	vertical-align: -webkit-baseline-middle;
+
+}
+
+.siebui-applet-title, .ui-dialog .ui-dialog-titlebar .ui-dialog-title, .siebui-screen-applet-head .siebui-screen-hp-title, .siebui-applet .siebui-applet-header .vis-dropdown label, .siebui-applet .siebui-applet-header .siebui-applet-title label, .siebui-chat-pane .siebui-chat .siebui-chat-pane-header .siebui-chat-caption, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-caption, .siebui-dateRange, .siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-header .siebui-task-assist-title, .siebui-report-accordion, .siebui-report-caption, #taskpaneHeader, .siebui-epui-integrated-applet .siebui-epui-header-applet .siebui-epui-rule-head {
+    color: #fff;
+}
+.siebui-applet{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#bmContainer{
+    margin: 0;
+    padding: 0;
+}
+#bmFirstBLock{
+    margin: 0;
+    padding: 0;
+}
+#bmFirstBLock button{
+    margin-left: 20px;
+    font-size: 100%;
+}
+#bmPeriod{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    height: 135px;
+    width: 30%;
+    text-align: center;
+}
+#bmPeriod div{
+    vertical-align: middle;
+}
+#bmPeriodDate{
+    margin: 0;
+    padding-bottom: 10px;
+}
+#bmPeriodDate div.bm-calc-label{
+    width: 170px;
+    display: inline-block;
+    text-align: right;
+}
+#bmPeriodDate div.bm-calc-field{
+    display: inline-block;
+    margin-left: 10px;
+}
+.bmPeriodButtons{
+    margin: 0;
+    padding: 0;
+}
+.bmPeriodButton{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.activeButton{
+    background: url("../../images/leto_gallery_nav.png") top left no-repeat;
+    width: 185px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    text-shadow: none;
+}
+.inactiveButton{
+    background: url("../../images/leto_gallery_nav.png") top right no-repeat;
+    width: 185px;
+    height: 30px;
+    border-bottom: 1px #cc1f5b dashed;
+    color: #cc1f5b;
+    text-shadow: none;
+}
+.bmPeriodButton .appletButton,
+.bmPeriodButton .appletButton:hover{
+    background-image: url('../../images/leto_gallery_nav.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px #cc1f5b dashed;
+    color: #cc1f5b;
+    text-shadow: none;
+    -webkit-transition: initial;
+    -moz-transition: initial;
+    transition: initial;
+}
+.bmPeriodButton .appletButton.active,
+.bmPeriodButton .appletButton.active:hover{
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    width: 130px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    text-shadow: none;
+    -webkit-transition: initial;
+    -moz-transition: initial;
+    transition: initial;
+    border-radius: 16px;
+}
+#bmGauge{
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    height: 135px;
+    width: 100%;
+    text-align: center;
+}
+#bmSecondBLock{
+}
+#bmSalesInfoContainer{
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    overflow: auto;
+    background: #fff;
+}
+#bmSalesInfoTable{
+    margin: 30px 0 0 0;
+    padding: 0;
+    width: 100%;
+}
+.bmSalesProductGroup{
+    margin: 5px;
+    background: url("../../images/leto_elips.png") no-repeat center center;
+    background-size: 65px 65px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    border-right: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+}
+.bmSalesTableHeaderElement{
+    margin: 0;
+    padding: 5px;
+    background: #da1d5f;
+    color: #fff;
+    font: bold 10pt sans-serif;
+    vertical-align: middle;
+    border-right: 1px solid #fff;
+}
+.bmSalesTableBodyTotal{
+    margin: 0;
+    max-width: 150px;
+    height: 20px;
+    background: #fee6e0;
+    vertical-align: middle;
+    border-right: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    text-align: center;
+}
+.bmSalesTableBodyElement{
+    margin: 0;
+    max-width: 150px;
+    height: 20px;
+    background: #fff;
+    vertical-align: middle;
+    border-right: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    text-align: center;
+}
+.bmSalesCalculateResult{
+    margin: 0;
+    max-width: 150px;
+    height: 20px;
+    background: #fff;
+    vertical-align: middle;
+    /*border-left: 1px solid #D6D6D6;*/
+    border-bottom: 1px solid #d6d6d6;
+}
+.bmSalesTableInput{
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 100%;
+    border: 1px solid #f5974a;
+    text-align: center;
+}
+.bmSalesTableInput:disabled{
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 100%;
+    border: 1px solid #f5974a;
+    text-align: center;
+    background: #eee;
+}
+.bmSalesDescriptionData{
+    margin: 0 auto;
+    width: 150px;
+    height: 15px;
+    line-height: 15px;
+    text-align: left;
+    overflow: hidden;
+    background: #fff;
+}
+.bmSalesDescriptionPopup{
+    z-index: 99999;
+    display: none;
+    margin: 0;
+    padding: 0;
+    background: #f00;
+    position: absolute;
+    height: 150px;
+    width: 400px;
+    background: #f2f2f2;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+}
+.bmSalesDescriptionPopupData{
+    margin: 5px 15px 15px 15px;
+    padding: 0;
+    width: 370px;
+    height: 130px;
+    color: #000;
+    text-align: left;
+    word-wrap: break-word;
+    overflow: auto;
+    line-height: 20px;
+}
+.bmGaugeDescriptionPopup{ /*Ð‘Ð¾Ð½ÑƒÑÐ½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°. Ð’ÑÐ¿Ð»Ñ‹Ð²Ð°ÑŽÑ‰Ð°Ñ Ð¿Ð¾Ð´ÑÐºÐ°Ð·ÐºÐ° Ð¿Ñ€Ð¸ Ð½Ð°Ð²ÐµÐ´ÐµÐ½Ð¸Ð¸ Ð½Ð° Ð¸Ð½Ð´Ð¸ÐºÐ°Ñ‚Ð¾Ñ€.*/
+    z-index: 99999;
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100px;
+    width: 323px;
+    background: #fff;
+    border: 1px solid #ff6666;
+    border-radius: 10px;
+    z-index: 999999;
+}
+.bmGaugeDescriptionPopupData{
+    /*margin: 8px;*/
+    margin: auto auto;
+    padding: 0;
+    width: 310px;
+    height: 87px;
+    color: #888;
+    text-align: left;
+    word-wrap: break-word;
+    overflow: auto;
+    line-height: 20px;
+    z-index: 999999;
+}
+.bmGaugeInfoDescriptionPopup{ /*Ð‘Ð¾Ð½ÑƒÑÐ½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°. ?.*/
+    z-index: 99999;
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100px;
+    width: 323px;
+    background: #fff;
+    border: 1px solid #ff6666;
+    border-radius: 10px;
+    z-index: 999999;
+}
+.bmGaugeInfoDescriptionPopupData{
+    /*margin: 8px;*/
+    margin: auto auto;
+    padding: 0;
+    width: 310px;
+    height: 87px;
+    color: #888;
+    text-align: left;
+    word-wrap: break-word;
+    overflow: auto;
+    line-height: 20px;
+    z-index: 999999;
+}
+.bmSalesDataNotFound{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #f00;
+    line-height: 50px;
+}
+.atcLoginMsgBar{
+    display: inline-block;
+    cursor: pointer;
+    width: 500px;
+    /*height: 300px;*/
+    margin-top: 80px;
+    margin-left: 0.0px;
+    border: 1px solid #666666;
+    color: #666666;
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    font-family: Trebuchet MS, sans-serif;
+    outline: none;
+    position: absolute;
+    z-index: 1003;
+    box-shadow: 0 0 10px 2px #1a3457;
+}
+#MsgBar .siebui-msgbarbkgrnd-msgread-nomsgs{
+    color: #333
+}
+#MsgBrdCst_Summary{
+    /*height: 273px;*/
+    overflow: auto;
+}
+.siebui-msgbrdcst-heading li:after{
+    right: 40px;
+}
+.siebui-msgbrdcst-heading li{
+    padding-right: 60px;
+}
+.leto-button-info-upper-right-div{
+    /* border: 1px solid #666666; */
+    float: right;
+    /*right: -23%;*/
+}
+.leto-button-info-left{
+    height: 145px;
+    float: left;
+}
+.leto-button-info-upper-right{
+    background: url("../../images/leto_elips_info.png") no-repeat center center;
+    background-size: 40px 40px;
+    /*border: 1px solid #666666;*/
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    float: right;
+}
+.bmGaugeDescriptionPopup1{ /*Ð‘Ð¾Ð½ÑƒÑÐ½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°. ÐšÐ½Ð¾Ð¿ÐºÐ° Ð˜Ð½Ñ„Ð¾.*/
+    z-index: 99999;
+    display: none;
+    margin: 7px 1px 100px -950px;
+    padding: 0;
+    position: absolute;
+    height: 400px;
+    width: 1000px;
+    background: #fff;
+    border: 1px solid #ff6666;
+    border-radius: 10px;
+    z-index: 999999;
+    overflow: scroll;
+}
+.bmGaugeDescriptionPopupData1{
+    /*margin: 8px;*/
+    margin: auto auto;
+    padding: 0;
+    width: 310px;
+    height: 87px;
+    color: #888;
+    text-align: left;
+    word-wrap: break-word;
+    overflow: auto;
+    line-height: 20px;
+    z-index: 999999;
+}
+.a2{
+    margin-left: 20px;
+}
+.butesc{
+    background: url("../../images/closing_button.png") no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 26px;
+    float: right;
+}
+applet, object, iframe, div, table,
+fieldset, form{
+    outline: none;
+}
+.siebui-applet.siebui-active{
+    box-shadow: none;
+}
+/**
+*   Smart scripts
+
+**/
+/* Page Layout 66:33 */
+
+.siebui-main-column66{
+    float: left;
+    width: 66%;
+}
+.siebui-main-column33{
+    float: right;
+    width: 33.5%;
+}
+/* Page Layout 25:75 FOR Smartscript */
+/*NEW!!!*/
+
+.siebui-main-template2575 .siebui-main-column25{
+    float: left;
+    width: 270px;
+}
+.siebui-main-template2575 .siebui-main-column75{
+    padding-left: 280px;
+}
+.siebui-main-template2575.siebui-rtl .siebui-main-column25{
+    float: right;
+}
+.siebui-main-template2575.siebui-rtl .siebui-main-column75{
+    padding-right: 280px;
+}
+/*---------------------------------------------------------------------------*/
+/*------------------------------ SmartScript styling ------------------------*/
+/*---------------------------------------------------------------------------*/
+
+.ssDisplayName{
+    white-space: pre-wrap !important;
+}
+
+.siebui-smartscript .siebui-ctrl-select{
+    word-break: break-all;
+}
+/*---------------------------------------------------------------------------*/
+/*------------------------------ Buttons Fix         ------------------------*/
+/*---------------------------------------------------------------------------*/
+
+.siebui-icon-createrecord::after{
+    content: normal;
+}
+.siebui-btn-grp:empty{
+    display: none !important;
+}
+.btn-icon, .btn-link, .siebui-icon-calc, .siebui-icon-currency, .siebui-icon-date, .siebui-icon-datetime, .siebui-icon-detail, .siebui-icon-dropdown, .siebui-icon-effdate, .siebui-icon-mvg, .siebui-icon-pick, .siebui-icon-phone-outbound, .siebui-icon-mailto, .siebui-icon-date, .siebui-appletmenu-btn, .siebui-icon-createrecord, .siebui-icon-deleterecord, .siebui-icon-deleterequest, .siebui-icon-writerecord, .siebui-icon-explicitwriterecord, .siebui-icon-undorecord, .siebui-icon-executequery, .siebui-icon-newquery, .siebui-icon-newrecord, .siebui-icon-editrecord, .siebui-icon-showqueryassistant, .siebui-icon-undoquery, .siebui-icon-find, .siebui-icon-helptext_org_chart_new, .ui-dialog .ui-dialog-content .siebui-popup-select-columns .siebui-popup-ctrl .siebui-btn-icon-e, .siebui-applet .siebui-applet-header .siebui-label-btn, .siebui-applet .siebui-applet-header button, .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.siebui-ctrl-btn, .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl.siebui-dashboard-ctrl-update .siebui-ctrl-btn, .siebui-chat-pane .siebui-chat .siebui-chat-pane-header .siebui-chat-close, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-toggle-area .siebui-chat-dashboard-toggle .siebui-chat-dashboard-switch-visible, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-toggle-area .siebui-chat-dashboard-toggle .siebui-chat-dashboard-switch-hidden, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-body .siebui-chat-dashboard .siebui-chat-dashboard-item-content .siebui-chat-dashboard-item-content-wrap .siebui-chat-dashboard-item-content-btn, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-links a, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-side-toggle-wide, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-side-toggle-wide, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-side-toggle-wide, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-side-toggle-narrow, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-side-toggle-narrow, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-side-toggle-narrow, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-dock-toggle-pin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-dock-toggle-pin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-dock-toggle-pin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-dock-toggle-unpin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-dock-toggle-unpin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-dock-toggle-unpin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-close, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-close, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-close, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-cti-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-cti-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-cti-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-cti-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-cti-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-cti-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-dashboard-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-dashboard-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-dashboard-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-dashboard-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-dashboard-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-dashboard-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-chat-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-chat-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-chat-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-chat-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-chat-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-chat-toggle-less, .siebui-search-esearch .siebui-search-button, .siebui-appletTitleSection .siebui-appletmenu-btn, .siebui-appletTitleSection .siebui-appletmenu-btn:hover, .siebui-appletTitleSection .siebui-appletmenu-btn:active, .siebui-appletTitleSection .siebui-appletmenu-btn:focus, .siebui-appletTitleSection .siebui-ganttFilterPane, .siebui-appletTitleSection .siebui-ganttFilter, .siebui-appletTitleSection .siebui-ganttFilter:active, .siebui-appletTitleSection .siebui-ganttFilter:focus, .siebui-prevButton, .siebui-nextButton, .siebui-prevSetButton, .siebui-nextSetButton, .siebui-todayButton, .siebui-msgbar-popup #MakeAllMsgReadBtn, .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .ui-accordion-header .siebui-msgbar-dismiss a, .siebui-telco-view1 .siebui-telco-view1Row1 .siebui-telco-view1Row1Col1 .siebui-applet .siebui-applet-header .siebui-applet-container.siebui-collapsible .siebui-btn-icon-expanded, .siebui-telco-view1 .siebui-telco-view1Row1 .siebui-telco-view1Row1Col1 .siebui-applet .siebui-applet-header .siebui-applet-container.siebui-collapsible .siebui-btn-icon-collapsed, .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.appletButton, .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl.siebui-dashboard-ctrl-update .appletButton, .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.appletButtonDis, .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl.siebui-dashboard-ctrl-update .appletButtonDis, .siebui-icon-newrule, .siebui-cfg-rules-insertion-container .siebui-icon-showpopup, .siebui-icon-deleteselection, .siebui-icon-newline, .siebui-barcode button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.siebui-applet-header .siebui-oracleicon,
+.siebui-applet-header .siebui-icon-in-progress::before,
+.siebui-applet-header .siebui-icon-version-submit::before,
+.siebui-applet-header .siebui-icon-bounding-center::before,
+.siebui-applet-header .siebui-icon-dock-right::before,
+.siebui-applet-header .siebui-icon-add-record::before,
+.siebui-applet-header .siebui-icon-consultative-transfer::before,
+.siebui-applet-header .siebui-icon-toggle-forward::before,
+.siebui-applet-header .siebui-icon-accept-work::before,
+.siebui-applet-header .siebui-icon-blind-transfer::before,
+.siebui-applet-header .siebui-icon-call::before,
+.siebui-applet-header .siebui-icon-cancel-forward::before,
+.siebui-applet-header .siebui-icon-chat::before,
+.siebui-applet-header .siebui-icon-clock::before,
+.siebui-applet-header .siebui-icon-consultative-conference::before,
+.siebui-applet-header .siebui-icon-dock-left::before,
+.siebui-applet-header .siebui-icon-dock-top::before,
+.siebui-applet-header .siebui-icon-dock::before,
+.siebui-applet-header .siebui-icon-done::before,
+.siebui-applet-header .siebui-icon-email::before,
+.siebui-applet-header .siebui-icon-fax::before,
+.siebui-applet-header .siebui-icon-forward::before,
+.siebui-applet-header .siebui-icon-hoteling::before,
+.siebui-applet-header .siebui-icon-initiate-work::before,
+.siebui-applet-header .siebui-icon-multiple-work-items::before,
+.siebui-applet-header .siebui-icon-no-call::before,
+.siebui-applet-header .siebui-icon-no-chat::before,
+.siebui-applet-header .siebui-icon-no-email::before,
+.siebui-applet-header .siebui-icon-no-web-collab::before,
+.siebui-applet-header .siebui-icon-not-ready::before,
+.siebui-applet-header .siebui-icon-pager::before,
+.siebui-applet-header .siebui-icon-pause-3::before,
+.siebui-applet-header .siebui-icon-preview::before,
+.siebui-applet-header .siebui-icon-ready::before,
+.siebui-applet-header .siebui-icon-release-work::before,
+.siebui-applet-header .siebui-icon-remove-tags::before,
+.siebui-applet-header .siebui-icon-reset-alt::before,
+.siebui-applet-header .siebui-icon-retrieve-work::before,
+.siebui-applet-header .siebui-icon-send-email::before,
+.siebui-applet-header .siebui-icon-send-wireless-msg::before,
+.siebui-applet-header .siebui-icon-toggle-chat::before,
+.siebui-applet-header .siebui-icon-transfer-to-agent::before,
+.siebui-applet-header .siebui-icon-undock::before,
+.siebui-applet-header .siebui-icon-voice::before,
+.siebui-applet-header .siebui-icon-web-collab::before,
+.siebui-applet-header .siebui-icon-web::before,
+.siebui-applet-header .siebui-icon-publish-alt::before,
+.siebui-applet-header .siebui-icon-applet-state-default::before,
+.siebui-applet-header .siebui-icon-applet-state-edit::before,
+.siebui-applet-header .siebui-icon-applet::before,
+.siebui-applet-header .siebui-icon-bounding-bottom::before,
+.siebui-applet-header .siebui-icon-bounding-left::before,
+.siebui-applet-header .siebui-icon-bounding-middle::before,
+.siebui-applet-header .siebui-icon-bounding-right::before,
+.siebui-applet-header .siebui-icon-move::before,
+.siebui-applet-header .siebui-icon-bounding-top::before,
+.siebui-applet-header .siebui-icon-btn-grp::before,
+.siebui-applet-header .siebui-icon-btn::before,
+.siebui-applet-header .siebui-icon-column::before,
+.siebui-applet-header .siebui-icon-constrain::before,
+.siebui-applet-header .siebui-icon-control::before,
+.siebui-applet-header .siebui-icon-drawer-close::before,
+.siebui-applet-header .siebui-icon-drawer-open::before,
+.siebui-applet-header .siebui-icon-display-grid::before,
+.siebui-applet-header .siebui-icon-inactive::before,
+.siebui-applet-header .siebui-icon-mvg::before,
+.siebui-applet-header .siebui-icon-popup::before,
+.siebui-applet-header .siebui-icon-question-alt::before,
+.siebui-applet-header .siebui-icon-screen::before,
+.siebui-applet-header .siebui-icon-simulate::before,
+.siebui-applet-header .siebui-icon-thread::before,
+.siebui-applet-header .siebui-icon-display-tile::before,
+.siebui-applet-header .siebui-icon-title::before,
+.siebui-applet-header .siebui-icon-tree-node::before,
+.siebui-applet-header .siebui-icon-tree-record::before,
+.siebui-applet-header .siebui-icon-view::before,
+.siebui-applet-header .siebui-icon-view-child::before,
+.siebui-applet-header .siebui-icon-view-grandchild::before,
+.siebui-applet-header .siebui-icon-add-alt::before,
+.siebui-applet-header .siebui-icon-workspace-create::before,
+.siebui-applet-header .siebui-icon-delete-alt-2::before,
+.siebui-applet-header .siebui-icon-delete-alt::before,
+.siebui-applet-header .siebui-icon-deliver::before,
+.siebui-applet-header .siebui-icon-drilldown-alt::before,
+.siebui-applet-header .siebui-icon-status::before,
+.siebui-applet-header .siebui-icon-workspace-in-progress::before,
+.siebui-applet-header .siebui-icon-inspect::before,
+.siebui-applet-header .siebui-icon-merge::before,
+.siebui-applet-header .siebui-icon-modify::before,
+.siebui-applet-header .siebui-icon-workspace-protect::before,
+.siebui-applet-header .siebui-icon-workspace-no::before,
+.siebui-applet-header .siebui-icon-workspace-yes::before,
+.siebui-applet-header .siebui-icon-workspace-publish::before,
+.siebui-applet-header .siebui-icon-rebase::before,
+.siebui-applet-header .siebui-icon-revert::before,
+.siebui-applet-header .siebui-icon-share-alt::before,
+.siebui-applet-header .siebui-icon-workspace-submit::before,
+.siebui-applet-header .siebui-icon-workspace-version::before,
+.siebui-applet-header .siebui-icon-workspace-share::before,
+.siebui-applet-header .siebui-icon-workspace::before,
+.siebui-applet-header .siebui-icon-world::before,
+.siebui-applet-header .siebui-icon-home-alt-1::before,
+.siebui-applet-header .siebui-icon-account-alt-1::before,
+.siebui-applet-header .siebui-icon-card::before,
+.siebui-applet-header .siebui-icon-text-photos::before,
+.siebui-applet-header .siebui-icon-stage::before,
+.siebui-applet-header .siebui-icon-mic::before,
+.siebui-applet-header .siebui-icon-trigger::before,
+.siebui-applet-header .siebui-icon-account-alt-2::before,
+.siebui-applet-header .siebui-icon-qrcode::before,
+.siebui-applet-header .siebui-icon-address-book::before,
+.siebui-applet-header .siebui-icon-compass::before,
+.siebui-applet-header .siebui-icon-compass-alt::before,
+.siebui-applet-header .siebui-icon-desktop::before,
+.siebui-applet-header .siebui-icon-laptop-alt::before,
+.siebui-applet-header .siebui-icon-phone-lg::before,
+.siebui-applet-header .siebui-icon-tablet::before,
+.siebui-applet-header .siebui-icon-chart-line::before,
+.siebui-applet-header .siebui-icon-chart-bar::before,
+.siebui-applet-header .siebui-icon-chart-bar-stacked::before,
+.siebui-applet-header .siebui-icon-promotion::before,
+.siebui-applet-header .siebui-icon-list-numbered::before,
+.siebui-applet-header .siebui-icon-hierarchy::before,
+.siebui-applet-header .siebui-icon-sitemap-alt::before,
+.siebui-applet-header .siebui-icon-phase::before,
+.siebui-applet-header .siebui-icon-blocked::before,
+.siebui-applet-header .siebui-icon-start::before,
+.siebui-applet-header .siebui-icon-pause::before,
+.siebui-applet-header .siebui-icon-stop::before,
+.siebui-applet-header .siebui-icon-step-previous::before,
+.siebui-applet-header .siebui-icon-step-next::before,
+.siebui-applet-header .siebui-icon-home-alt-2::before,
+.siebui-applet-header .siebui-icon-sync-alt::before,
+.siebui-applet-header .siebui-icon-home::before,
+.siebui-applet-header .siebui-icon-cart-alt::before,
+.siebui-applet-header .siebui-icon-expand::before,
+.siebui-applet-header .siebui-icon-contract::before,
+.siebui-applet-header .siebui-icon-edit-alt::before,
+.siebui-applet-header .siebui-icon-fin-application::before,
+.siebui-applet-header .siebui-icon-household::before,
+.siebui-applet-header .siebui-icon-fin-account::before,
+.siebui-applet-header .siebui-icon-save-list::before,
+.siebui-applet-header .siebui-icon-folder::before,
+.siebui-applet-header .siebui-icon-folder-open::before,
+.siebui-applet-header .siebui-icon-save-alt::before,
+.siebui-applet-header .siebui-icon-save::before,
+.siebui-applet-header .siebui-icon-binoculars::before,
+.siebui-applet-header .siebui-icon-settings-alt::before,
+.siebui-applet-header .siebui-icon-debug::before,
+.siebui-applet-header .siebui-icon-reports::before,
+.siebui-applet-header .siebui-icon-dashboard::before,
+.siebui-applet-header .siebui-icon-target::before,
+.siebui-applet-header .siebui-icon-apply-list::before,
+.siebui-applet-header .siebui-icon-task::before,
+.siebui-applet-header .siebui-icon-question::before,
+.siebui-applet-header .siebui-icon-info::before,
+.siebui-applet-header .siebui-icon-login::before,
+.siebui-applet-header .siebui-icon-logout::before,
+.siebui-applet-header .siebui-icon-reset::before,
+.siebui-applet-header .siebui-icon-tiles::before,
+.siebui-applet-header .siebui-icon-mail::before,
+.siebui-applet-header .siebui-icon-configure::before,
+.siebui-applet-header .siebui-icon-switch::before,
+.siebui-applet-header .siebui-icon-grid::before,
+.siebui-applet-header .siebui-icon-tile-grid::before,
+.siebui-applet-header .siebui-icon-log::before,
+.siebui-applet-header .siebui-icon-cart::before,
+.siebui-applet-header .siebui-icon-attachment::before,
+.siebui-applet-header .siebui-icon-checkbox-checked::before,
+.siebui-applet-header .siebui-icon-checkbox-unchecked::before,
+.siebui-applet-header .siebui-icon-checkbox-partial::before,
+.siebui-applet-header .siebui-icon-radio-checked::before,
+.siebui-applet-header .siebui-icon-radio-unchecked::before,
+.siebui-applet-header .siebui-icon-location::before,
+.siebui-applet-header .siebui-icon-airplane::before,
+.siebui-applet-header .siebui-icon-user::before,
+.siebui-applet-header .siebui-icon-delete::before,
+.siebui-applet-header .siebui-icon-cal-daily::before,
+.siebui-applet-header .siebui-icon-cal-weekly::before,
+.siebui-applet-header .siebui-icon-dollar::before,
+.siebui-applet-header .siebui-icon-drilldown::before,
+.siebui-applet-header .siebui-icon-query-assist::before,
+.siebui-applet-header .siebui-icon-query-cancel::before,
+.siebui-applet-header .siebui-icon-query-go::before,
+.siebui-applet-header .siebui-icon-select-multi::before,
+.siebui-applet-header .siebui-icon-select::before,
+.siebui-applet-header .siebui-icon-cal-monthly::before,
+.siebui-applet-header .siebui-icon-calculator::before,
+.siebui-applet-header .siebui-icon-date::before,
+.siebui-applet-header .siebui-icon-print::before,
+.siebui-applet-header .siebui-icon-arrow-left::before,
+.siebui-applet-header .siebui-icon-arrow-right::before,
+.siebui-applet-header .siebui-icon-unlock::before,
+.siebui-applet-header .siebui-icon-lock::before,
+.siebui-applet-header .siebui-icon-arrowsm-sort::before,
+.siebui-applet-header .siebui-icon-camera::before,
+.siebui-applet-header .siebui-icon-bulkonboard::before,
+.siebui-applet-header .siebui-icon-zoom-in::before,
+.siebui-applet-header .siebui-icon-zoom-out::before,
+.siebui-applet-header .siebui-icon-arrowsm-fwd::before,
+.siebui-applet-header .siebui-icon-arrowsm-rev::before,
+.siebui-applet-header .siebui-icon-arrowsm-right::before,
+.siebui-applet-header .siebui-icon-arrowsm-left::before,
+.siebui-applet-header .siebui-icon-arrowsm-first::before,
+.siebui-applet-header .siebui-icon-arrowsm-last::before,
+.siebui-applet-header .siebui-icon-arrowsm-bottom::before,
+.siebui-applet-header .siebui-icon-arrowsm-top::before,
+.siebui-applet-header .siebui-icon-arrowsm-up::before,
+.siebui-applet-header .siebui-icon-arrowsm-down::before,
+.siebui-applet-header .siebui-icon-wizard::before,
+.siebui-applet-header .siebui-icon-tv::before,
+.siebui-applet-header .siebui-icon-phone::before,
+.siebui-applet-header .siebui-icon-laptop::before,
+.siebui-applet-header .siebui-icon-bars::before,
+.siebui-applet-header .siebui-icon-signal::before,
+.siebui-applet-header .siebui-icon-barcode-query::before,
+.siebui-applet-header .siebui-icon-barcode-edit::before,
+.siebui-applet-header .siebui-icon-barcode-add::before,
+.siebui-applet-header .siebui-icon-arrow-up::before,
+.siebui-applet-header .siebui-icon-arrow-down::before,
+.siebui-applet-header .siebui-icon-building::before,
+.siebui-applet-header .siebui-icon-contract2::before,
+.siebui-applet-header .siebui-icon-invoice::before,
+.siebui-applet-header .siebui-icon-servicerequest::before,
+.siebui-applet-header .siebui-icon-prospective::before,
+.siebui-applet-header .siebui-icon-newclient::before,
+.siebui-applet-header .siebui-icon-closedaccount::before,
+.siebui-applet-header .siebui-icon-play::before,
+.siebui-applet-header .siebui-icon-pause-alt::before,
+.siebui-applet-header .siebui-icon-minus::before,
+.siebui-applet-header .siebui-icon-barcode::before,
+.siebui-applet-header .siebui-icon-barcode-alt::before,
+.siebui-applet-header .siebui-icon-call-transfer::before,
+.siebui-applet-header .siebui-icon-undo::before,
+.siebui-applet-header .siebui-icon-tools::before,
+.siebui-applet-header .siebui-icon-toggle::before,
+.siebui-applet-header .siebui-icon-text-rightalign::before,
+.siebui-applet-header .siebui-icon-text-photo::before,
+.siebui-applet-header .siebui-icon-text-list::before,
+.siebui-applet-header .siebui-icon-text-leftalign::before,
+.siebui-applet-header .siebui-icon-text-italic::before,
+.siebui-applet-header .siebui-icon-text-indentright::before,
+.siebui-applet-header .siebui-icon-text-indentleft::before,
+.siebui-applet-header .siebui-icon-text-center::before,
+.siebui-applet-header .siebui-icon-text-bold::before,
+.siebui-applet-header .siebui-icon-text-attach::before,
+.siebui-applet-header .siebui-icon-tasks::before,
+.siebui-applet-header .siebui-icon-tasks-alt::before,
+.siebui-applet-header .siebui-icon-sync::before,
+.siebui-applet-header .siebui-icon-success::before,
+.siebui-applet-header .siebui-icon-star::before,
+.siebui-applet-header .siebui-icon-star-circle::before,
+.siebui-applet-header .siebui-icon-sitemap::before,
+.siebui-applet-header .siebui-icon-share::before,
+.siebui-applet-header .siebui-icon-settings::before,
+.siebui-applet-header .siebui-icon-services::before,
+.siebui-applet-header .siebui-icon-search::before,
+.siebui-applet-header .siebui-icon-search-circle::before,
+.siebui-applet-header .siebui-icon-sales::before,
+.siebui-applet-header .siebui-icon-redo::before,
+.siebui-applet-header .siebui-icon-records::before,
+.siebui-applet-header .siebui-icon-quotes::before,
+.siebui-applet-header .siebui-icon-query-bookmark::before,
+.siebui-applet-header .siebui-icon-pinfolder::before,
+.siebui-applet-header .siebui-icon-pin::before,
+.siebui-applet-header .siebui-icon-pin-active::before,
+.siebui-applet-header .siebui-icon-notification::before,
+.siebui-applet-header .siebui-icon-map-location::before,
+.siebui-applet-header .siebui-icon-invoices::before,
+.siebui-applet-header .siebui-icon-inventory::before,
+.siebui-applet-header .siebui-icon-info-circle::before,
+.siebui-applet-header .siebui-icon-history::before,
+.siebui-applet-header .siebui-icon-help::before,
+.siebui-applet-header .siebui-icon-fleet::before,
+.siebui-applet-header .siebui-icon-error::before,
+.siebui-applet-header .siebui-icon-edit::before,
+.siebui-applet-header .siebui-icon-edit-active::before,
+.siebui-applet-header .siebui-icon-directions::before,
+.siebui-applet-header .siebui-icon-customer::before,
+.siebui-applet-header .siebui-icon-contacts::before,
+.siebui-applet-header .siebui-icon-communication::before,
+.siebui-applet-header .siebui-icon-close::before,
+.siebui-applet-header .siebui-icon-close-circle::before,
+.siebui-applet-header .siebui-icon-client::before,
+.siebui-applet-header .siebui-icon-check::before,
+.siebui-applet-header .siebui-icon-check-circle::before,
+.siebui-applet-header .siebui-icon-call-video::before,
+.siebui-applet-header .siebui-icon-call-transfer2::before,
+.siebui-applet-header .siebui-icon-call-outbound::before,
+.siebui-applet-header .siebui-icon-calendar::before,
+.siebui-applet-header .siebui-icon-book::before,
+.siebui-applet-header .siebui-icon-away::before,
+.siebui-applet-header .siebui-icon-appointments::before,
+.siebui-applet-header .siebui-icon-alert::before,
+.siebui-applet-header .siebui-icon-admin::before,
+.siebui-applet-header .siebui-icon-add::before,
+.siebui-applet-header .siebui-icon-actions::before,
+.siebui-applet-header .siebui-icon-accounts::before,
+.siebui-applet-header .siebui-icon-effdate::before,
+.siebui-applet-header .siebui-icon-chart-combo::before,
+.siebui-applet-header .siebui-icon-chart-bar-clustered::before,
+.siebui-applet-header .siebui-icon-chart-cube::before,
+.siebui-applet-header .siebui-icon-chart-scatter::before,
+.siebui-applet-header .siebui-icon-chart-spine::before,
+.siebui-applet-header .siebui-icon-mailto::before,
+.siebui-applet-header .siebui-icon-phone-outbound::before,
+.siebui-applet-header .siebui-icon-calc::before,
+.siebui-applet-header .siebui-icon-currency::before,
+.siebui-applet-header .siebui-icon-date::before,
+.siebui-applet-header .siebui-icon-datetime::before,
+.siebui-applet-header .siebui-icon-dropdown::before,
+.siebui-applet-header .siebui-icon-mvg::before,
+.siebui-applet-header .siebui-icon-detail::before,
+.siebui-applet-header .siebui-icon-pick::before,
+.siebui-applet-header .siebui-file-label::before,
+.siebui-applet-header .siebui-icon-newrecord::before,
+.siebui-applet-header .siebui-icon-createrecord::before,
+.siebui-applet-header .siebui-icon-editrecord::before,
+.siebui-applet-header .siebui-icon-deleterequest::before,
+.siebui-applet-header .siebui-icon-writerecord::before,
+.siebui-applet-header .siebui-icon-explicitwriterecord::before,
+.siebui-applet-header .siebui-icon-undorecord::before,
+.siebui-applet-header .siebui-appletmenu-btn::before,
+.siebui-applet-header .siebui-icon-newquery::before,
+.siebui-applet-header .siebui-icon-executequery::before,
+.siebui-applet-header .siebui-icon-find::before,
+.siebui-applet-header .siebui-icon-undoquery::before,
+.siebui-applet-header .siebui-icon-showqueryassistant::before,
+.siebui-applet-header .siebui-applet .siebui-collapsible .siebui-btn-icon-expanded::before,
+.siebui-applet-header .siebui-applet .siebui-collapsible .siebui-btn-icon-collapsed::before,
+.siebui-applet-header .siebui-viz-button-map .siebui-ctrl-btn::before,
+.siebui-applet-header .siebui-viz-button-grid .siebui-ctrl-btn::before,
+.siebui-applet-header .siebui-viz-button-detail .siebui-ctrl-btn::before,
+.siebui-applet-header .siebui-viz-button-tile .siebui-ctrl-btn::before,
+.siebui-applet-header .siebui-icon-addrecords::before,
+.siebui-applet-header .siebui-icon-deleterecords::before,
+.siebui-applet-header .siebui-icon-deleteallrecords::before,
+.siebui-applet-header .siebui-icon-recnav_prev_off::before,
+.siebui-applet-header .siebui-icon-recnav_prev_on::before,
+.siebui-applet-header .siebui-icon-recnav_next_off::before,
+.siebui-applet-header .siebui-icon-recnav_next_on::before,
+.siebui-applet-header .siebui-icon-bttns_more::before,
+.siebui-applet-header .siebui-icon-layout_maximize_on::before,
+.siebui-applet-header .siebui-icon-layout_maximize_off::before,
+.siebui-applet-header .siebui-icon-bttns_less::before,
+.siebui-applet-header .siebui-icon-layout_minimize_on::before,
+.siebui-applet-header .siebui-icon-layout_minimize_off::before,
+.siebui-applet-header .siebui-icon-layout_hide_on::before,
+.siebui-screen-hp-layoutbuttons .siebui-icon-layout_hide_off::before,
+.siebui-screen-hp-layoutbuttons .siebui-icon-layout_hide_on::before,
+.siebui-screen-hp-layoutbuttons .siebui-icon-layout_minimize_on::before,
+.siebui-screen-hp-layoutbuttons .siebui-icon-layout_minimize_off::before,
+.siebui-applet-header .siebui-icon-layout_hide_off::before,
+.siebui-applet-header .siebui-icon-tb-new_call_list::before,
+.siebui-applet-header .siebui-icon-tb-newquery::before,
+.siebui-applet-header .siebui-icon-tb-executequery::before,
+.siebui-applet-header .siebui-icon-tb-apply_target_list::before,
+.siebui-applet-header .siebui-icon-tb-save_target_list::before,
+.siebui-applet-header .siebui-icon-tb-sitemap::before,
+.siebui-applet-header .siebui-icon-tb-open_dashboard::before,
+.siebui-applet-header .siebui-icon-tb-toggle_task_assistant::before,
+.siebui-applet-header .siebui-icon-tb-toggle_task_pane::before,
+.siebui-applet-header .siebui-icon-tb-quick_print::before,
+.siebui-applet-header .siebui-icon-tb-synchronize::before,
+.siebui-applet-header .siebui-icon-tb-reports::before,
+.siebui-applet-header .siebui-icon-tb-toggle_cti_toolbar::before,
+.siebui-applet-header .siebui-icon-helptext_org_chart_new::before,
+.siebui-applet-header .siebui-icon-layout_movedown_off::before,
+.siebui-applet-header .siebui-icon-layout_movedown_on::before,
+.siebui-applet-header .siebui-icon-layout_moveup_off::before,
+.siebui-applet-header .siebui-icon-layout_moveup_on::before,
+.siebui-applet-header .siebui-icon-layout_show_off::before,
+.siebui-applet-header .siebui-icon-layout_show_on::before,
+.siebui-applet-header .siebui-icon-screentab_icon::before,
+.siebui-applet-header .siebui-icon-home_icon::before,
+.siebui-applet-header .siebui-icon-invoices_icon::before,
+.siebui-applet-header .siebui-icon-contract2_icon::before,
+.siebui-applet-header .siebui-icon-accounts_large::before,
+.siebui-applet-header .siebui-icon-accounts_icon::before,
+.siebui-applet-header .siebui-icon-contacts_large::before,
+.siebui-applet-header .siebui-icon-contacts_icon::before,
+.siebui-applet-header .siebui-icon-opportunitygrey_large::before,
+.siebui-applet-header .siebui-icon-opportunities_icon::before,
+.siebui-applet-header .siebui-icon-quotegrey_large::before,
+.siebui-applet-header .siebui-icon-ms_quote_icon::before,
+.siebui-applet-header .siebui-icon-quotes_icon::before,
+.siebui-applet-header .siebui-icon-ordersgrey_large::before,
+.siebui-applet-header .siebui-icon-orders_icon::before,
+.siebui-applet-header .siebui-icon-icon_forecasting::before,
+.siebui-applet-header .siebui-icon-messageplan::before,
+.siebui-applet-header .siebui-icon-icon_revenues::before,
+.siebui-applet-header .siebui-icon-leadsgrey_large::before,
+.siebui-applet-header .siebui-icon-service_requests_icon::before,
+.siebui-applet-header .siebui-icon-service_requests_large::before,
+.siebui-applet-header .siebui-icon-callscheduler_large::before,
+.siebui-applet-header .siebui-icon-part_browsers_large::before,
+.siebui-applet-header .siebui-icon-auto_vehicles::before,
+.siebui-applet-header .siebui-icon-assets_large::before,
+.siebui-applet-header .siebui-icon-invoice_large::before,
+.siebui-applet-header .siebui-icon-households_icon::before,
+.siebui-applet-header .siebui-icon-shift_large::before,
+.siebui-applet-header .siebui-icon-fins_households::before,
+.siebui-applet-header .siebui-icon-fins_accounts_large::before,
+.siebui-applet-header .siebui-icon-new_application::before,
+.siebui-applet-header .siebui-icon-calendar_icon::before,
+.siebui-applet-header .siebui-icon-customerdirectory_icon::before,
+.siebui-applet-header .siebui-icon-icon_required::before,
+.siebui-applet-header .siebui-icon-hh_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-fa_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-sr_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-act_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-pb_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-ast_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-invoice_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-shift_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-am_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-lead_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-oppty_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-quo_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-ord_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-acc_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-cn_form_applet_icon::before,
+.siebui-applet-header .siebui-icon-buttonshowitem::before,
+.siebui-applet-header .siebui-icon-buttonhideitem::before,
+.siebui-applet-header .siebui-icon-buttonshowallitems::before,
+.siebui-applet-header .siebui-icon-buttonhideallitems::before,
+.siebui-applet-header .siebui-icon-buttonmoveitemtop::before,
+.siebui-applet-header .siebui-icon-buttonmoveitemup::before,
+.siebui-applet-header .siebui-icon-buttonmoveitemdown::before,
+.siebui-applet-header .siebui-icon-buttonmoveitembottom::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-recnav_prev_off::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-recnav_prev_on::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-recnav_next_off::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-recnav_next_on::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-addrecords::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-deleterecords::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-deleteallrecords::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-buttonshowitem::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-buttonhideitem::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-buttonshowallitems::before,
+.siebui-applet-header .siebui-rtl .siebui-icon-buttonhideallitems::before,
+.siebui-applet-header .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon-closethick::before,
+.siebui-applet-header .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close-rtl .ui-icon-closethick::before,
+.siebui-applet-header .ui-menu .ui-menu-item .ui-icon-carat-1-e::before,
+.siebui-applet-header .siebui-rtl .ui-menu .ui-menu-item .ui-icon-carat-1-e::before,
+.siebui-applet-header .siebui-nav-hb.siebui-view-navs .siebui-nav-tabScreen .siebui-nav-hb-btn::before,
+.siebui-applet-header .siebui-nav-hb.siebui-view-navs .siebui-nav-tabView .siebui-nav-hb-btn::before,
+.siebui-applet-header .siebui-nav-hb.siebui-subview-screennavs .siebui-nav-tabView .siebui-nav-hb-btn::before,
+.siebui-applet-header .siebui-nav-hb.siebui-subview-navs .siebui-nav-tabScreen .siebui-nav-hb-btn::before,
+.siebui-applet-header .siebui-nav-hb.siebui-subview-navs .siebui-nav-tabView .siebui-nav-hb-btn::before,
+.siebui-applet-header .siebui-toolbar-settings .siebui-toolbar-enable::before,
+.siebui-applet-header .siebui-toolbar-toggle-communication-panel .siebui-toolbar-enable::before,
+.siebui-applet-header .siebui-navigation-tree .siebui-subview-navs .dynatree-container li span.dynatree-has-children>a::before,
+.siebui-applet-header .siebui-icon-marker-selected::before,
+.siebui-applet-header .siebui-icon-marker::before,
+.siebui-applet-header .siebui-icon-showroute::before,
+.siebui-applet-header .ui-jqgrid .ui-jqgrid-htable .siebui-col-lock::before,
+.siebui-applet-header .ui-jqgrid .ui-jqgrid-htable .s-ico .ui-icon-asc::before,
+.siebui-applet-header .ui-jqgrid .ui-jqgrid-htable .s-ico .ui-icon-desc::before,
+.siebui-applet-header .siebui-icon-add-attachment a::before,
+.siebui-applet-header .siebui-icon-add-literature a::before,
+.siebui-applet-header .siebui-tile-container .siebui-tile .siebui-tile-image::before,
+.siebui-applet-header .siebui-cal-btn-settings::before,
+.siebui-applet-header .siebui-viz-button-detail .siebui-ctrl-btn::before,
+.siebui-applet-header .siebui-viz-button-tilegrid .siebui-ctrl-btn::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 .siebui-catalog-qty-cols .siebui-catalog-add-to-cart .siebui-icon-addtocart::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 .siebui-catalog-qty-cols .siebui-catalog-add-to-cart .siebui-icon-addtocart::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 .siebui-catalog-qty-cols .siebui-catalog-edit-promo .siebui-icon-applyeditpromotion::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 .siebui-catalog-qty-cols .siebui-catalog-edit-promo .siebui-icon-applyeditpromotion::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 .siebui-catalog-qty-cols .siebui-catalog-configure .siebui-icon-customizeproduct::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 .siebui-catalog-qty-cols .siebui-catalog-configure .siebui-icon-customizeproduct::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav li a .siebui-catalog-eligibility-yes-icon::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav li a .siebui-catalog-eligibility-yes-icon::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav li a .siebui-catalog-eligibility-no-icon::before,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav li a .siebui-catalog-eligibility-no-icon::before,
+.siebui-applet-header .siebui-catalog-tile-image::before,
+.siebui-applet-header .siebui-comparelist-img-col::before,
+.siebui-applet-header .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.siebui-ctrl-btn::before,
+.siebui-applet-header .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl .siebui-dashboard-next::before,
+.siebui-applet-header .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl .siebui-dashboard-prev::before,
+.siebui-applet-header .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl .siebui-dashboard-close::before,
+.siebui-applet-header .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl.siebui-dashboard-ctrl-update .siebui-ctrl-btn::before,
+.siebui-applet-header .siebui-rtl .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl .siebui-dashboard-next::before,
+.siebui-applet-header .siebui-rtl .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl .siebui-dashboard-prev::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-pane-header .siebui-chat-close::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-toggle-area .siebui-chat-dashboard-toggle .siebui-chat-dashboard-switch-visible::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-toggle-area .siebui-chat-dashboard-toggle .siebui-chat-dashboard-switch-hidden::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-body .siebui-chat-dashboard .siebui-chat-dashboard-item-content .siebui-chat-dashboard-item-content-wrap .siebui-chat-dashboard-kb-btn::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-body .siebui-chat-dashboard .siebui-chat-dashboard-item-content .siebui-chat-dashboard-item-content-wrap .siebui-chat-dashboard-action-btn::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-links .siebui-chat-toolbar-send-txt::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-links .siebui-chat-toolbar-send-url::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-links .siebui-chat-toolbar-used-txt::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-links .siebui-chat-toolbar-share::before,
+.siebui-applet-header .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-links .siebui-chat-toolbar-push-url::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-side-toggle-wide::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-side-toggle-wide::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-side-toggle-wide::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-side-toggle-narrow::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-side-toggle-narrow::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-side-toggle-narrow::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-dock-toggle-pin::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-dock-toggle-pin::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-dock-toggle-pin::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-dock-toggle-unpin::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-dock-toggle-unpin::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-dock-toggle-unpin::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-close::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-close::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-close::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-cti-toggle-more::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-cti-toggle-more::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-cti-toggle-more::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-dashboard-toggle-more::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-dashboard-toggle-more::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-dashboard-toggle-more::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-chat-toggle-more::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-chat-toggle-more::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-chat-toggle-more::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-cti-toggle-less::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-cti-toggle-less::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-cti-toggle-less::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-dashboard-toggle-less::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-dashboard-toggle-less::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-dashboard-toggle-less::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-chat-toggle-less::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-chat-toggle-less::before,
+.siebui-applet-header .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-chat-toggle-less::before,
+.siebui-applet-header .offline-icon::before,
+.siebui-applet-header .online-icon::before,
+.siebui-applet-header .siebui-dm-log-btn::before,
+.siebui-applet-header .statusFullDownLoad::before,
+.siebui-applet-header .statusFullDownLoadFailed::before,
+.siebui-applet-header .statusSyncPending::before,
+.siebui-applet-header .statusIncDataDownLoad::before,
+.siebui-applet-header .statusIncDownLoadFailed::before,
+.siebui-applet-header .statusUpSyncISync::before,
+.siebui-applet-header .statusUpSyncOnly::before,
+.siebui-applet-header .statusGoOnline::before,
+.siebui-applet-header .statusUpSync::before,
+.siebui-applet-header .statusUpSyncFailed::before,
+.siebui-applet-header .statusUpSyncDataConflict::before,
+.siebui-applet-header .statusUpSyncDone::before,
+.siebui-applet-header .siebui-search-esearch .siebui-search-bg #srch-button::before,
+.siebui-applet-header .siebui-search-esearch .siebui-search-bg #inner-adv-find-button::before,
+.siebui-applet-header .siebui-search-esearch .siebui-search-bg #adv-srch-button::before,
+.siebui-applet-header .siebui-search-esearch .siebui-search-bg #srch-pref-button::before,
+.siebui-applet-header .siebui-search-esearch .siebui-search-bg #adv-find-reset-button::before,
+.siebui-applet-header .siebui-appletTitleSection .siebui-ganttFilter::before,
+.siebui-applet-header .siebui-appletTitleSection .siebui-ganttFilter::before,
+.siebui-applet-header .siebui-prevButton::before,
+.siebui-applet-header .siebui-nextButton::before,
+.siebui-applet-header .siebui-prevSetButton::before,
+.siebui-applet-header .siebui-nextSetButton::before,
+.siebui-applet-header .siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-header .siebui-task-assist-close::before,
+.siebui-applet-header .siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-player .siebui-task-assist-player-main ul.dynatree-container>li>ul>li>ul>li>.dynatree-folder.siebui-task-assist-has-substep>.dynatree-expander::before,
+.siebui-applet-header .siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-player .siebui-task-assist-player-main ul.dynatree-container>li>ul>li>ul>li>.dynatree-folder.siebui-task-assist-has-substep.dynatree-expanded>.dynatree-expander::before,
+.siebui-applet-header .siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-player .siebui-task-assist-player-main ul.dynatree-container>li>ul>li>ul>li>.siebui-task-assist-branch-step>.dynatree-connector::before,
+.siebui-applet-header .siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-player .siebui-task-assist-player-footer>a.siebui-task-assist-return-link::before,
+.siebui-applet-header .siebui-rtl .siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-player .siebui-task-assist-player-footer>a.siebui-task-assist-return-link::before,
+.siebui-applet-header .siebui-msgbrdcst-attachment-icon::before,
+.siebui-applet-header .siebui-msgbrdcst-drilldown-icon::before,
+.siebui-applet-header .siebui-msgbar-popup #MakeAllMsgReadBtn::before,
+.siebui-applet-header .siebui-msgbar-popup .titleClass .ui-dialog-title::before,
+.siebui-applet-header .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .ui-accordion-header .siebui-msgbar-dismiss a::before,
+.siebui-applet-header .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-msgbar-accordian-row-normal>.siebui-mbar::before,
+.siebui-applet-header .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-msgbar-accordian-row-high>.siebui-mbar::before,
+.siebui-applet-header .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-msgbar-accordian-row-urgent>.siebui-mbar::before,
+.siebui-applet-header .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-msgbar-accordian-readmessage-normal>.siebui-mbar::before,
+.siebui-applet-header .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-msgbar-accordian-readmessage-high>.siebui-mbar::before,
+.siebui-applet-header .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-msgbar-accordian-readmessage-urgent>.siebui-mbar::before,
+.siebui-applet-header .header-top .siebui-msgbarbkgrnd-msgread-nomsgs::before,
+.siebui-applet-header .ToolbarButton .siebui-msgbarbkgrnd-msgread-nomsgs::before,
+.siebui-applet-header .header-top .siebui-msgbar-bkgrnd-msg-normal::before,
+.siebui-applet-header .ToolbarButton .siebui-msgbar-bkgrnd-msg-normal::before,
+.siebui-applet-header .header-top .siebui-msgbar-bkgrnd-msg-high::before,
+.siebui-applet-header .ToolbarButton .siebui-msgbar-bkgrnd-msg-high::before,
+.siebui-applet-header .header-top .siebui-msgbar-bkgrnd-msg-urgent::before,
+.siebui-applet-header .ToolbarButton .siebui-msgbar-bkgrnd-msg-urgent::before,
+.siebui-applet-header .siebui-catalog-link-buttons .siebui-icon-customize::before,
+.siebui-applet-header .siebui-self-service .siebui-opa-region .siebui-confirm-checkbox::before,
+.siebui-applet-header .siebui-report-accordion-exp::before,
+.siebui-applet-header .siebui-report-accordion-collap::before,
+.siebui-applet-header .siebui-chart-icon-bar-stacked::before,
+.siebui-applet-header .siebui-chart-icon-bar::before,
+.siebui-applet-header .siebui-chart-icon-line::before,
+.siebui-applet-header .siebui-chart-icon-spline::before,
+.siebui-applet-header #taskpaneHeader #s_close::before,
+.siebui-applet-header #s_TaskPane ul.dynatree-container span.dynatree-expander::before,
+.siebui-applet-header #s_TaskPane ul.dynatree-container .dynatree-expanded span.dynatree-expander::before,
+.siebui-applet-header #taskpaneFooter a.returnLink::after,
+.siebui-applet-header .siebui-telco-view1 .siebui-telco-view1Row1 .siebui-telco-view1Row1Col1 .siebui-applet .siebui-applet-header .siebui-applet-container.siebui-collapsible .siebui-btn-icon-expanded::before,
+.siebui-applet-header .siebui-telco-view1 .siebui-telco-view1Row1 .siebui-telco-view1Row1Col1 .siebui-applet .siebui-applet-header .siebui-applet-container.siebui-collapsible .siebui-btn-icon-collapsed::before,
+.siebui-applet-header .siebui-telco-view1 .siebui-telco-view1Row1 .siebui-telco-view1Row1Col3 .siebui-applet .siebui-view1-row1col3-hdr .siebui-view1-row1col3-row1 .siebui-view1-row1col3-img::before,
+.siebui-applet-header .siebui-telco-view1 .siebui-telco-view1Row2 .siebui-telco-view1Row2Col1 .siebui-tile-container .siebui-tile-list .siebui-tile .siebui-tile-image::before,
+.siebui-applet-header .siebui-icon-record-count-err::before,
+.siebui-applet-header .ui-icon-radio-off::before,
+.siebui-applet-header .ui-icon-radio-on::before,
+.siebui-applet-header .ui-icon-triangle-1-e::before,
+.siebui-applet-header .siebui-rtl .ui-icon-triangle-1-e::before,
+.siebui-applet-header .ui-icon-triangle-1-s::before,
+.siebui-applet-header .ui-icon-triangle-1-se::after,
+.siebui-applet-header .siebui-icon-arrowsm-down-after::after,
+.siebui-applet-header .siebui-icon-chart-bar-hor::before,
+.siebui-applet-header .siebui-icon-chart-pie::before,
+.siebui-applet-header .siebui-icon-segment::before,
+.siebui-applet-header .siebui-viz-button-map .appletButton::before,
+.siebui-applet-header .siebui-viz-button-grid .appletButton::before,
+.siebui-applet-header .siebui-viz-button-detail .appletButton::before,
+.siebui-applet-header .siebui-viz-button-tile .appletButton::before,
+.siebui-applet-header .siebui-viz-button-detail .appletButton::before,
+.siebui-applet-header .siebui-viz-button-tilegrid .appletButton::before,
+.siebui-applet-header .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.appletButton::before,
+.siebui-applet-header .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl.siebui-dashboard-ctrl-update .appletButton::before,
+.siebui-applet-header .siebui-viz-button-map .appletButtonDis::before,
+.siebui-applet-header .siebui-viz-button-grid .appletButtonDis::before,
+.siebui-applet-header .siebui-viz-button-detail .appletButtonDis::before,
+.siebui-applet-header .siebui-viz-button-tile .appletButtonDis::before,
+.siebui-applet-header .siebui-viz-button-detail .appletButtonDis::before,
+.siebui-applet-header .siebui-viz-button-tilegrid .appletButtonDis::before,
+.siebui-applet-header .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.appletButtonDis::before,
+.siebui-applet-header .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl.siebui-dashboard-ctrl-update .appletButtonDis::before,
+.siebui-applet-header .siebui-icon-createrecord::after,
+.siebui-applet-header .siebui-view-navs .siebui-nav-tabView .ui-tabs-nav .ui-state-focus::after,
+.siebui-applet-header .siebui-subview-navs .siebui-nav-tabView .ui-tabs-nav .ui-state-focus::after,
+.siebui-applet-header .siebui-subview-screennavs .siebui-nav-tabView .ui-tabs-nav .ui-state-focus::after,
+.siebui-applet-header .siebui-view-navs .siebui-nav-tabView .ui-tabs-nav .ui-tabs-active::after,
+.siebui-applet-header .siebui-subview-navs .siebui-nav-tabView .ui-tabs-nav .ui-tabs-active::after,
+.siebui-applet-header .siebui-subview-screennavs .siebui-nav-tabView .ui-tabs-nav .ui-tabs-active::after,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav .ui-tabs-active::after,
+.siebui-applet-header .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav .ui-tabs-active::after,
+.siebui-applet-header .siebui-ecfg-form-control.siebui-ecfg-search-input+.siebui-ecfg-search-btn::before,
+.siebui-applet-header .siebui-icon-newrule::before,
+.siebui-applet-header .siebui-cfg-rules-insertion-container .siebui-icon-showpopup::before,
+.siebui-applet-header .siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-list ul.dynatree-container>li>.dynatree-node>.dynatree-connector::before,
+.siebui-applet-header .siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-list ul.dynatree-container>li>.dynatree-node>.dynatree-expander::before,
+.siebui-applet-header .siebui-loginprm-col2 .siebui-icon-help::before,
+.siebui-applet-header .siebui-self-service .siebui-login-body .siebui-icon-help::before,
+.siebui-applet-header .siebui-chart-icon-bar-hor::before,
+.siebui-applet-header .siebui-chart-icon-pie::before,
+.siebui-applet-header .siebui-icon-deleteselection::before,
+.siebui-applet-header .siebui-icon-newline::before{
+    color: #fff;
+}
+.btn-icon, .btn-link, .siebui-icon-calc, .siebui-icon-currency, .siebui-icon-date, .siebui-icon-datetime, .siebui-icon-detail, .siebui-icon-dropdown, .siebui-icon-effdate, .siebui-icon-mvg, .siebui-icon-pick, .siebui-icon-phone-outbound, .siebui-icon-mailto, .siebui-icon-date, .siebui-appletmenu-btn, .siebui-icon-createrecord, .siebui-icon-deleterecord, .siebui-icon-deleterequest, .siebui-icon-writerecord, .siebui-icon-explicitwriterecord, .siebui-icon-undorecord, .siebui-icon-executequery, .siebui-icon-newquery, .siebui-icon-newrecord, .siebui-icon-editrecord, .siebui-icon-showqueryassistant, .siebui-icon-undoquery, .siebui-icon-find, .siebui-icon-helptext_org_chart_new, .ui-dialog .ui-dialog-content .siebui-popup-select-columns .siebui-popup-ctrl .siebui-btn-icon-e, .siebui-applet .siebui-applet-header .siebui-label-btn, .siebui-applet .siebui-applet-header button, .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.siebui-ctrl-btn, .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl.siebui-dashboard-ctrl-update .siebui-ctrl-btn, .siebui-chat-pane .siebui-chat .siebui-chat-pane-header .siebui-chat-close, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-toggle-area .siebui-chat-dashboard-toggle .siebui-chat-dashboard-switch-visible, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-toggle-area .siebui-chat-dashboard-toggle .siebui-chat-dashboard-switch-hidden, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-body .siebui-chat-dashboard .siebui-chat-dashboard-item-content .siebui-chat-dashboard-item-content-wrap .siebui-chat-dashboard-item-content-btn, .siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-links a, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-side-toggle-wide, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-side-toggle-wide, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-side-toggle-wide, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-side-toggle-narrow, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-side-toggle-narrow, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-side-toggle-narrow, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-dock-toggle-pin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-dock-toggle-pin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-dock-toggle-pin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-dock-toggle-unpin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-dock-toggle-unpin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-dock-toggle-unpin, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-close, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-close, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-close, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-cti-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-cti-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-cti-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-cti-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-cti-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-cti-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-dashboard-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-dashboard-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-dashboard-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-dashboard-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-dashboard-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-dashboard-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-chat-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-chat-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-chat-toggle-more, .siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-chat-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-chat-toggle-less, .siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-chat-toggle-less, .siebui-search-esearch .siebui-search-button, .siebui-appletTitleSection .siebui-appletmenu-btn, .siebui-appletTitleSection .siebui-appletmenu-btn:hover, .siebui-appletTitleSection .siebui-appletmenu-btn:active, .siebui-appletTitleSection .siebui-appletmenu-btn:focus, .siebui-appletTitleSection .siebui-ganttFilterPane, .siebui-appletTitleSection .siebui-ganttFilter, .siebui-appletTitleSection .siebui-ganttFilter:active, .siebui-appletTitleSection .siebui-ganttFilter:focus, .siebui-prevButton, .siebui-nextButton, .siebui-prevSetButton, .siebui-nextSetButton, .siebui-todayButton, .siebui-msgbar-popup #MakeAllMsgReadBtn, .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .ui-accordion-header .siebui-msgbar-dismiss a, .siebui-telco-view1 .siebui-telco-view1Row1 .siebui-telco-view1Row1Col1 .siebui-applet .siebui-applet-header .siebui-applet-container.siebui-collapsible .siebui-btn-icon-expanded, .siebui-telco-view1 .siebui-telco-view1Row1 .siebui-telco-view1Row1Col1 .siebui-applet .siebui-applet-header .siebui-applet-container.siebui-collapsible .siebui-btn-icon-collapsed, .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.appletButton, .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl.siebui-dashboard-ctrl-update .appletButton, .siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.appletButtonDis, .siebui-dashboard-container .siebui-dashboard-control-area .siebui-dashboard-ctrl.siebui-dashboard-ctrl-update .appletButtonDis, .siebui-icon-newrule, .siebui-cfg-rules-insertion-container .siebui-icon-showpopup, .siebui-icon-deleteselection, .siebui-icon-newline, .siebui-barcode button {
+    /*color: #fff;*/
+}
+.siebui-icon-newrecord span, .siebui-icon-editrecord span, .siebui-icon-showqueryassistant span, .siebui-icon-undoquery span, .siebui-icon-find span, .siebui-icon-newrule span, .siebui-cfg-rules-insertion-container .siebui-icon-showpopup span, .siebui-icon-deleteselection span, .siebui-icon-newline span {
+    display: none!important;
+}
+.siebui-applet-header .siebui-file-label{
+    font-size: 0;
+    width: 15px;
+    overflow-x: hidden;
+}
+.siebui-applet-header .siebui-file-label::before{
+    font-size: 15px;
+    content: "\e6a4" !important;
+    line-height: 21px;
+}
+.siebui-applet .AppletButtons button, .siebui-applet .siebui-applet-buttons button, .siebui-popup-cti-call-from-ui .ui-dialog-buttonpane .ui-dialog-buttonset>button {
+    z-index: 15000;
+}
+/*,
+.siebui-label-btn .siebui-ctrl-file {
+    /!*visibility: visible;*!/
+}*/
+/*---------------------------------------------------------------------------*/
+/*------------------------------  TASK UI            ------------------------*/
+/*---------------------------------------------------------------------------*/
+.siebui-applet-taskui-h{
+    color: #666;
+    background: #93d6d4;
+}
+.siebui-applet-taskui-h{
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    margin-left: 8px;
+    border-radius: 0 0 4px 4px;
+    font-size: 1.4em;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1em;
+    text-shadow: 0 -1px #000000;
+    -webkit-box-shadow: 1px 0 7px #aaa;
+    box-shadow: 1px 0 7px #aaa;
+}
+.siebui-applet-taskui-spacer{
+    display: none;
+}
+.siebui-align-left .siebui-taskui-playbar-top{
+    text-align: left !important;
+}
+
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div {
+    float: left;
+    height: 42px;
+    line-height: 42px;
+}
+
+/* CTI Toolbar Begin */
+
+/* Toolbar Buttons (main menu!) / Shortcuts */
+
+#_sweclient .siebui-button-toolbar #_sweviewbar {
+    max-width: 620px;
+}
+
+#_sweclient #_sweappmenu {
+    position: relative;
+}
+#_sweclient #_sweappmenu > div > iframe{
+    /*display:none;*/
+    width: 142px;
+    height: 25px;
+}
+
+.com_siebel_applets_toolbar_CSSToolBarApplet_class {
+    overflow: auto;
+    white-space: nowrap;
+    display: inline;
+    opacity: 1;
+}
+
+/* CTI DIV Layout */
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div {
+    float: left;
+    height: 42px;/*Ð±Ñ‹Ð»Ð¾ 26px*/
+    line-height: 42px;/*Ð±Ñ‹Ð»Ð¾ 26px*/
+}
+
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div:last-child {
+    clear: right;
+}
+
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div img,
+img.ToolbarButtonOff,
+img.ToolbarButtonOn,
+.ToolbarButton a  {
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 16px;
+
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 0 rgba(255,255,255,0.6);
+    box-shadow:         0 0 0 rgba(255,255,255,0.6);
+    font-weight: bold;
+    padding: 3px;
+    margin: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    opacity: 1;
+
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+}
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div img{
+    height: 40px;/*Ð²Ñ‹ÑÐ¾Ñ‚Ð° ÐºÐ°Ñ€Ñ‚Ð¸Ð½Ð¾Ðº28px*/
+    width: 40px;/*Ð²Ñ‹ÑÐ¾Ñ‚Ð° ÐºÐ°Ñ€Ñ‚Ð¸Ð½Ð¾Ðº28px*/
+    padding: 0px; /*Ð¾Ñ‚ÑÑ‚ÑƒÐ¿Ñ‹*/
+}
+img.ToolbarButtonOff {
+    opacity: 0.3;
+}
+
+ul.siebui-toolbar{
+    padding: 0 1px;
+}
+
+ul.siebui-toolbar li{
+    float: left;
+    display: inline;
+}
+
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div img:hover,
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div img:focus,
+img.ToolbarButtonOn:hover,
+img.ToolbarButtonOn:focus,
+.ToolbarButton a:hover,
+.ToolbarButton a:focus {
+    opacity: 1;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;
+    box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;
+}
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div img:active,
+img.ToolbarButtonOn:active,
+.ToolbarButton a:active  {
+    opacity: 1;
+    -webkit-box-shadow: inset 0 1px 2px #aaa;
+    box-shadow:         inset 0 1px 2px #aaa;
+}
+
+img.ToolbarButtonOff:hover,
+img.ToolbarButtonOff:focus{
+}
+
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div.siebui-commbtn-disabled img,
+.com_siebel_applets_toolbar_CSSToolBarApplet_class > div div.siebui-commbtn-disabled img{
+    opacity: 0.45;
+    cursor: default!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    background: none!important;
+}
+
+
+#Media_Indicator, #InQueue_Time {  /* must overrule button defs, these are static! */
+    cursor: default;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    background: none!important;
+    border: 1px solid transparent!important;
+    opacity: 1!important;
+}
+
+
+/* CTI Top Level Button Container */
+.commTopBtnContainer {
+}
+
+/* CTI Sideway Button Container */
+.commSidewayBtnContainer {
+}
+
+/* CTI Subcommand DIV */
+.com_siebel_applets_toolbar_CSSToolBarApplet_class>div>div {
+    float: left;
+}
+
+/* Separator Container */
+.commSepContainer {
+    margin: 0 3px;
+}
+
+/* CTI Separator */
+.commSep {
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+/* CTI Timer Container */
+.commTimerContainer {
+    margin: 0 0 0 3px;
+}
+
+/* CTI Timer */
+.commTimerSpan {
+    border-radius: 2px 2px 2px 2px;
+    display: inline-block;
+    font-family: monospace,verdana;
+    font-size: 11px;
+    height: 17px;
+    line-height: 16px;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+/* CTI Edit Container */
+.commEditContainer {
+}
+input.commEdit {
+    vertical-align: middle;
+    font-size: 10px;
+
+    border-radius: 2px;
+
+    margin-left: 4px;
+    padding: 2px 5px
+}
+input.commEdit:active,
+input.commEdit:focus,
+input.commEdit:hover{
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* CTI Combo Container */
+.commComboContainer {
+    margin: 0 2px;
+}
+.commCombo {
+    vertical-align: middle;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 2px;
+    width:15em!important;
+	    background-color: #e8ebf3;
+}
+
+
+/* CTI Image */
+
+.com_siebel_applets_toolbar_CSSToolBarApplet_class>div>img {
+    padding: 9px;
+}
+
+.com_siebel_applets_toolbar_CSSToolBarApplet_class>div>div>img {
+    __margin: 2px 1px;
+    __padding: 3px;
+}
+
+.commStatusBox {
+    font-weight:bold;
+    color:black;
+    font-size: 0.8em;
+    text-decoration:none;
+}
+#CommStatusBox /*rgaraev - ÑÐºÑ€Ñ‹Ð» ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ñ Ð¾Ñ‚ gplus*/
+{
+    display: none;
+}
+#Employee,
+#Additional
+{
+	height: 24px;
+  width: 11.5em !important;
+  line-height: 20px;
+  font-size: 10pt;
+  color: black;
+  border: none !important;
+      background-color: #e8ebf3;
+}
+#Work_Edit,
+#Working_Time
+{
+   height: 24px;
+    line-height: 23px;
+    font-size: 15pt;
+    color: black;
+    border: none !important;
+        background-color: #e8ebf3;
+}
+
+/* floated */
+
+.floatToolbar {
+    border-radius: 2px;
+    position: absolute;
+    z-index:9999;
+    width:250px;
+    padding: 10px;
+    white-space:nowrap;
+
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    white-space:nowrap;
+    overflow:hidden !important;
+}
+
+.floatToolbar.com_siebel_applets_toolbar_CSSToolBarApplet_class > div {
+    margin: 2px 0;
+}
+
+.floatToolbar .commSepContainer{
+    display: none;
+}
+
+.floatToolbar #CommBtn_Initiate_Work_Item{
+    clear:left;
+}
+.floatToolbar .commComboContainer {
+    width: 98% !important;
+}
+.floatToolbar .commCombo {
+    width: 98% !important;
+}
+
+.siebui-call-from-ui-disabled {
+    text-decoration: none;
+    cursor: default;
+}
+
+.siebui-call-from-ui-enabled {
+    text-decoration: underline;
+    cursor: auto;
+}
+
+.commMakeCallFromUIPopup {
+    /*user could change the size of make call popup here with !important*/
+}
+
+#ui-dialog-title-comm_makecall_popup {
+    font-weight: bold;
+}
+.siebui-navigation-tab #_swecontent {
+    top: 177px;
+}
+/* CTI Toolbar End */
+
+.ui-jqgrid .ui-jqgrid-btable .ui-state-highlight td{
+    background-color: rgba(192, 192, 192, 0.46) !important;
+    color:black;
+}
+.no-touch .ui-jqgrid .ui-jqgrid-btable tr:hover td{
+    background-color: #ebebed !important;
+    color: #000000;
+}
+
+/* сделано чтобы скрыть строчку у ки Заявка на рассмотрении -Кредитная история - Кредиты в лето  LETO-5531 AKHALIDOVA */
+.ui-jqgrid .ui-jqgrid-sdiv{
+  display: none !important; 
+}
+/* Header Msg String    LETO-5531  в ATCCCFrameBanner.swt было указание на класс siebui-tb-cti-status-msg-container в файле theme-aurora  */
+
+/*LETO-5746*/
+.ui-autocomplete {
+    max-height: 250px;
+}
+/*LETO-5746*/
+
+    #MsgLayer {
+         position: fixed;
+    /* left: 100px; */
+    bottom: 6px;
+    /* float: right; */
+    height: 34px;
+    right: 24px;
+    line-height: 1em;
+    margin: 2px 0 0;
+    overflow: hidden;
+    max-width: 210px;
+    line-height: 31px;
+    color: #fff;
+    background: #c24839;
+    z-index: 1;
+}
+    .CommStatusMessage {
+        box-shadow: 0 0 2px #000000 inset;
+        -webkit-box-shadow: 0 0 2px #000000 inset;
+        display: inline-block;
+        font-size: 0.8em;
+        font-weight: bold;
+        line-height: 1.5em;
+        padding: 3px 10px;
+    }
+
+    /* HTML Popup Msg Bar  */
+
+    #MsgBar{ /*rgaraev*/
+        box-shadow: 0 0 4px #000000;
+        -webkit-box-shadow: 0 0 4px #000000;
+        border-radius: 2px 2px 2px 2px;
+        display: block;
+        /*font-size:  1.5em; 0.75em*/
+        font-weight: bold;
+       /* height: 30px; /*18*/
+        line-height: 30px; /*18*/
+       /* margin-top: 4px;*/
+        padding: 0;
+        text-align: center;
+        text-decoration: none;
+       /* width: 50px; /**/
+    }
+  
+.siebui-span-lg-4 .siebui-label{
+ width:89%;
+ white-space:nowrap;
+ }  
+  
+/*LETO-5859>>dnyudlchiev НАЧАЛО*/
+@media(min-width:1200px){
+  .siebui-extend-ctrl,.siebui-ctrl-mvg,.siebui-ctrl-calc,.siebui-ctrl-currency,.siebui-ctrl-date,.siebui-ctrl-datetime,.siebui-ctrl-effdate,.siebui-ctrl-pick,.siebui-ctrl-select,.siebui-ctrl-phone,.siebui-ctrl-mailto,.siebui-ctrl-textarea,.siebui-ctrl-input,.siebui-ctrl-url,.mceGridField .siebui-ctrl-input ~ span .siebui-anchor-readonly,.siebui-search-esearch .siebui-search-bg .siebui-search-combobox-searchLookin,.siebui-search-esearch .siebui-search-bg .siebui-search-textbox-srch,.siebui-drilldown-input,.siebui-input-popup ~ span .siebui-anchor-readonly,.siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row1 .siebui-catalog-ctrl-input,.siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row1 .siebui-catalog-ctrl-input,.siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row2 .siebui-catalog-ctrl-input,.siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row2 .siebui-catalog-ctrl-input,.siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 .siebui-catalog-ctrl-input,.siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 .siebui-catalog-ctrl-input,.siebui-button-toolbar .siebui-tb-cti-container .siebui-tb-cti-timer,.siebui-button-toolbar .siebui-tb-cti-container input.siebui-tb-cti-edit-box,.siebui-button-toolbar .siebui-tb-cti-container .siebui-tb-cti-dropdown,.siebui-comm-panel-container .siebui-tb-cti-container .siebui-tb-cti .siebui-tb-cti-timer,.siebui-comm-panel-container .siebui-tb-cti-container .siebui-tb-cti .siebui-tb-cti-edit-box,.siebui-comm-panel-container .siebui-tb-cti-container .siebui-tb-cti .siebui-tb-cti-dropdown,.siebui-search-esearch .siebui-search-bg .siebui-search-combobox-searchLookin,.siebui-search-esearch .siebui-search-bg .siebui-search-textbox-srch{
+  font-size: 11px;
+  }
+}
+@media(min-width:1200px){
+  .ui-jqgrid .ui-jqgrid-btable td{
+    font-size:11px;
+  }
+}
+@media(min-width:1200px){
+  .siebui-label-btn,.miniBtnUIC>button,.appletButton,.appletButtons,.siebui-ctrl-btn,.appletButton,.appletButtonDis,.ui-dialog .ui-dialog-content .AppletButtons .siebui-popup-action a,.ui-dialog .ui-dialog-content .siebui-popup-select-columns .siebui-popup-ctrl .siebui-btn-icon-e,.ui-menu.ui-autocomplete .ui-menu-item,.ui-menu .ui-menu-item a,.siebui-view .ui-body-g .ui-btn,.siebui-view-navs .siebui-nav-tabScreen .ui-tabs-nav li a,.siebui-subview-navs .siebui-nav-tabScreen .ui-tabs-nav li a,.siebui-subview-screennavs .siebui-nav-tabScreen .ui-tabs-nav li a,.siebui-view-navs .siebui-nav-tabView .ui-tabs-nav li a,.siebui-subview-navs .siebui-nav-tabView .ui-tabs-nav li a,.siebui-subview-screennavs .siebui-nav-tabView .ui-tabs-nav li a,.siebui-navigation-tree .siebui-subview-navs .dynatree-container li a,.siebui-popup-cti-call-from-ui .ui-dialog-buttonpane .ui-dialog-buttonset>button,.siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.siebui-ctrl-btn,.siebui-chat-pane .siebui-chat .siebui-chat-pane-header .siebui-chat-close,.siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-toggle-area .siebui-chat-dashboard-toggle .siebui-chat-dashboard-switch-visible::before,.siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-toggle-area .siebui-chat-dashboard-toggle .siebui-chat-dashboard-switch-hidden::before,.siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-links a::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-side-toggle-wide::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-side-toggle-wide::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-side-toggle-wide::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-side-toggle-narrow::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-side-toggle-narrow::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-side-toggle-narrow::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-dock-toggle-pin::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-dock-toggle-pin::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-dock-toggle-pin::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-dock-toggle-unpin::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-dock-toggle-unpin::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-dock-toggle-unpin::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-side-toggle .siebui-comm-panel-close::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-dock-toggle .siebui-comm-panel-close::before,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-btns .siebui-comm-panel-close-toggle .siebui-comm-panel-close::before,.siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-cti-toggle-more::before,.siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-cti-toggle-more::before,.siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-cti-toggle-more::before,.siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-cti-toggle-less::before,.siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-cti-toggle-less::before,.siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-cti-toggle-less::before,.siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-dashboard-toggle-more::before,.siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-dashboard-toggle-more::before,.siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-dashboard-toggle-more::before,.siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-dashboard-toggle-less::before,.siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-dashboard-toggle-less::before,.siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-dashboard-toggle-less::before,.siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-chat-toggle-more::before,.siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-chat-toggle-more::before,.siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-chat-toggle-more::before,.siebui-comm-panel-container .siebui-comm-panel-cti-toggle .siebui-comm-panel-chat-toggle-less::before,.siebui-comm-panel-container .siebui-comm-panel-dashboard-toggle .siebui-comm-panel-chat-toggle-less::before,.siebui-comm-panel-container .siebui-comm-panel-chat-toggle .siebui-comm-panel-chat-toggle-less::before,.siebui-nav-hb.siebui-offline-nav .siebui-nav-hb-gooffline-visible .siebui-offline-navoptions,.siebui-search-esearch .siebui-search-button,.siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.appletButton,.siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-value .siebui-dashboard-element.appletButtonDis,.siebui-sub-applets .siebui-subview-screennavs .siebui-nav-tabView .ui-tabs-nav li a,.siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav li a,.siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs ul.ui-tabs-nav li a,.siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-head .siebui-chat-tab-head-items .siebui-chat-tab-head-item a,.siebui-ctrl-password ~ .siebui-ctrl-link{
+    padding:5px 10px;
+    font-size:11px;
+    line-height:21px
+  }
+}
+@media(min-width:1200px){
+  .ui-jqgrid .ui-widget-content input,.ui-jqgrid .ui-widget-content select,.ui-jqgrid .ui-widget-content textarea{
+    font-size:11px
+  }
+}
+@media(min-width:1200px){
+  .siebui-label,.scLabelRight,.ui-dialog .ui-dialog-content .siebui-popup-label,.siebui-label span,.scLabelRight span,.siebui-send-email .siebui-email-row .siebui-email-label .siebui-ctrl-btn span,.siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row1 ul li .siebui-catalog-label,.siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row1 ul li .siebui-catalog-label,.siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row2 ul li .siebui-catalog-label,.siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row2 ul li .siebui-catalog-label,.siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 ul li .siebui-catalog-label,.siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col .siebui-catalog-right-row3 ul li .siebui-catalog-label,.siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-middle-col .siebui-catalog-tile-description .siebui-catalog-label,.siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell .siebui-dashboard-time-label,.siebui-dashboard-container .siebui-dashboard-field-area .siebui-dashboard-cell label.siebui-dashboard-element,.siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-body .siebui-chat-dashboard .siebui-chat-dashboard-item-title .siebui-chat-dashboard-item-name,.siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-tabs .siebui-chat-tab-body .siebui-chat-dashboard .siebui-chat-dashboard-item-title .siebui-chat-dashboard-item-colon,.siebui-chat-pane .siebui-chat .siebui-chat-wrap .siebui-chat-toolbar .siebui-chat-toolbar-label,.siebui-telco-view1 .siebui-telco-view1Row1 .siebui-telco-view1Row1Col3 .siebui-applet .siebui-view1-row1col3-hdr .siebui-view1-row1col3-row1 .siebui-view1-row1col3-row1col2 .siebui-view1-row1col3-text,.siebui-send-email .siebui-email-row .siebui-email-label .appletButton span,.siebui-send-email .siebui-email-row .siebui-email-label .appletButtonDis span,.siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs .siebui-catalog-eligibility-reason,.siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-right-col.siebui-catalog-tabs .siebui-catalog-eligibility-reason,.siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile .siebui-catalog-tile-inner-container .siebui-catalog-tile-description .siebui-catalog-label,.siebui-popup-cti-call-from-ui .siebui-popup-cti-call-from-ui-text{
+    font-size:11px
+  }
+}
+.siebui-applet-title,.ui-dialog .ui-dialog-titlebar .ui-dialog-title,.siebui-screen-applet-head .siebui-screen-hp-title,.siebui-applet .siebui-applet-header .vis-dropdown label,.siebui-applet .siebui-applet-header .siebui-applet-title label,.siebui-chat-pane .siebui-chat .siebui-chat-pane-header .siebui-chat-caption,.siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-caption,.siebui-dateRange,.siebui-task-assist-pane .siebui-task-assist .siebui-task-assist-header .siebui-task-assist-title,.siebui-report-accordion,.siebui-report-caption,#taskpaneHeader,.siebui-epui-integrated-applet .siebui-epui-header-applet .siebui-epui-rule-head{
+  font-size:16px;
+ 
+ .siebui-applet .AppletButtons .siebui-applet-title, .siebui-applet .siebui-applet-buttons .siebui-applet-title {
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.siebui-applet .siebui-applet-buttons, .siebui-comm-panel-container .siebui-comm-panel-frame .siebui-comm-panel-header .siebui-comm-panel-message-cti, .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-unreadmessage, .siebui-msgbar-popup .siebui-msgbrdcst-summary .siebui-msgbrdcst-accordian .siebui-readmessage {
+
+    background: none !important;
+}
+
+}
+.siebui-applet .AppletButtons .siebui-applet-title label,.siebui-applet .siebui-applet-buttons .siebui-applet-title label{
+  font-size:16px
+}
+@media(min-width:1200px){
+  .ui-jqgrid .ui-widget-content a.drilldown,.ui-jqgrid .ui-widget-content a.email,.ui-jqgrid .ui-widget-content .siebui-ctrl-drilldown{
+    font-size:11px
+  }
+/*LETO-5859>>dnyudlchiev КОНЕЦ*/
+
+.siebui-applet .siebui-applet-header {
+    min-height: 50px;
+    width: 100%;
+}
+
+}
+
+div[title="Цель кредита Аплет формы"] div.siebui-applet-header {       
+    min-height: 50px; !important
+}
+
+.siebui-icon-dropdown::before {
+  content: "\e64f" !important;
+  color: #D51254 !important;
+    position: relative;
+  top: 2px;
+}
+
+.siebui-tile {
+    /*width: 80px !important;
+    height: 80px !important;*/
+    border-radius: 20px !important;
+}
+
+div[title="Быстрый выбор Аплет списка"] {
+    height: 153px;
+    text-align: center;
+}
+
+div[title="Быстрый выбор Аплет списка"] i {
+    font-size: 3.5em;
+    color: #283B8A;
+}
+
+.siebui-tile-navlink_desc, .siebui-ctrl-drilldown {
+    font-size: 1em;
+    color: black !important;
+    text-decoration: underline;
+}
+
+.siebui-tile-navlink-img {
+    margin-top: 10px;
+}
+
+.siebui-tile-list {
+  width: auto !important;
+}
+
+
+
+.siebui-badge {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    background-color: red;
+    border-radius: 15px;
+    padding: 4px 8px;
+    position: absolute;
+    top: -10px;
+    right: -9px;
+}
+
+.ui-jqgrid .ui-jqgrid-btable tr:nth-child(even) td {
+}
+.siebui-tile-container .siebui-tile {
+  -webkit-box-shadow: 0 0 0px gray;
+    -moz-box-shadow: 0 0 0px gray;
+    box-shadow: 0px 0px 0px 0px gray;
+    width: auto !important;
+    border-radius: 0px !important;
+    background-color: #F1F1F1 !important;
+    color: #D51254;
+    border: none;
+    margin-top: 0;
+    margin-right: 0;
+      font-size: 14px;
+
+}
+.siebui-tile-container .siebui-tile .siebui-tile-navlink-img {
+  text-decoration: none;
+  border-bottom: 1px dashed #D51254;
+    font-weight: bold;
+}
+
+.siebui-tile-container .siebui-tile.siebui-tile-selected, .siebui-catalogview-table .siebui-catalog-tile-container .siebui-tile.siebui-tile-selected, .siebui-catalogview-table .siebui-catalog-grid-layout .siebui-tile.siebui-tile-selected {
+    -webkit-box-shadow: 0 0 0px gray;
+    -moz-box-shadow: 0 0 0px gray;
+    box-shadow: 0px 0px 0px 0px gray;
+    background-color: #fafafb !important;
+    color: black;
+    border: none;
+    width: auto;
+    margin-top: 0;
+    margin-right: 0;
+}
+.siebui-tile-list .siebui-tile-selected .siebui-tile-navlink-img{
+  text-decoration: none;
+  border-bottom: 1px dashed white !important;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.ATCRefinancedParametersViewKI {
+  background-image: url(../../images/icons/refinance.png);
+  background-repeat: no-repeat;
+  width:20px;
+  height: 20px;
+  float: left;
+  position: relative;
+  left: -15px;
+}

@@ -1,0 +1,48 @@
+<div id="PhotoPopup" >   
+   <div id="PhotoHeader"><span id="PhotoHeaderText">Фотографирование Клиента</span></div>
+    <div id="PhotoFrame">
+        <div id="PhotoVideoFrame">
+            <div id="PhotoImageHolder">
+                <img id="PhotoImagePreview" />
+                <img class="PhotoImagePreviewInProgress" style="display:none"  src="IMAGES/custom/VoiceRecorderImages/inprogress-big.gif"/>
+                <div id="PhotoHoverErrorMessage" style="display:none">
+                    <div id="PhotoHoverErrorMessageText">                        
+                    </div>
+                </div>
+            </div>
+            <video id="PhotoVideoWebcam" style="display:none"></video>
+            <canvas id="PhotoVideoCanvas" style="display:none"></canvas>
+            <div id="PhotoTextData">
+                <div id="PhotoInfoData" style="display:none"></div>
+                <div id="PhotoDebugData" style="display:none">
+                    <ul id="PhotoDebugData"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="PhotoFrameCarusele"><div class="Wrap"><ul id="lightSlider"></ul></div>            
+        </div>
+    </div>
+    <div id="PhotoResult">
+        <span id="PhotoCheckInProgress" style="display:none">Подождите, идет проверка изображения</span>
+        <span id="PhotoCheckSuccess" style="display:none">Проверка фотографии осуществлена успешно!</span>
+        <span id="PhotoCheckError" style="display:none">Проверка фотографии осуществлена неудачно!</span>
+        <span id="PhotoCheckSystemError" style="display:none">Оборудование для фотографирования не найдено. 
+            <p>Проверьте правильность подключения веб-камеры и настройки браузера.</p></span>
+        <span id="PhotoCheckInfo" style="display:none">
+            <p>
+                Для получения фотографии надлежащего качества следуйте подсказкам на экране.
+            </p>
+            <ul>
+                <li>Прерывистые линии должны пересекаться на переносице клиента</li>
+                <li>Вертикальная линия должна проходить по середине носа</li>
+                <li>Глаза должны находиться на уровне горизонтальной линии</li>
+            </ul>
+        </span>
+    </div>
+    <div id="PhotoFooter">
+        <button id="PhotoPopupCancel">Отмена</button>
+        <button id="PhotoPopupPhoto" disabled>Фотографировать</button>
+        <button id="PhotoPopupSave" disabled>Сохранить</button>
+    </div>
+</div>
+<canvas style="display:none" id="PhotoBestShot"></canvas>       

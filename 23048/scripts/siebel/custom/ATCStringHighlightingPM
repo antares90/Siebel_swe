@@ -1,0 +1,36 @@
+//Regenerate using:http://duncanford.github.io/prpm-code-generator/?prpm=PM&object=DesktopForm&name=ATCStringHighlighting&userprops=&comments=Yes&logging=Yes
+if (typeof(SiebelAppFacade.ATCStringHighlightingPM) === "undefined") {
+
+ SiebelJS.Namespace("SiebelAppFacade.ATCStringHighlightingPM");
+ define("siebel/custom/ATCStringHighlightingPM", ["siebel/listpmodel"],
+  function () {
+   SiebelAppFacade.ATCStringHighlightingPM = (function () {
+
+    function ATCStringHighlightingPM(pm) {
+     SiebelAppFacade.ATCStringHighlightingPM.superclass.constructor.apply(this, arguments);
+    }
+
+    SiebelJS.Extend(ATCStringHighlightingPM, SiebelAppFacade.PresentationModel);
+
+    ATCStringHighlightingPM.prototype.Init = function () {
+     // Init is called each time the object is initialised.
+     // Add code here that should happen before default processing
+     SiebelAppFacade.ATCStringHighlightingPM.superclass.Init.apply(this, arguments);
+     SiebelJS.Log(this.Get("GetName")+": ATCStringHighlightingPM:      Init method reached.");
+     // Add code here that should happen after default processing
+    }
+
+    ATCStringHighlightingPM.prototype.Setup = function (propSet) {
+     // Setup is called each time the object is initialised.
+     // Add code here that should happen before default processing
+     SiebelJS.Log(this.Get("GetName")+": ATCStringHighlightingPM:      Setup method reached.");
+     SiebelAppFacade.ATCStringHighlightingPM.superclass.Setup.apply(this, arguments);
+     // Add code here that should happen after default processing
+    }
+
+    return ATCStringHighlightingPM;
+   }()
+  );
+  return "SiebelAppFacade.ATCStringHighlightingPM";
+ })
+}

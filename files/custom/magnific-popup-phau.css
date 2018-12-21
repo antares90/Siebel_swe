@@ -1,0 +1,293 @@
+@import "../../files/3rdParty/magnific-popup/magnific-popup.css";
+@import "../../files/3rdParty/lightslider/css/lightslider.css";
+@import "../../FONTS/custom/stylesheet.css";
+
+#PhotoPopup {
+    position: relative;
+    background: #FFF;    
+    width: auto;
+    width: 584px;
+    margin: 20px auto;
+}
+
+#PhotoHeader, #PhotoFrame, #PhotoVideoFrame, #PhotoResult, #PhotoFooter 
+{
+    border-style: solid;
+    border-color: #E0E0E0;
+    border-width: thin;
+    display: flex;
+    align-items: center;
+}
+#PhotoHeader {
+    height: 75px;
+}
+
+#PhotoFrame {
+    height: 375px;
+}
+
+#PhotoResult {
+    height:110px;
+}
+
+#PhotoFooter {
+    height:110px;
+}
+
+#PhotoVideoFrame {
+    width: 420px;
+    height: 312px;
+    overflow: hidden;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    position:relative;
+}
+
+#PhotoHeaderText, #PhotoCheckError, #PhotoCheckInProgress, #PhotoCheckSuccess, #PhotoCheckSystemError {
+    line-height: 46px;
+    font-family: "HelveticaNeueCyr";
+    margin-left: 30px;
+}
+
+#PhotoCheckSystemError {
+    line-height: 10px;
+    font-family: "HelveticaNeueCyr";
+    margin-left: 30px;
+}
+    #PhotoCheckSystemError p{
+        margin-left:20px;
+        font-size:12px;
+    }
+
+    #PhotoHeaderText {
+        font-size: 20px;
+        color: rgb(28,29,33);
+    }
+
+#PhotoCheckError, #PhotoCheckSuccess, #PhotoCheckInProgress, #PhotoCheckSystemError {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+#PhotoInfoData {
+    font-family: "HelveticaNeueCyr";
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#PhotoCheckError, 
+#PhotoInfoData, 
+#PhotoCheckSystemError {
+    color: rgb(255,0,0);
+}
+#PhotoCheckSuccess {
+    color: rgb(31,160,65);
+}
+#PhotoCheckInProgress {
+    color: rgb(79,124,189);
+}
+
+#PhotoFrameCarusele {
+    height: 312px;
+    width: 85px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+#PhotoCheckInfo {
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: "HelveticaNeueCyr";
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 13px;
+    margin-top: -20px;
+}
+
+    #PhotoCheckInfo ul {
+        list-style: disc;            
+        margin-right: 10px;
+        margin-left: 20px;
+        line-height: 15px;
+        font-size:14px;
+    }
+
+#PhotoCheckSuccess,
+#PhotoCheckInProgress,
+#PhotoCheckError,
+#PhotoCheckSystemError {
+    width: 523px;
+    height: 50px;
+    border-radius: 2px;
+    margin-left: 30px;
+}
+
+#PhotoCheckError,
+#PhotoCheckSystemError {
+    background-color: #ffe3e3;
+}
+
+#PhotoCheckSuccess {
+    background-color: #e3f8e3;
+}
+
+#PhotoCheckInProgress {
+    background-color: #dff2ff;
+}
+
+    #PhotoCheckError:before,
+    #PhotoCheckSuccess:before,
+    #PhotoCheckInProgress:before,
+    #PhotoCheckSystemError:before {
+        padding-left: 15px;
+        position: relative;
+        top: 4px;
+        margin-right: 20px;
+    }
+
+#PhotoCheckSuccess:before {
+    content: url(../../IMAGES/custom/VoiceRecorderImages/ic_check_circle_black_18px.png);
+}
+
+#PhotoCheckError:before,
+#PhotoCheckSystemError:before {
+    content: url(../../IMAGES/custom/VoiceRecorderImages/ic_cancel_black_24px.png);
+}
+
+#PhotoCheckInProgress:before {
+    content: url(../../IMAGES/custom/VoiceRecorderImages/inprogress-sm.gif);    
+}
+
+
+
+#PhotoPopupCancel,
+#PhotoPopupPhoto,
+#PhotoPopupSave {
+    font-family: "HelveticaNeueCyr";
+    color: rgb(255,255,255);
+    width: 130px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(75, 112, 52);
+}
+
+#PhotoPopupCancel {
+    background-color: #ff0000;
+    margin-left: 30px;
+}
+
+#PhotoPopupPhoto {
+    background-color: #4f7bbd;
+    margin-left: 57px;
+}
+
+#PhotoPopupSave {
+    background-color: #007f00;
+    margin-left: 57px;
+}
+
+    #PhotoPopupPhoto:disabled,
+    #PhotoPopupSave:disabled {
+        color: rgb(164,165,165);
+        background-color: rgb(239, 239, 239);
+        border: none;
+    }
+
+#PhotoVideoWebcam {
+    height: 100%;
+    position: relative;
+}
+#PhotoVideoCanvas{
+    position:absolute;
+    top: 0px;
+}
+
+#PhotoTextData {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 300px;
+}
+#PhotoInfoData {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#PhotoDebugData{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+    #PhotoDebugData ul, #PhotoDebugData li {
+        margin: 0px 0px 0px 0px;
+    }
+
+
+#PhotoImagePreview {
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 87px;
+}
+
+#PhotoImageHolder {
+    height: 100%;
+    width: 100%;
+}
+.CheckInProgress {
+    filter: opacity(60%) grayscale(60%)
+}
+
+#PhotoImageHolder:hover .PhotoImagePreviewError {
+    opacity: 0.3;
+}
+#PhotoImageHolder:hover #PhotoHoverErrorMessage{
+    opacity: 1;
+}
+
+#PhotoHoverErrorMessage {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.PhotoImagePreviewInProgress, .PhotoImageError, .PhotoImageSuccess {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#PhotoFrameCarusele .container {
+    position: relative;   
+}
+
+ul#lightSlider .image {
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 2px;
+}
+
+#PhotoFrameCarusele .container-active {    
+    border-color: #a1bdde!important;    
+}
+
+#PhotoFrameCarusele ul{
+    width:70px
+}

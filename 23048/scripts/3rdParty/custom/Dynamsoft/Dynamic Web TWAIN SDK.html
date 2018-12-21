@@ -1,0 +1,994 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dynamic Web TWAIN SDK</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link href="Documents/res/Styles/default.css" type="text/css" rel="stylesheet" />
+    <link href="Documents/res/Styles/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="Documents/res/Scripts/jquery.js"></script>
+    <script type="text/javascript" src="Documents/res/Scripts/jquery-sample.js"></script>
+    <script type="text/javascript" src="Documents/res/Scripts/prettify.js"></script>
+</head>
+<body>
+    <div class="body_Broad_width">
+        <div class=" DWTPage">
+            <div class="DWTHeader">
+                <div class="header-top">
+                    <div class="tagline">
+                        11 Years of Experience in TWAIN SDKs and Version Control Solutions
+                    </div>
+                    <div class="tel">
+                        Tel: 1-877-605-5491
+                    </div>
+                </div>
+                <div class="logo">
+                    <div class="versionNo">11.2</div>
+                </div>
+
+            </div>
+            <div id="main_content">
+                <div id="tabs" class="pr">
+                    <ul class="tab-nav fb">
+                        <li><a id="showHelloWorld" href="#HelloWorld">Hello World</a></li>
+                        <li><a id="showSamplesTab" href="#Samples">Code Samples</a></li>
+                        <li><a id="showManualTab" href="#Manual">Documentation</a></li>
+                    </ul>
+                    
+                    <!-- anchor anchor -->
+                    <div style="cursor:pointer; position:absolute; z-index:9; top:120px; left:664px; width:180px; height:45px; display:none" id="anchor-go"></div>
+                    <div style="position:absolute; cursor:pointer; top:4680px; left:644px; z-index:9; height:45px; width:200px; display:none" id="anchor-back"></div>
+
+                    <div>
+                        <a class="btnPDF" href="Documents/Dynamic%20Web%20TWAIN%20Developer's%20Guide.pdf"
+                           target="_blank"><i class="icnPDF"></i>Developer's Guide (PDF)</a>
+                    </div>
+                    <div id="HelloWorld" class="tabcontent">
+                        <!--<img src="Documents/res/Images/Hello World Image.png" width="366" height="404" />-->
+                        <h1>
+                            Build a scan page in five minutes
+                        </h1>
+                        <p>
+                            <br />
+                            The following 3 steps will show you how to quickly create your first web-based scan application.
+                        </p>
+                        <div class="fx">
+                            <div class="icnOrder-Group">
+                                <a class="icnOrder-link" style="display: none;"><i class="icn-Order">1</i></a> <a class="icnOrder-link" style="display: none;"><i class="icn-Order">2</i></a>
+                                <a class="icnOrder-link" style="display: none;"><i class="icn-Order">3</i></a>
+                            </div>
+                        </div>
+                        <ol class="step">
+                            <li class="list-item list-item-1">
+                                <div class="w40-holder">
+                                    <i class="icn-Order">1</i>
+                                </div>
+                                <h2 class="fl">
+                                    <!--Create an empty HTML page and use the Dynamsoft's Resources folder-->
+                                    Start a Web Application
+                                    <br />
+                                    <!--<img src="Documents/res/Images/StepOne.png" width="239" height="84" alt="" />-->
+                                </h2>
+                                <div class="cl">
+                                </div>
+                                <ol class="subStep">
+                                    <li>
+                                        <h3>
+                                            1.1 Copy the Dynamsoft's Resources folder to your project
+                                        </h3>
+                                        <p>
+                                            <!--You can use any IDE of your choice.-->
+                                            The Resources folder can normally be copied from
+                                            <!--<br />-->
+                                            <!--<em class="folder">-->
+                                            C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number} {Trial}\<!--</em>--><br />
+                                            <img src="Documents/res/Images/ResourcesFolder.png" width="730" height="258" alt="" />
+                                        </p>
+                                        <!--<h4>
+                                            Code
+                                        </h4>-->
+                                        <!--<pre class="prettyprint linenums">
+                                        &lt;html&gt;
+                                        &lt;head&gt;
+                                            &lt;title&gt;Hello World&lt;/title&gt;
+                                        &lt;/head&gt;
+
+                                        &lt;body&gt;
+                                        &lt;/body&gt;
+                                        &lt;/html&gt;</pre>-->
+                                    </li>
+                                    <li>
+                                        <h3>
+                                            <!--1.2 Copy the Resources folder to the same location of the page.-->
+                                            1.2 Create an empty HTML page
+                                        </h3>
+                                        <p>
+
+                                            <!--<img src="Documents/res/Images/ResourcesFolder.png" width="738" height="309" />-->
+                                        </p>
+                                        <p>
+                                            Please put the empty html page under the same folder level as the Resources folder, as shown below:
+                                            <img src="Documents/res/Images/ResourcesAndHTML.png" width="351" height="68" />
+                                            <!--After copying the above folder to the same place with the html page,
+                                            your project structure will be like this:-->
+                                            <!--<img src="Documents/res/Images/stepThree.png" width="211" height="90" /><br />-->
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="list-item list-item-2">
+                                <div class="w40-holder">
+                                    <i class="icn-Order">2</i>
+                                </div>
+                                <h2 class="fl">
+                                    Add Dynamic Web TWAIN to the HTML Page
+                                </h2>
+                                <div class="cl">
+                                </div>
+                                <ol class="subStep">
+                                    <li>
+                                        <h3>
+                                            2.1 Include the two Dynamsoft's JS files in the &lt;head&gt; tag.
+                                        </h3>
+                                        <?prettify linenums="4" ?>
+                                        <pre class="prettyprint linenums">
+&lt;script&nbsp;type="text/javascript"&nbsp;src="Resources/dynamsoft.webtwain.initiate.js"&gt;&nbsp;&lt;/script&gt;
+&lt;script&nbsp;type="text/javascript"&nbsp;src="Resources/dynamsoft.webtwain.config.js"&gt;&nbsp;&lt;/script&gt;</pre>
+                                    </li>
+                                    <li>
+                                        <h3>
+                                            2.2 Add Dynamic Web TWAIN container to the &lt;body&gt; tag.
+                                        </h3>
+                                        <?prettify linenums="9" ?>
+                                        <pre class="prettyprint linenums">
+&lt;div id="dwtcontrolContainer"&gt; &lt;/div&gt;</pre>
+                                        <p>
+                                            Note: “dwtcontrolContainer” is the default id for the div. You can change it in the dynamsoft.webtwain.config.js if necessary.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="list-item list-item-3">
+                                <div class="w40-holder">
+                                    <i class="icn-Order">3</i>
+                                </div>
+                                <h2 class="fl">
+                                    Use Dynamic Web TWAIN
+                                </h2>
+                                <div class="cl">
+                                </div>
+                                <ol class="subStep">
+                                    <li>
+                                        <h3>
+                                            3.1 Add a Scan button and the minimum scripts to scan
+                                        </h3>
+                                        <?prettify linenums="10" ?>
+                                        <pre class="prettyprint linenums">
+&lt;input&nbsp;type="button"&nbsp;value="Scan"&nbsp;onclick="AcquireImage();"&nbsp;/&gt;
+&lt;script&nbsp;type="text/javascript"&gt;&nbsp;
+    function AcquireImage(){
+        var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+        DWObject.IfDisableSourceAfterAcquire = true;
+        DWObject.SelectSource();
+        DWObject.OpenSource();
+        DWObject.AcquireImage();
+    }
+&lt;/script&gt;</pre>
+                                    </li>
+                                    <li>
+                                        <h3>
+                                            3.2 Review the complete code.
+                                        </h3>
+                                        <pre class="prettyprint linenums">&lt;html&gt;  
+    &lt;head&gt;    
+        &lt;title&gt;Hello World&lt;/title&gt;
+        &lt;script&nbsp;type="text/javascript"&nbsp;src="Resources/dynamsoft.webtwain.initiate.js"&gt;&nbsp;&lt;/script&gt;
+        &lt;script&nbsp;type="text/javascript"&nbsp;src="Resources/dynamsoft.webtwain.config.js"&gt;&nbsp;&lt;/script&gt;
+    &lt;/head&gt;
+  
+    &lt;body&gt;
+        &lt;input&nbsp;type="button"&nbsp;value="Scan"&nbsp;onclick="AcquireImage();"&nbsp;/&gt;
+        &lt;div&nbsp;id="dwtcontrolContainer"&gt;&nbsp;&lt;/div&gt;
+        &lt;script&nbsp;type="text/javascript"&gt;&nbsp;
+            function AcquireImage(){
+                var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+                DWObject.IfDisableSourceAfterAcquire = true;
+                DWObject.SelectSource();
+                DWObject.OpenSource();
+                DWObject.AcquireImage();
+            }
+        &lt;/script&gt;
+    &lt;/body&gt;  
+&lt;/html&gt;</pre>
+                                        <h3>
+                                            <a id="RunHelloWorld" class="btn fl" href="Dynamic%20Web%20TWAIN%20SDK.html#Samples">RUN it now</a>
+                                        </h3>
+                                        <br />
+                                        <br />
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                    <div id="Samples" class="tabcontent" style="">
+                        <div id="sidebar">
+                            <h2>
+                                Product Core
+                            </h2>
+                            <ul id="demoCat" class="catList">
+                                <li>
+                                    <ul class="demoList"></ul>
+                                </li>
+                            </ul>
+                            <div class="cl"></div>
+                            <h2 class="mt10">
+                                Add-ons
+                            </h2>
+                            <ul id="demoAddonCat" class="catList">
+                                <li><a>Barcode</a></li>
+                            </ul>
+
+                            <h2>
+                                Advanced
+                            </h2>
+                            <ul id="advancedCat" class="catList">
+                                <li><a href="Samples/Dynamic Web TWAIN Online Demo.html" target="_blank">Online demo <img src="documents/res/images/icn-external-link.png" border="0" /></a></li>
+                                <li><a href="Samples/Dynamic Web TWAIN Sample Code Gallery.html" target="_blank">More...  <img src="documents/res/images/icn-external-link.png" border="0" /></a></li>
+                            </ul>
+                        </div>
+                        <div id="sampleContent">
+                            <h1>
+                                <span id="demoDesc"></span>
+                            </h1>
+                            <div class="demo-main">
+                                <iframe width="678" height="440" frameborder="0" scrolling="no"
+                                        id="frmDemo"></iframe>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    <!--This smaple demanstrates: -->
+                                </p>
+                                <p>
+                                    <i class="icnViewSource"></i>&nbsp;<a id="viewSource" href="#">Code Snippet</a>
+                                    <br />
+                                    <span id="demoLink"></span>
+                                </p>
+                                <div id="demoSource">
+                                    <div id="demoSource1" class="demo1 demoCode">
+                                        <pre class="prettyprint linenums">
+function AcquireImage() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    DWObject.IfDisableSourceAfterAcquire = true;
+    DWObject.SelectSource();
+    DWObject.OpenSource();
+    DWObject.AcquireImage();
+}                                       
+</pre>
+                                    </div>
+                                    <div id="demoSource2" class="demo2 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);
+var DWObject;
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    /*Please refer to 'Change the Size of the Viewer' in the Developers' Guide (upper-right corner) for more info*/
+    //DWObject.Width = 270;
+    //DWObject.Height = 400;
+    if (DWObject) {
+        DWObject.RegisterEvent('OnPostAllTransfers', function() {
+            alert("The event OnPostAllTransfers is fired.");
+        });
+    }
+}
+function AcquireImage() {
+    if (DWObject) {
+        DWObject.IfDisableSourceAfterAcquire = true;
+        DWObject.SelectSource();
+        DWObject.OpenSource();
+        DWObject.AcquireImage();
+    }
+}                                      </pre>
+                                    </div>
+                                    <div id="demoSource3" class="demo3 demoCode">
+                                        <pre class="prettyprint linenums">
+Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);
+var DWObject;
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        var count = DWObject.SourceCount;
+        for (var i = 0; i < count; i++)
+            document.getElementById("source").options.add(
+                new Option(DWObject.GetSourceNameItems(i), i));
+    }
+}
+function AcquireImage() {
+    if (DWObject) {                
+        DWObject.SelectSourceByIndex(document.getElementById("source").selectedIndex);
+        DWObject.OpenSource();
+        DWObject.IfDisableSourceAfterAcquire = true;
+        DWObject.AcquireImage();
+    }
+}                                      </pre>
+                                    </div>
+                                    <div id="demoSource4" class="demo4 demoCode">
+                                        <pre class="prettyprint linenums">
+function AcquireImage() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        DWObject.SelectSource();
+        DWObject.OpenSource();
+        DWObject.IfDisableSourceAfterAcquire = true;
+        if (document.getElementById("ShowUI").checked)
+            DWObject.IfShowUI = true; //Enable the Data Source's default User Interface
+        else
+            DWObject.IfShowUI = false; //Disable the Data Source's default User Interface
+        DWObject.AcquireImage();
+    }
+}                                    </pre>
+                                    </div>
+                                    <div id="demoSource5" class="demo5 demoCode">
+                                        <pre class="prettyprint linenums">
+function AcquireImage() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {                
+        DWObject.SelectSource();
+        DWObject.OpenSource();
+        DWObject.IfShowUI = false; //Disable scanner UI.
+        DWObject.IfDisableSourceAfterAcquire = true;
+        if (document.getElementById("ADF").checked) //Use auto feeder or use the flatbed
+            DWObject.IfFeederEnabled = true; //Enbale Document Feeder
+        else
+            DWObject.IfFeederEnabled = false; //Disable Document Feeder
+        DWObject.AcquireImage();
+    }
+}                             </pre>
+                                    </div>
+                                    <div id="demoSource6" class="demo6 demoCode">
+                                        <pre class="prettyprint linenums">
+function AcquireImage() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        DWObject.SelectSourceByIndex(document.getElementById("source").selectedIndex);
+        DWObject.OpenSource();
+        DWObject.IfDisableSourceAfterAcquire = true;
+        //Pixel type
+        if (document.getElementById("BW").checked)
+            DWObject.PixelType = EnumDWT_PixelType.TWPT_BW;
+        else if (document.getElementById("Gray").checked)
+            DWObject.PixelType = EnumDWT_PixelType.TWPT_GRAY;
+        else if (document.getElementById("RGB").checked)
+            DWObject.PixelType = EnumDWT_PixelType.TWPT_RGB;
+        //If auto feeder
+        if (document.getElementById("ADF").checked)
+            DWObject.IfFeederEnabled = true;
+        else
+            DWObject.IfFeederEnabled = false;
+        //If show UI
+        if (document.getElementById("ShowUI").checked)
+            DWObject.IfShowUI = true;
+        else
+            DWObject.IfShowUI = false;
+        //Resolution
+        DWObject.Resolution = parseInt(document.getElementById("Resolution").value);
+        DWObject.AcquireImage();
+    }
+}                                 </pre>
+                                    </div>
+                                    <div id="demoSource7" class="demo7 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+function OnHttpUploadSuccess() {
+    console.log('successful');
+}
+function OnHttpUploadFailure(errorCode, errorString, sHttpResponse) {
+    alert(errorString + sHttpResponse);
+}
+function UploadImage() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        // If no image in buffer, return the function
+        if (DWObject.HowManyImagesInBuffer == 0)
+            return;
+        var strHTTPServer = location.hostname;
+        var CurrentPathName = unescape(location.pathname);
+        var CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);
+        var strActionPage = CurrentPath + "SaveToFile.aspx";
+        DWObject.IfSSL = false; // Set whether SSL is used
+        DWObject.HTTPPort = location.port == "" ? 80 : location.port;
+        var Digital = new Date();
+        var uploadfilename = Digital.getMilliseconds();
+        
+        // Upload the image(s) to the server asynchronously
+        if (document.getElementById("imgTypejpeg").checked == true) {
+			//If the current image is B&W
+            //1 is B&W, 8 is Gray, 24 is RGB
+            if (DWObject.GetImageBitDepth(DWObject.CurrentImageIndexInBuffer) == 1)
+                //If so, convert the image to Gray
+                DWObject.ConvertToGrayScale(DWObject.CurrentImageIndexInBuffer);
+            //Upload image in JPEG
+            DWObject.HTTPUploadThroughPost(strHTTPServer, DWObject.CurrentImageIndexInBuffer, strActionPage, uploadfilename + ".jpg", OnHttpUploadSuccess, OnHttpUploadFailure);
+        }
+        else if (document.getElementById("imgTypetiff").checked == true) {
+            DWObject.HTTPUploadAllThroughPostAsMultiPageTIFF(strHTTPServer, strActionPage, uploadfilename + ".tif", OnHttpUploadSuccess, OnHttpUploadFailure);
+        }
+        else if (document.getElementById("imgTypepdf").checked == true) {
+            DWObject.HTTPUploadAllThroughPostAsPDF(strHTTPServer, strActionPage, uploadfilename + ".pdf", OnHttpUploadSuccess, OnHttpUploadFailure);
+        }
+    }
+}                                   </pre>
+                                    </div>
+                                    <div id="demoSource8" class="demo8 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+function btnPreImage_onclick() {
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer != 0 && DWObject.CurrentImageIndexInBuffer != 0) {
+            DWObject.CurrentImageIndexInBuffer = DWObject.CurrentImageIndexInBuffer - 1;
+            updatePageInfo();
+        }
+    }
+}
+function btnNextImage_onclick() {
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer != 0 && DWObject.CurrentImageIndexInBuffer 
+                < DWObject.HowManyImagesInBuffer - 1) {
+            DWObject.CurrentImageIndexInBuffer = DWObject.CurrentImageIndexInBuffer + 1;
+            updatePageInfo();
+        }
+    }
+}
+function btnFirstImage_onclick() {
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer != 0 && DWObject.CurrentImageIndexInBuffer != 0) {
+            DWObject.CurrentImageIndexInBuffer = 0;
+            updatePageInfo();
+        }
+    }
+}
+function btnLastImage_onclick() {
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer != 0 && DWObject.CurrentImageIndexInBuffer 
+                != DWObject.HowManyImagesInBuffer - 1) {
+            DWObject.CurrentImageIndexInBuffer = DWObject.HowManyImagesInBuffer - 1;
+            updatePageInfo();
+        }
+    }
+}
+function setlPreviewMode() {
+    if (DWObject) {
+        var o = parseInt(document.getElementById("DW_PreviewMode").selectedIndex + 1);
+        DWObject.SetViewMode(o, o);
+    }
+}
+function btnRemoveSelectedImages_onclick() {
+    if (DWObject) {
+        DWObject.RemoveAllSelectedImages();
+        if (DWObject.HowManyImagesInBuffer == 0) {
+            document.getElementById("DW_CurrentImage").value = "0";
+            document.getElementById("DW_TotalImage").value = "0";
+        }
+        else {
+            updatePageInfo();
+        }
+    }
+}
+function btnRemoveAllImages_onclick() {
+    if (DWObject) {
+        DWObject.RemoveAllImages();
+        document.getElementById("DW_TotalImage").value = "0";
+        document.getElementById("DW_CurrentImage").value = "0";
+    }
+}
+function updatePageInfo() {
+    if (DWObject) {
+        document.getElementById("DW_TotalImage").value = DWObject.HowManyImagesInBuffer;
+        document.getElementById("DW_CurrentImage").value 
+            = DWObject.CurrentImageIndexInBuffer + 1;
+    }
+}                                </pre>
+                                    </div>
+                                    <div id="demoSource9" class="demo9 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+/***********You need to add a line of script in the dynamsoft.webtwain.config.js to have two controls***********/
+/*Please refer to 'Use Thumbnails' in the Developers' Guide (upper-right corner) for more info*/
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        DWObjectLargeViewer = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainerLargeViewer');
+        DWObjectLargeViewer.SetViewMode(-1, -1);
+        DWObjectLargeViewer.MaxImagesInBuffer = 1;
+        DWObject.SetViewMode(1, 3);
+        var count = DWObject.SourceCount;
+        for (var i = 0; i < count; i++)
+            document.getElementById("source").options.add(
+                new Option(DWObject.GetSourceNameItems(i), i));
+        // Register the events
+        DWObject.RegisterEvent("OnPostTransfer", Dynamsoft_OnPostTransfer);
+        DWObject.RegisterEvent("OnPostLoad", Dynamsoft_OnPostLoad);
+        DWObject.RegisterEvent("OnMouseClick", Dynamsoft_OnMouseClick);
+    }
+}
+function Dynamsoft_OnPostTransfer() {
+    updateLargeViewer();
+}
+function Dynamsoft_OnPostLoad(path, name, type) {
+    updateLargeViewer();
+}
+function Dynamsoft_OnMouseClick() {
+    updateLargeViewer();
+}
+function updateLargeViewer() {
+    DWObject.CopyToClipboard(DWObject.CurrentImageIndexInBuffer);
+    DWObjectLargeViewer.LoadDibFromClipboard();
+}</pre>
+                                    </div>
+                                    <div id="demoSource10" class="demo10 demoCode">
+                                        <pre class="prettyprint linenums">
+function ShowImageEditor() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer == 0)
+            alert("There is no image in buffer.");
+        else
+            DWObject.ShowImageEditor();
+    }
+}                                 </pre>
+                                    </div>
+                                    <div id="demoSource11" class="demo11 demoCode">
+                                        <pre class="prettyprint linenums">
+function RotateLeft() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer == 0)
+            alert("There is no image in buffer.");
+        else 
+            DWObject.RotateLeft(DWObject.CurrentImageIndexInBuffer);
+    }
+}
+function RotateRight() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer == 0)
+            alert("There is no image in buffer.");
+        else 
+            DWObject.RotateRight(DWObject.CurrentImageIndexInBuffer);
+    }
+}
+function Mirror() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer == 0)
+            alert("There is no image in buffer.");
+        else 
+            DWObject.Mirror(DWObject.CurrentImageIndexInBuffer);
+    }
+}
+function Flip() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer == 0)
+            alert("There is no image in buffer.");
+        else 
+            DWObject.Flip(DWObject.CurrentImageIndexInBuffer);
+    }
+}</pre>
+                                    </div>
+                                    <div id="demoSource12" class="demo12 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+function OnSuccess() {
+    console.log('successful');
+}
+function OnFailure(errorCode, errorString) {
+    alert(errorString);
+}
+function DownloadImage() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        var strHTTPServer = location.hostname; 
+        var downloadfilename = 
+                location.pathname.substring(0, location.pathname.lastIndexOf('/'))
+                + "/Resources/reference/imgs/img.png";
+        DWObject.HTTPPort = location.port == "" ? 80 : location.port;
+        DWObject.HTTPDownload(strHTTPServer, downloadfilename, OnSuccess, OnFailure);
+    }
+}                                  </pre>
+                                    </div>
+                                    <div id="demoSource13" class="demo13 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+//Callback functions for async APIs
+function OnSuccess(){ 
+    console.log('successful'); 
+}
+function OnFailure(errorCode, errorString){ 
+    alert(errorString); 
+}
+function LoadImage() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        DWObject.IfShowFileDialog = true; 
+        DWObject.LoadImageEx("", EnumDWT_ImageType.IT_ALL, OnSuccess, OnFailure); 
+    }
+}                              </pre>
+                                    </div>
+                                    <div id="demoSource14" class="demo14 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+//Callback functions for async APIs
+function OnSuccess() {
+    console.log('successful');
+}
+function OnFailure(errorCode, errorString) {
+    alert(errorString);
+}
+function SaveWithFileDialog() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer > 0) {
+            DWObject.IfShowFileDialog = true;
+            if (document.getElementById("imgTypejpeg").checked == true) {
+				//If the current image is B&W
+                //1 is B&W, 8 is Gray, 24 is RGB
+                if (DWObject.GetImageBitDepth(DWObject.CurrentImageIndexInBuffer) == 1)
+                    //If so, convert the image to Gray
+                    DWObject.ConvertToGrayScale(DWObject.CurrentImageIndexInBuffer);
+                //Save image in JPEG
+                DWObject.SaveAsJPEG("DynamicWebTWAIN.jpg", DWObject.CurrentImageIndexInBuffer);			
+			}
+            else if (document.getElementById("imgTypetiff").checked == true) 
+                DWObject.SaveAllAsMultiPageTIFF("DynamicWebTWAIN.tiff", OnSuccess, OnFailure);
+            else if (document.getElementById("imgTypepdf").checked == true) 
+                DWObject.SaveAllAsPDF("DynamicWebTWAIN.pdf", OnSuccess, OnFailure);
+        }
+    }
+}                                </pre>
+                                    </div>
+                                    <div id="demoSource15" class="demo15 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+function GetBarcodeInfo(sImageIndex, result) {
+    //Retrieve barcode details
+    var count = result.GetCount();
+    if (count == 0) {
+        alert("The barcode for the selected format is not found.");
+        return;
+    } else {
+        for (i = 0; i < count; i++) {
+            var text = result.GetContent(i);
+            var x = result.GetX1(i);
+            var y = result.GetY1(i);
+            var format = result.GetFormat(i);
+            var barcodeText = ("barcode[" + (i + 1) + "]: " + text + "\n");
+            barcodeText += ("format:" + format + "\n");
+            barcodeText += ("x: " + x + " y:" + y + "\n");
+            alert(barcodeText);
+        }
+    }
+}
+//This is the function called when barcode reading fails
+function GetErrorInfo (errorcode, errorstring) {
+    alert(errorstring);
+}
+function ReadBarcode() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        if (DWObject.HowManyImagesInBuffer == 0) {
+            alert("Please scan or load an image first.");
+            return;
+        }
+        //Get barcode result.
+        switch (document.getElementById("barcodeformat").selectedIndex) {
+            case 0:
+                result = DWObject.Addon.Barcode.Read(
+                    DWObject.CurrentImageIndexInBuffer, EnumDWT_BarcodeFormat.CODE_39, GetBarcodeInfo, GetErrorInfo);
+                break;
+            case 1:
+                result = DWObject.Addon.Barcode.Read(
+                    DWObject.CurrentImageIndexInBuffer, EnumDWT_BarcodeFormat.CODE_128, GetBarcodeInfo, GetErrorInfo);
+                break;
+            default:
+                break;
+        }
+    }
+}</pre>
+                                    </div>
+                                    <div id="demoSource16" class="demo16 demoCode">
+                                        <pre class="prettyprint linenums">
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        DWObject.RegisterEvent('OnPostAllTransfers', SaveWithFileDialog);
+    }
+}
+function AcquireImage() {
+    if (DWObject) {
+        DWObject.SelectSource();
+        DWObject.OpenSource();
+        DWObject.IfDisableSourceAfterAcquire = true;
+        DWObject.AcquireImage();
+    }
+}
+//Callback functions for async APIs
+function OnSuccess(){ 
+    console.log('successful'); 
+}
+function OnFailure(errorCode, errorString){ 
+    alert(errorString); 
+}
+function SaveWithFileDialog() {
+    if (DWObject) {
+        DWObject.IfShowFileDialog = true;
+        if (document.getElementById("imgTypejpeg").checked == true) {
+			//If the current image is B&W
+            //1 is B&W, 8 is Gray, 24 is RGB
+            if (DWObject.GetImageBitDepth(DWObject.CurrentImageIndexInBuffer) == 1)
+                //If so, convert the image to Gray
+                DWObject.ConvertToGrayScale(DWObject.CurrentImageIndexInBuffer);
+            //Save image in JPEG
+            DWObject.SaveAsJPEG("DynamicWebTWAIN.jpg", DWObject.CurrentImageIndexInBuffer);
+        }
+        else if (document.getElementById("imgTypetiff").checked == true) {
+            DWObject.SaveAllAsMultiPageTIFF("DynamicWebTWAIN.tiff", OnSuccess, OnFailure);
+        }
+        else if (document.getElementById("imgTypepdf").checked == true) {
+            DWObject.SaveAllAsPDF("DynamicWebTWAIN.pdf", OnSuccess, OnFailure);
+        }
+    }
+}                                </pre>
+                                    </div>
+                                    <div id="demoSource17" class="demo17 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+function OnHttpUploadSuccess(){ 
+    console.log('successful'); 
+}
+function OnHttpUploadFailure(errorCode, errorString, sHttpResponse){
+    alert(sHttpResponse); 
+}
+function UploadImage() {
+    var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    if (DWObject) {
+        // If no image in buffer, return the function
+        if (DWObject.HowManyImagesInBuffer == 0)
+            return;
+        var strHTTPServer = location.hostname;
+        var CurrentPathName = unescape(location.pathname);
+        var CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);
+        var strActionPage = CurrentPath + "SaveFileWithUploadedInfo.aspx";
+        DWObject.IfSSL = false; 
+        DWObject.HTTPPort = location.port == "" ? 80 : location.port;
+        var Digital = new Date();
+        var uploadfilename = Digital.getMilliseconds();
+        DWObject.ClearAllHTTPFormField();
+        DWObject.SetHTTPFormField('extraInfo', document.getElementById("infoToSend").value);
+        DWObject.HTTPUploadAllThroughPostAsPDF(strHTTPServer, strActionPage, uploadfilename + ".pdf", OnHttpUploadSuccess, OnHttpUploadFailure);
+    }
+}
+</pre>
+                                    </div>
+                                    <div id="demoSource18" class="demo18 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+var DWObject;
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+    if (DWObject) {
+        // Call DWObject.Addon.Webcam.Download(url) to download webcam module to local.
+        var arySource = DWObject.Addon.Webcam.GetSourceList();
+        for (var i = 0; i < arySource.length; i++)
+            document.getElementById("source").options.add(new Option(arySource[i])); // Get Webcam Source names and put them in a drop-down box
+    }
+}
+function CaptureImage() {
+    if (DWObject) {
+		
+        DWObject.Addon.Webcam.SelectSource(document.getElementById("source").options[document.getElementById("source").selectedIndex].text);
+        var showUI = document.getElementById("ShowUI").checked;
+        // optional
+        var OnCaptureStart = function () {
+        }
+        // optional
+        var OnCaptureSuccess = function () {
+        }
+        // optional
+        var OnCaptureError = function (error, errorstr) {
+            alert(errorstr);
+        }
+        // optional
+        var OnCaptureEnd = function () {
+            //Call DWObject.Addon.Webcam.CloseSource() to release webcam.
+        }
+        DWObject.Addon.Webcam.CaptureImage(showUI, OnCaptureStart, OnCaptureSuccess, OnCaptureError, OnCaptureEnd);
+    }
+}
+</pre>
+                                    </div>
+                                    <div id="demoSource19" class="demo19 demoCode">
+                                        <pre class="prettyprint linenums overflowScroll">
+Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);
+var DWObject;
+function Dynamsoft_OnReady() {
+	DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+}
+function OnSuccess() {
+	console.log('successful');
+}
+function OnFailure(errorCode, errorString) {
+	alert(errorString);
+}
+function LoadImage() {
+	if (DWObject) {	
+
+		//Please NOTE that the PDF Rasterizer doesn't work for Chrome/Firefox 26-
+		DWObject.Addon.PDF.SetResolution(200);  	
+		DWObject.Addon.PDF.SetConvertMode(EnumDWT_ConverMode.CM_RENDERALL);   
+		DWObject.IfShowFileDialog = true;
+		DWObject.LoadImageEx("", EnumDWT_ImageType.IT_PDF, OnSuccess, OnFailure);
+	}
+}
+</pre>
+                                    </div>
+                                </div>
+                                <p>
+                                    Main API(s) used in this sample: <span id="spnDemoAPIName">AcquireImage</span>
+                                </p>
+                                <p>
+                                    Check out the complete <a href="Dynamic%20Web%20TWAIN%20SDK.html?#Manual" id="GotoManual">
+                                        API documentation
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Manual" class="tabcontent">
+                        <iframe scrolling="no" width="982" height="4889" frameborder="0" id="SDKManual_iframe" src="Documents/Help/index.htm"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                Copyright © Dynamsoft. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.hasLoadHelloWorldDemo = false;
+        //ducument.getElementById
+        $(document).ready(function () {
+            prettyPrint();
+            loadDemos();
+            
+            <!-- anchor -->
+         $("#anchor-go").click(function(){
+         $('body,html').animate({scrollTop:4700},500);
+      });
+         $("#anchor-back").click(function(){
+         $('body,html').animate({scrollTop:0},500);
+      });
+         <!-- anchor -->
+            
+            
+            // tabs
+            $('ul.tab-nav a:lt(3)').click(function () {
+                var tabContainers = $('#tabs  .tabcontent');
+                if ($(this).parent().attr('id') == 'selected') {
+                    return false;
+                }
+                //tabContainers.hide().filter(this.hash).fadeIn();
+                tabContainers.attr('style', 'position:absolute;left:-5000px;top:-5000px');
+                $(this.hash).attr('style', 'position:relative;');
+				
+				
+					
+                if (this.hash == "#Samples") {
+                    if (hasLoadHelloWorldDemo == false) {
+                        //document.getElementById("frmDemo").src = "Samples/Getting Started/HelloWorld.html";
+                        hasLoadHelloWorldDemo = true;
+                        $("li.demo:eq(0) a").click();
+                    }
+					
+                }
+                if (this.hash == "#HelloWorld") {
+                    $(".icnOrder-Group").show();
+					
+                }
+                else {
+                    $(".icnOrder-Group").hide();
+                }
+				
+				if (this.hash == "#Manual") {
+					$("#anchor-go").show();
+					$("#anchor-back").show();
+                
+				} else {
+					$("#anchor-go").hide();
+					$("#anchor-back").hide();
+				
+				}
+				$('ul.tab-nav a').parent().attr('id', '');
+                $(this).parent().attr('id', 'selected');
+                $(window).scrollTop(0);
+
+
+                return false;
+            })/*.filter(':first').click();*/
+
+            $(function () {
+                $(window).scroll(function () {
+                    var s = $(window).scrollTop();
+                    $(".icnOrder-link").removeClass("icnOrder-link-current");
+                    for (var i = 0; i < 3; i++) {
+                        if ($(".list-item:eq(" + i + ")").offset().top < (s + 34 * i + 10)) {
+                            if ($(".icnOrder-link:eq(" + i + ")").is(":hidden")) {
+                                $(".icnOrder-link:eq(" + i + ")").show();
+                                $(".icnOrder-link").removeClass("icnOrder-link-current");
+                                $(".icnOrder-link:eq(" + i + ")").addClass("icnOrder-link-current");
+                            }
+                            $(".list-item:eq(" + i + ") .icn-Order").hide();
+                        }
+                        else if ($(".list-item:eq(" + i + ")").offset().top > s + i * 34) {
+                            $(".icnOrder-link:eq(" + i + ")").hide();
+                            if ($(".list-item:eq(" + i + ") .icn-Order").is(":hidden")) {
+                                $(".list-item:eq(" + i + ") .icn-Order").show();
+                                $(".icnOrder-link:eq(" + i + ")").addClass("icnOrder-link-current");
+                            }
+                        }
+                    }
+                });
+
+                $(".icnOrder-link").click(function () {
+                    var iListIndex = $(this).find(".icn-Order").html();
+                    var s = $(".list-item:eq(" + (iListIndex - 1) + ")").offset().top - 10;
+                    $(window).scrollTop(s);
+                })
+                $("#showHelloWorld").click(function () {
+                    $(".icnOrder-link").removeClass("icnOrder-link-current");
+                    $(".icnOrder-link").hide();
+                    $(".list-item .icn-Order").show();
+                })
+
+                // Go to next Tab
+                hash = window.location.hash;
+                target = $('.tab-nav a[href="' + hash + '"]');
+
+                if (target.length == 0) {
+                    $('.tab-nav a:first').click();
+                } else {
+                    if (hash == "#Samples") {
+                        $("#demoCat li:eq(1) a").click();
+                    }
+                    target.click();
+                }
+                var rand1 = parseInt((Math.random() + 1) * 10000);
+                var rand2 = parseInt((Math.random() + 1) * 10000);
+                if (rand2 == rand1) {
+                    rand2 = parseInt((Math.random() + 1) * 10000);
+                }
+                $("#RunHelloWorld").attr("href", "Dynamic%20Web%20TWAIN%20SDK.html?s=" + rand1 + "#Samples");
+                $("#GotoManual").attr("href", "Dynamic%20Web%20TWAIN%20SDK.html?s=" + rand2 + "#Manual");
+
+                // Clear hash value
+                if (!($.browser.msie && ($.browser.version == 6.0) && !$.support.style)) {
+                    window.location.hash = '';
+                }
+            });
+
+            // reset iframe height of #Manual
+            $("#SDKManual_iframe").load(function () {
+                var myEventMethod =
+                    window.addEventListener ? "addEventListener" : "attachEvent";
+                // create event listener
+                var myEventListener = window[myEventMethod];
+                var myEventMessage =
+                    myEventMethod == "attachEvent" ? "onmessage" : "message";
+                myEventListener(myEventMessage, function (e) {
+                    if (e.data != null && e.data != "") {
+                        if (parseInt(e.data) > 0)
+                            document.getElementById('SDKManual_iframe').height = (parseInt(e.data) + 30) + "px";
+                    }
+                }, false);
+                window.scroll(0, 0);
+            })
+            var isIE6 = ! -[1, ] && !window.XMLHttpRequest;
+            if (isIE6) {
+                document.getElementById('SDKManual_iframe').height = "1200px";
+                //document.getElementById('SDKManual_iframe').width = "960px";
+            }
+        });
+
+    </script>
+</body>
+</html>

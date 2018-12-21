@@ -1,0 +1,39 @@
+/*<ORACLECOPYRIGHT>
+* Copyright (C) 1994-2014
+* Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+* Other names may be trademarks of their respective owners.
+* UNIX is a registered trademark of The Open Group.
+*
+* This software and related documentation are provided under a license agreement
+* containing restrictions on use and disclosure and are protected by intellectual property laws.
+* Except as expressly permitted in your license agreement or allowed by law, you may not use, copy,
+* reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish,
+* or display any part, in any form, or by any means. Reverse engineering, disassembly,
+* or decompilation of this software, unless required by law for interoperability, is prohibited.
+*
+* The information contained herein is subject to change without notice and is not warranted to be error-free.
+* If you find any errors, please report them to us in writing.
+*
+* U.S. GOVERNMENT RIGHTS Programs, software, databases, and related documentation and technical data delivered to U.S.
+* Government customers are "commercial computer software" or "commercial technical data" pursuant to the applicable
+* Federal Acquisition Regulation and agency-specific supplemental regulations.
+* As such, the use, duplication, disclosure, modification, and adaptation shall be subject to the restrictions and
+* license terms set forth in the applicable Government contract, and, to the extent applicable by the terms of the
+* Government contract, the additional rights set forth in FAR 52.227-19, Commercial Computer Software License
+* (December 2007). Oracle America, Inc., 500 Oracle Parkway, Redwood City, CA 94065.
+*
+* This software or hardware is developed for general use in a variety of information management applications.
+* It is not developed or intended for use in any inherently dangerous applications, including applications that
+* may create a risk of personal injury. If you use this software or hardware in dangerous applications,
+* then you shall be responsible to take all appropriate fail-safe, backup, redundancy,
+* and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any
+* damages caused by use of this software or hardware in dangerous applications.
+*
+* This software or hardware and documentation may provide access to or information on content,
+* products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and
+* expressly disclaim all warranties of any kind with respect to third-party content, products, and services.
+* Oracle Corporation and its affiliates will not be responsible for any loss, costs,
+* or damages incurred due to your access to or use of third-party content, products, or services.
+</ORACLECOPYRIGHT>*/
+/* 8.1.1.14SIA[23044]PATCHSET7 */
+if(typeof(SiebelApp)==="undefined"){SiebelApp={}}if(typeof(SiebelApp.MobileFileMgr)==="undefined"){SiebelApp.MobileFileMgr=(function(){function b(){var f;e=function e(){return f};e.prototype=this;f=new e();f.constructor=e;return f}var d=0;var c=new b();var a=localStorage.getItem("isAdfmContainer");b.prototype.adfInvoke=function(g,f){var e={success:function(h){},error:function(h){}};$.extend(e,f);adf.mf.api.invokeMethod("com.oracle.determinations.mobile.application.FileBean",g,f.filename,function(i,h){e.success(h)},function(i,h){e.error(h)});return this};b.prototype.cordovaInvoke=function(g,f){var e={arguments:[],success:function(h){},error:function(h){}};$.extend(e,f);Cordova.exec(function(h){e.success(h)},function(h){e.error(h)},"IOSService",g,e.arguments);return this};b.prototype.Write=function(g){if(a){var f=500000;var h=0;var e=g.content.length;d+=e;var i=function(){if(h>=e){g.success();return}var k=h+f;k=(k>e)?e:k;var l=g.content.substring(h,k);h+=f;var j=function(){d-=l.length};adf.mf.api.invokeMethod("com.oracle.determinations.mobile.application.FileBean","writeFile",g.filename,l,function(){j()},function(){g.error()});var m=function(){if(d<50000000){i();return}setTimeout(m,500)};m()};i()}else{g.success()}return this};b.prototype.WriteTempWithFlag=function(h){if(a){var g=40960;var i=0;var f=h.content.length;var e=h.append?true:false;var k=true;var j=function(){if(i>=f){h.success();return}var m=i+g;m=(m>f)?f:m;var n=h.content.substring(i,m);i+=g;var l=true;if(k){l=e}else{l=true}adf.mf.api.invokeMethod("com.oracle.determinations.mobile.application.FileBean","writeTempFileWithFlag",h.filename,n,l,function(){k=false;j()},function(){h.error()})};j()}else{h.success()}return this};b.prototype.Open=function(e){if(e&&e.filename&&a){var f=false;adf.mf.api.invokeMethod("com.oracle.determinations.mobile.application.FileBean","displayFile",e.filename,e.displayFileName,function(i,h){f=true;if(e&&e.success){e.success(h)}},function(i,h){f=true;if(e&&e.error){e.error(h)}else{alert(h.message)}});var g=function(){if(!f){var h=SiebelApp.S_App.LocaleObject.GetLocalString("IDS_CLIENT_ERROR_FILE_OPEN");h=h.replace("%1",e.displayFileName);alert(h)}};setTimeout(g,2000)}return this};b.prototype.OpenTempFile=function(e){if(e&&e.filename&&a){adf.mf.api.invokeMethod("com.oracle.determinations.mobile.application.FileBean","displayFileFromTemp",e.filename,e.displayFileName,function(g,f){if(e&&e.success){e.success(f)}},function(g,f){if(e&&e.error){e.error(f)}else{alert(f.message)}});return this}return this};b.prototype.Unzip=function(e){if(e&&e.filename&&a){adf.mf.api.invokeMethod("com.oracle.determinations.mobile.application.FileBean","unzipFile",e.filename,function(g,f){if(e&&e.success){e.success(f)}},function(g,f){if(e&&e.error){e.error(f)}})}return this};b.prototype.DeleteFilePath=function(e){if(e&&e.filename&&a){this.adfInvoke("deleteFile",e)}return this};b.prototype.StartHttpServer=function(f){if(a){var g=this;var e={success:function(i){},error:function(i){}};$.extend(e,f);var h=e.success;e.success=function(i){localStorage.setItem("httpServerPort",i);h(i)};g.cordovaInvoke("starthttpserver",e)}return this};b.prototype.StopHttpServer=function(e){if(a){this.cordovaInvoke("stophttpserver",e)}return this};b.prototype.GetHttpURLPrefix=function(g){if(!a){return}var e=this;var f={success:function(k){},error:function(k){}};$.extend(f,g);var i=function(l){var k=function(n){var m=parseInt(localStorage.getItem("tsStartingLServer"));if(m&&m>0&&((new Date()).valueOf()-parseInt(m)<5000)){setTimeout(function(){e.GetHttpURLPrefix(n)},1000)}else{localStorage.setItem("tsStartingLServer",(new Date()).valueOf());e.StartHttpServer({success:function(o){localStorage.setItem("tsSuccessLocalServer",(new Date()).valueOf());localStorage.removeItem("tsStartingLServer");n.success("http://localhost:"+o)},error:function(p){localStorage.removeItem("tsStartingLServer");var o=SiebelApp.S_App.LocaleObject.GetLocalString("IDS_SWE_CKEDITOR_NOT_AVAILABLE");n.error(o)}})}};e.detectServer({success:function(m){l.success(m);localStorage.removeItem("tsStartingLServer")},error:function(){k(l)}})};var h=parseInt(localStorage.getItem("tsSuccessLocalServer"));var j=localStorage.getItem("httpServerPort");if(h&&h>0&&((new Date()).valueOf()-parseInt(h)<5000)&&j&&parseInt(j)>0){f.success("http://localhost:"+j)}else{i(f)}return this};b.prototype.detectServer=function(g){var e={success:function(i){},error:function(i){}};$.extend(e,g);var h=localStorage.getItem("httpServerPort");if(h&&parseInt(h)>0){var f=$("<img src='http://localhost:"+h+"/e5a6126c-9ffc-44d9-b4dc-6a0c7b6667a6-detect.gif'>");f.load(function(){f.remove();localStorage.setItem("tsSuccessLocalServer",(new Date()).valueOf());e.success("http://localhost:"+h)});f.error(function(){f.remove();e.error()});$("body").append(f)}else{e.error()}};return c}())};

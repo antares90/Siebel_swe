@@ -1,0 +1,637 @@
+/* Стили для кастомных кнопок в системе */
+.siebui-label-btn.disabled, .appletButton.disabled, .AppletCustomButtons.disabled, .siebui-ctrl-btn.disabled, .siebui-label-btn[disabled], .miniBtnUIC>button[disabled], .appletButton[disabled], .AppletCustomButtons[disabled], .siebui-ctrl-btn[disabled], fieldset[disabled] .siebui-label-btn, fieldset[disabled] .miniBtnUIC>button, fieldset[disabled] .appletButton, fieldset[disabled] .AppletCustomButtons, fieldset[disabled] .siebui-ctrl-btn, .appletButton.disabled, .appletButton[disabled], fieldset[disabled] .appletButton, .appletButtonDis.disabled, .appletButtonDis[disabled], fieldset[disabled] .appletButtonDis, .appletButtonDis{
+    color: #4f4f4f !important;
+	opacity: .65;
+	border: none !important;
+    background-color: #f0f0f0 !important;
+}
+
+div[title="Карточка запроса Аплет формы"] button[title="Карточка запроса:Выполнить"]  {
+  margin-top: 0px;
+  background: green !important;
+  padding: 3px 37px;
+}
+
+div[title="Карточка запроса Аплет формы"] button[title="Карточка запроса:Отменить"]  {
+  margin-top: 0px;
+  background: red !important;
+  padding: 3px 37px;
+}
+
+div[title="Карточка запроса Аплет формы"] button[title="Карточка запроса:Вернуть в  очередь"]  {
+  margin-top: 0px;
+  padding: 3px 15px;
+}
+
+div[title="Карточка запроса Аплет формы"] button[title="Карточка запроса:На доработку"]  {
+  margin-top: 0px;
+  padding: 3px 30px;
+}
+
+div[title="Карточка запроса Аплет формы"] button[title="Карточка запроса:На уточнение"]  {
+  margin-top: 0px;
+  padding: 3px 30px;
+}
+
+div[title="Карточка запроса Аплет формы"] button[title="Карточка запроса:Подтвердить"]  {
+  margin-top: 0px;
+  padding: 3px 30px;
+}
+
+div[title="Карточка запроса Аплет формы"] button[title="Карточка запроса:Отправить в работу"]  {
+  margin-top: 0px;
+  background: green !important;
+}
+
+.AppletCustomButtons button
+ {
+	background: #00B4F9 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+    background-image: none !important;
+    border: 1px solid black !important;
+    white-space: nowrap !important;
+    outline: 0 !important;
+    color: #fff !important;
+    line-height: 20px !important; /*25*/
+    border-radius: 4px !important;
+ }
+/*Экран - Кредитный калькулятор*/
+.AppletBackATCCheckOperation table[class="GridBack"] button,
+.AppletBackATCQuickSelect table[class="GridBack"] button{
+    background: #00b8ff;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…B5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c2MjQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(top, #00b8ff 0%, #00a2e0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00b8ff), color-stop(100%, #00a2e0));
+    background: -webkit-linear-gradient(top, #00b8ff 0%, #00a2e0 100%);
+    background: -o-linear-gradient(top, #00b8ff 0%, #00a2e0 100%);
+    background: -ms-linear-gradient(top, #00b8ff 0%, #00a2e0 100%);
+    background: linear-gradient(to bottom, #00b8ff 0%, #00a2e0 100%);
+    border: 1px solid #006085;
+    padding: 0 10px;
+    font-size: 0.855em;
+}
+div[class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable alert-div"]{
+    width: 500px !important;
+}
+/* Убирает старые иконки на тулбаре */
+div[id="s_toolbar"] img {
+    width:0!important;
+}
+/* Новые иконки на тулбаре (шрифт "Oracle") */
+.siebui-icon-tb-new_application::before {
+    content:"\e634";
+}
+.siebui-icon-tb-new_call_report::before {
+    content:"\e6AA";
+}
+.siebui-icon-tb-fins_authentication_manager::before {
+    content:"\e64A";
+}
+.siebui-icon-tb-show_audit_trail::before {
+    content:"\e68E";
+}
+.siebui-icon-tb-toggle::before {
+    content:"\e621";
+}
+/* LETO-5600 */
+div[title="Движение пакетов Аплет списка"] button[title="Движение пакетов:Обозначить к утрате"],
+div[title="Движение пакетов Аплет списка"] button[title="Движение пакетов:Обозначить к утрате"]:hover,
+div[title="Движение пакетов Аплет списка"] button[title="Движение пакетов:Обозначить к утрате"]:active,
+div[title="Короба Аплет списка"] button[title="Короба:Отправить"],
+div[title="Короба Аплет списка"] button[title="Короба:Отправить"]:hover,
+div[title="Короба Аплет списка"] button[title="Короба:Отправить"]:active {
+    padding:5px !important;
+}
+button[data-display="Очистить"],
+button[data-display="Очистить"]:hover,
+button[data-display="Очистить"]:focus,
+button[data-display="Поиск"],
+button[data-display="Поиск"]:hover,
+button[data-display="Поиск"]:focus,
+button[data-display="Выбрать из списка"],
+button[data-display="Выбрать из списка"]:hover,
+button[data-display="Выбрать из списка"]:focus{ background: #4f7cbd;}
+
+
+
+button[data-display="Новый расчет"],
+button[data-display="Новый расчет"]:hover,
+button[data-display="Новый расчет"]:focus,
+button[data-display="Рассчитать"],
+button[data-display="Рассчитать"]:hover,
+button[data-display="Рассчитать"]:active,
+/*button[data-display='Проверить введенный адрес'],
+button[data-display='Проверить введенный адрес']:hover,
+button[data-display='Проверить введенный адрес']:focus{
+    background: #4f7cbd;
+}*/
+button[data-display="Сервисное обслуживание"],
+button[data-display="Сервисное обслуживание"]:hover,
+button[data-display="Сервисное обслуживание"]:active,
+button[data-display="Платежи и переводы"],
+button[data-display="Платежи и переводы"]:hover,
+button[data-display="Платежи и переводы"]:focus{
+    background: #4f7cbd;
+    width: 250px;
+    height: 50px;
+}
+
+/*Правило для отрисовки кнопки (Платежи и переводы) в EXPRESS*/
+div[title="Операции Аплет формы"] button[data-display="Платежи и переводы"] {
+    width: 160px;
+    height: 24px;
+    font-size: 9pt;
+    font-weight: bold;
+    background: #4f7cbd;
+    padding: 0 10px;
+    margin-top: 3px;
+}
+
+button[data-display="Новый расчет"]{
+    margin-left: 15px;
+    font-size: 14px;
+}
+button[data-display="Рассчитать"]{
+    font-size: 14px;
+}
+/*Для запроса изменение клиентских данных */
+button[data-display="Проверено"],
+button[data-display="Проверено"]:hover,
+button[data-display="Проверено"]:active,
+button[data-display="Проверено, перейти к следующей"],
+button[data-display="Проверено, перейти к следующей"]:hover,
+button[data-display="Проверено, перейти к следующей"]:active{
+    background: green;
+}
+/*Для запроса изменение клиентских данных */
+/*button[data-display="Отказать"],
+button[data-display="Отказать"]:hover,
+button[data-display="Отказать"]:active,*/
+button[data-display="Проверено, перерыв"],
+button[data-display="Проверено, перерыв"]:hover,
+button[data-display="Проверено, перерыв"]:active,
+button[title="Параметры транша:Отказать"],
+button[title="Параметры транша:Отказать"]:hover,
+button[title="Параметры транша:Отказать"]:active,
+.AppletBackATCTrancheParameters button[data-display="Отказать"],
+.AppletBackATCTrancheParameters button[data-display="Отказать"]:hover,
+.AppletBackATCTrancheParameters button[data-display="Отказать"]:active,
+/*button[data-display="Отмена заявки"],
+button[data-display="Отмена заявки"]:hover,
+button[data-display="Отмена заявки"]:active,
+button[data-display="Завершить активность"],
+button[data-display="Завершить активность"]:hover,
+button[data-display="Завершить активность"]:active,*/
+button[data-display="Отказ клиента"],
+button[data-display="Отказ клиента"]:hover,
+button[data-display="Отказ клиента"]:active,
+button[data-display="Обозначить к утрате"],
+button[data-display="Обозначить к утрате"]:hover,
+button[data-display="Обозначить к утрате"]:active,
+button[data-display="Завершить активность"],
+button[data-display="Завершить активность"]:hover,
+button[data-display="Завершить активность"]:focus{
+    background: red;
+}
+
+button[data-display="Сформировать ПФ"]
+/*.AppletCustomButtons button[data-display="Сформировать ПФ"]:active*/{
+    background: #ea8823;
+    background-color: #ea8823 !important;
+    /*font-size: 14px;*/
+    margin-left:-30px;
+}
+button[data-display="Сформировать ПФ"]:hover {
+	background-color:#ea8823 !important;
+}
+
+div[class="siebui-btn-grp-search"] button[data-display="Сформировать ПФ"] {
+	background: #ea8823;
+    background-color: #ea8823 !important;
+    font-size: 14px;
+    margin-left:-30px;
+}
+
+/*LETO-6147*/
+div[title="Продукты Аплет списка"] button[data-display="Рассчитать и сформировать ПФ"],
+div[title="Продукты Аплет списка"] button[data-display="Рассчитать и сформировать ПФ"]:active,
+div[title="Продукты Аплет списка"] button[data-display="Рассчитать и сформировать ПФ"]:hover,
+div[title="Продукты Аплет списка"] button[data-display="Рассчитать и сформировать ПФ"]:focus{
+    background-color: #00B4F9 !important;
+    color:#F2F2F2;
+    border: 1px solid #404880;
+    font-size: 8.5pt;
+}
+div[title="Продукты Аплет списка"] button[data-display="Рассчитать и сформировать ПФ"]:disabled{
+    background-color: #eee !important;
+}
+/*LETO-6147*/
+
+
+/*кнопка сформировать ПФ чтобы не уезжала влево*/
+div[title="Короба Аплет списка"] button[title="Короба:Сформировать ПФ"],
+div[title="Короба Аплет списка"] button[title="Короба:Сформировать ПФ"]:hover,
+div[title="Короба Аплет списка"] button[title="Короба:Сформировать ПФ"]:active,
+div[title='Печатные формы Аплет списка'] button[data-display="Сформировать ПФ"],
+div[title='Печатные формы Аплет списка'] button[data-display="Сформировать ПФ"]:hover,
+div[title='Печатные формы Аплет списка'] button[data-display="Сформировать ПФ"]:active,
+div[title='Обращения Аплет списка'] button[data-display="Сформировать ПФ"],
+div[title='Обращения Аплет списка'] button[data-display="Сформировать ПФ"]:hover,
+div[title='Обращения Аплет списка'] button[data-display="Сформировать ПФ"]:active,
+div[title='Операции Аплет списка'] button[data-display="Сформировать ПФ"],
+div[title='Операции Аплет списка'] button[data-display="Сформировать ПФ"]:hover,
+div[title='Операции Аплет списка'] button[data-display="Сформировать ПФ"]:active{
+    margin-left: 0;
+}
+button[data-display="Оформить заявку"],
+button[data-display="Оформить заявку"]:hover,
+button[data-display="Оформить заявку"]:active{
+    margin: 0 0 0 50px;
+    background: #338a67;
+    font-size: 14px;
+}
+/*div[title="Параметры запрашиваемого кредита Аплет формы"] span[id="MonthPayReq_Label"]
+{
+	font-size: 10pt;
+	font-weight: bold !important;
+}*/
+/*##########################################*/
+/*Экран - Проверка заявки*/
+button[data-display="Проверено, перейти к следующей"]{
+    width: 210px;
+    height: 40px;
+    font-size: 8.5pt;
+}
+button[data-display="Проверено, перерыв"]{
+    width: 188px;
+    width: 210px;
+    height: 40px;
+    font-size: 8.5pt;
+}
+button[data-display="НВО"]{
+    width: 210px;
+    height: 40px;
+    font-size: 8.5pt;
+}
+button[data-display="Вернуть в очередь"]{
+    width: 210px;
+    height: 40px;
+    font-size: 8.5pt;
+}
+/*##########################################*/
+/*Экран - Выдача транша*/
+button[title="Параметры транша:Отказать"]{
+    width: 188px;
+    height: 40px;
+    font-size: 8.5pt;
+}
+/*Альтернатива без title  LETO-4144>>DYUN*/
+.AppletBackATCTrancheParameters button[data-display="Отказать"]{
+    width: 188px;
+    height: 40px;
+    font-size: 8.5pt;
+}
+button[title="Параметры транша:Проверено"]{
+    background: green !important;
+    width: 188px;
+    height: 40px;
+    font-size: 8.5pt;
+}
+/*Альтернатива без title  LETO-4144>>DYUN*/
+.AppletBackATCTrancheParameters button[data-display="Проверено"]{
+    background: green !important;
+    width: 188px;
+    height: 40px;
+    font-size: 8.5pt;
+}
+/*##########################################*/
+/*Кнопки плэйбара в тасках.*/
+button[data-display="Сохранить<br>и выйти"],
+div[class="siebui-taskui-playbar-top siebui-applet-action"] button[data-display="Назад"],
+div[class="siebui-taskui-playbar-top siebui-applet-action"] button[data-display="Далее"],
+button[data-display="Повторная<br>отправка в СПР"]{
+    background: #4f7cbd !important;
+    width: 100px;
+    height: 40px;
+    font-size: 8.5pt;
+    padding: 0 10px;
+}
+div[class="siebui-taskui-playbar-top siebui-applet-action"] button[data-display="Отмена заявки"]{
+	background: red;
+    width: 100px;
+    height: 40px;
+    font-size: 8.5pt;
+    padding: 0 10px;
+}
+
+div[class="siebui-btn-grp-search"] button[data-display="Отказать"]{
+	background: red;
+
+}
+div[class="siebui-taskui-playbar-top siebui-applet-action"] button[data-display="Завершение"]{
+    background: #4f7cbd !important;
+    width: 100px;
+    height: 40px;
+    font-size: 8.5pt;
+    padding: 0 10px;
+}
+div[class="siebui-taskui-playbar-top siebui-applet-action"] button[data-display="Отменить"]{/*LETO-9199*/
+	background: red;
+    width: 100px;
+    height: 40px;
+    font-size: 8.5pt;
+    padding: 0 10px;
+}
+/*##########################################*/
+/*CallCenter*/
+button[data-display="Уведомления"], button[data-display="Уведомления"]:hover,button[data-display="Уведомления"]:active{
+    width: 160px;
+    height: 24px;
+    font-size: 9pt;
+    font-weight: bold;
+    background: #ff8000;
+    padding: 0 10px;
+}
+button[data-display="Предложения"]{
+    width: 160px;
+    height: 24px;
+    font-size: 9pt;
+    font-weight: bold;
+    background: blue !important;
+    padding: 0 10px;
+}
+button[data-display="Создать задачу в <br> Календарь"]{
+    width: 160px;
+    height: 35px;
+	font-size: 9pt;
+    font-weight: bold;
+	line-height: 10px;
+}
+button[data-display="Подтвердить тематику"],
+button[data-display="Завершить активность"]{
+    width: 160px;
+    height: 60px;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 0 10px;
+    margin-top: -1px;
+    margin-left: 10px;
+}
+button[data-display="Подтвердить тематику"],button[data-display="Подтвердить тематику"]:hover, button[data-display="Подтвердить тематику"]:active,
+button[data-display="Выполнить операцию"],button[data-display="Выполнить операцию"]:hover, button[data-display="Выполнить операцию"]:active
+button[data-display="Изменить код доступа"],button[data-display="Изменить код доступа"]:hover,
+div[title="Запрос графика платежей Аплет формы"] button[data-display="Запрос графика платежей"],
+div[title="Запрос графика платежей Аплет формы"] button[data-display="Запрос графика платежей"]:hover,
+div[title="Запрос графика платежей Аплет формы"] button[data-display="Запрос графика платежей"]:active,
+    /*Альтернатива без title  LETO-4144>>DYUN*/
+.AppletBackATCCustomButton button[data-display="Запрос графика платежей"],
+.AppletBackATCCustomButton button[data-display="Запрос графика платежей"]:hover,
+.AppletBackATCCustomButton button[data-display="Запрос графика платежей"]:active,
+div[title="Операции Аплет формы"] button[data-display="Подтвердить тематику"],
+div[title="Операции Аплет формы"] button[data-display="Подтвердить тематику"]:hover,
+div[title="Операции Аплет формы"] button[data-display="Подтвердить тематику"]:active,
+    /*Альтернатива без title  LETO-4144>>DYUN*/
+.AppletBackATCCustomButton button[data-display="Подтвердить тематику"],
+button[data-display="Отправить"],button[data-display="Отправить"]:hover,button[data-display="Отправить"]:active,
+button[data-display="Заблокировать"],button[data-display="Заблокировать"]:hover, button[data-display="Заблокировать"]:active,
+button[data-display="Изменить PIN"],button[data-display="Изменить PIN"]:hover, button[data-display="Изменить PIN"]:active{
+    background: green;
+    padding: 0 10px;
+}
+div[class="mceGridField siebui-value mceField"]button[data-display="Завершить активность"]{
+    padding: 0 10px;
+	background: red !important;
+}
+button[data-display="Выполнить"]{
+    margin-top: 15px;
+    background: green !important;
+    padding: 0 10px;
+}
+button[data-display="Подтвердить"]{
+    background: green !important;
+    padding: 0 10px;
+}
+button[data-display="Карточка клиента"]{
+    margin-top: 15px;
+    background: blue !important;
+    padding: 0 10px;
+}
+button[data-display="Отказ клиента"]{
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+button[data-display="Выполнить"].appletButtonDis,
+button[data-display="Подтвердить"].appletButtonDis,
+button[data-display="Отказ клиента"].appletButtonDis{
+    color: #404453!important;
+    background: #ddd !important
+}
+/*CallCenter Кнопки Тематики*/
+
+/*button[data-display="Изменение анкетных данных"],
+button[data-display="Продолжение <br>оформления заявки"],
+button[data-display="Новая заявка"],
+button[data-display="Выписка по счету"],
+button[data-display="Расчет суммы <br>досрочного погашения"],
+button[data-display="Печать локальной карты"],
+button[data-display="Погашение до 15000"],
+button[data-display="Изменение кода доступа"],
+div[title="Быстрый выбор Аплет формы"] table[class="GridBack"] button[data-display="Запрос графика платежей"]
+{
+	margin: 25px;
+	width: 210px;
+	height: 70px;
+	font-size: 10pt;
+	font-weight: bold;
+}*/
+div[title="Быстрый выбор Аплет формы"] table[class="GridBack"] button{
+    margin: 25px;
+    width: 220px;
+    height: 70px;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 0 10px;
+}
+/*Альтернатива без title  LETO-4144>>DYUN*/
+.AppletBackATCQuickSelect table[class="GridBack"] button{
+    margin: 25px;
+    width: 220px;
+    height: 70px;
+    font-size: 10pt;
+    font-weight: bold;
+}
+div[title="Быстрый выбор Аплет формы"] table[class="GridBack"]{
+    margin: 0 auto;
+    padding: 0 10px;
+}
+/*Альтернатива без title  LETO-4144>>DYUN*/
+.AppletBackATCQuickSelect table[class="GridBack"]{
+    margin: 0 auto;
+    padding: 0 10px;
+}
+button[data-display="Изменить код доступа"]{
+    background: #89c843  !important;
+    padding: 0 10px;
+}
+/*СС - Проверка и выполнение операции*/
+div[title="Проверка и выполнение операции Аплет формы"] table[class="GridBack"] button{
+    margin: 10px;
+    width: 105px;
+    /*LETO-10982>MLIPOV>10.09.2018>заменено на динамическое определение ниже
+	height: 25px;*/
+	display: inline-block;
+	vertical-align: top;
+	/*LETO-10982>MLIPOV>10.09.2018>end*/
+    padding: 0 10px;
+}
+div[title="Проверка и выполнение операции Аплет формы"] table[class="GridBack"] button::before{
+    content: normal;
+}
+/*Альтернатива без title  LETO-4144>>DYUN*/
+.AppletBackATCCheckOperation table[class="GridBack"] button{
+    margin: 10px;
+    width: 105px;
+    height: 25px;
+    padding: 0 10px;
+}
+div[title="Проверка и выполнение операции Аплет формы"] table[class="GridBack"] textarea{
+    margin: 15px 0 10px 10px !important;
+    width: 300px !important;
+    height: 100px !important;
+}
+/*Альтернатива без title  LETO-4144>>DYUN*/
+.AppletBackATCCheckOperation table[class="GridBack"] textarea{
+    margin: 15px 0 10px 10px !important;
+    width: 300px !important;
+    height: 100px !important;
+}
+div[title="Проверка и выполнение операции Аплет формы"] table[class="GridBack"] td{
+    padding: 5px 8px !important;
+    text-align: center !important;
+}
+div[title="Проверка и выполнение операции Аплет формы"] table[class="GridBack"] button{
+    width: 125px;
+}
+/*Новое поле на апплете "Проверка и выполнение операции"  LETO-6505>>DNYUDLCHIEV*/
+div[title="Проверка и выполнение операции Аплет формы"] table[class="GridBack"] input[type="text"]{
+    margin: 0 0 0 10px !important;
+    width: 300px !important;
+}
+/*LETO-10982>MLIPOV>10.09.2018>зеленая кнопка Зарегистрировать*/
+div[title="Проверка и выполнение операции Аплет формы"] button[data-display="Зарегистрировать"]{
+    background: #008000;
+}
+div[title="Проверка и выполнение операции Аплет формы"] button::before[data-display="Зарегистрировать"]{
+    background: #ff0000  !important;
+}
+/*LETO-10982>MLIPOV>10.09.2018>end*/
+
+/*Альтернатива без title  LETO-4144>>DYUN*/
+.AppletBackATCCheckOperation table[class="GridBack"] td{
+    padding: 5px 10px !important;
+    text-align: center !important;
+}
+/*Таск - textarea*/
+textarea[aria-labelledby="ATC_Factor_Resolution_Label"],
+textarea[aria-labelledby="Factor_Initial_Data_Label"],
+textarea[aria-labelledby="Factor_Resolution_Label"],
+textarea[aria-labelledby="FactorResolutionDocs_Label"]{
+    width: 100%;
+}
+/*Операции по договору POS*/
+button[data-display="Отмена авторизации"]{
+    background: #ff0000 !important;
+    padding: 0 10px;
+}
+button[data-display="Авторизовать"]{
+    padding: 0 10px;
+}
+/*Параметры предварительного расчета*/
+button[data-display="Создать заявку"]{
+    background: green;
+    width: 176px;
+    height: 24px;
+    padding: 0 10px;
+}
+div[title-preserved="Текущий счет"] button[data-display="Создать заявку"]{
+    padding: 5px 10px;
+    height: auto;
+}
+div[title-preserved="Расчётный счёт"] button[data-display="Создать заявку"]{
+    padding: 5px 10px;
+    height: auto;
+}
+
+/*LETO-11167>MLIPOV>18.09.2018>зеленая кнопка Сбросить фильтр*/
+button[data-display="Сбросить фильтр"],
+button[data-display="Сбросить фильтр"]:hover,
+button[data-display="Сбросить фильтр"]:active,
+button[data-display="Сбросить фильтр"]:focus
+{
+	background: #008000;
+}
+/*LETO-11167>MLIPOV>18.09.2018>end*/
+
+/*
+Приложение risk
+*/
+button[data-display="Захватить"]{
+    background: orange !important;
+}
+button[data-display="Завершить проверку"]{
+    background: #1A3C89 !important;
+}
+/*
+Приложение express
+*/
+button[data-display="Обозначить к утрате"]{
+    padding: 0 10px;
+}
+.appletButtonDis, .siebui-toolbar-settings-popup .siebui-tb-item-btn .appletButtonDis, .siebui-toolbar-mobilesettings-popup .siebui-tb-item-btn .appletButtonDis, .siebui-button-toolbar .siebui-tb-cti-container .siebui-tb-cti-btn-img-disabled, .siebui-comm-panel-container .siebui-tb-cti-container .siebui-tb-cti .siebui-tb-cti-btn-img-disabled{
+    background: #ddd !important;
+    border: 1px #ddd solid !important;
+}
+.btn-plain, .appletButtonDis,
+.siebui-toolbar-settings-popup .siebui-tb-item-btn .appletButtonDis,
+.siebui-toolbar-mobilesettings-popup .siebui-tb-item-btn .appletButtonDis,
+.siebui-button-toolbar .siebui-tb-cti-container .siebui-tb-cti-btn-img-disabled,
+.siebui-comm-panel-container .siebui-tb-cti-container .siebui-tb-cti .siebui-tb-cti-btn-img-disabled{
+    background-color: #ddd !important;
+    padding: 5px 10px;
+}
+/*Выровнить только поле комментарий */
+.GridBorder table.GridBack td[valign="middle"][colspan="1"][rowspan="4"]{
+    vertical-align: top;
+}
+button[data-display="Положить трубку"]{
+    background: red !important;
+}
+/*Выровнять поля с информационным баннером и информацией о категориях клиента LETO-10046*/
+.GridBorder table.GridBack td[valign="middle"][colspan="33"][rowspan="1"]{
+    vertical-align: top;
+}
+
+.GridBorder table.GridBack td[valign="middle"][colspan="16"][rowspan="1"]{
+    vertical-align: top;
+}
+/*Выровнять поля с информационным баннером и информацией о категориях клиента LETO-10046*/
+
+/*LETO-10390>>для приведения к одному размеру кнопок Собрать голос и Фотографировать*/
+div[title="Регистрация в ЕСИА/ЕБС Аплет формы"] button[data-display="Собрать голос"]{
+    width: 128px;
+}
+div[title="Регистрация в ЕСИА/ЕБС Аплет формы"] button[data-display="Фотографировать"]{
+    width: 128px;
+}
+
+div[title="Карточка операции Аплет формы"] button[title="Карточка операции:Подтвердить"]  {
+  padding: 3px 22px;
+}
+
+div[title="Карточка операции Аплет формы"] button[title="Карточка операции:Отклонить"]  {
+  padding: 3px 22px;
+  background: red
+}

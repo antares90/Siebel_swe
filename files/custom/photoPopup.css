@@ -1,0 +1,19 @@
+@import "../../files/3rdParty/magnific-popup/magnific-popup.css";
+.PhotoPopup {
+    position: relative;
+    background: #FFF;
+	height: auto; 
+    width: 620px; 
+    display: block;
+    margin: 20px auto;
+}
+
+#mainImage{
+	height: auto; 
+    width: auto; 
+	min-width:600px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}

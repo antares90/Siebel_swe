@@ -1,0 +1,39 @@
+/*<ORACLECOPYRIGHT>
+* Copyright (C) 1994-2014
+* Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+* Other names may be trademarks of their respective owners.
+* UNIX is a registered trademark of The Open Group.
+*
+* This software and related documentation are provided under a license agreement
+* containing restrictions on use and disclosure and are protected by intellectual property laws.
+* Except as expressly permitted in your license agreement or allowed by law, you may not use, copy,
+* reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish,
+* or display any part, in any form, or by any means. Reverse engineering, disassembly,
+* or decompilation of this software, unless required by law for interoperability, is prohibited.
+*
+* The information contained herein is subject to change without notice and is not warranted to be error-free.
+* If you find any errors, please report them to us in writing.
+*
+* U.S. GOVERNMENT RIGHTS Programs, software, databases, and related documentation and technical data delivered to U.S.
+* Government customers are "commercial computer software" or "commercial technical data" pursuant to the applicable
+* Federal Acquisition Regulation and agency-specific supplemental regulations.
+* As such, the use, duplication, disclosure, modification, and adaptation shall be subject to the restrictions and
+* license terms set forth in the applicable Government contract, and, to the extent applicable by the terms of the
+* Government contract, the additional rights set forth in FAR 52.227-19, Commercial Computer Software License
+* (December 2007). Oracle America, Inc., 500 Oracle Parkway, Redwood City, CA 94065.
+*
+* This software or hardware is developed for general use in a variety of information management applications.
+* It is not developed or intended for use in any inherently dangerous applications, including applications that
+* may create a risk of personal injury. If you use this software or hardware in dangerous applications,
+* then you shall be responsible to take all appropriate fail-safe, backup, redundancy,
+* and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any
+* damages caused by use of this software or hardware in dangerous applications.
+*
+* This software or hardware and documentation may provide access to or information on content,
+* products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and
+* expressly disclaim all warranties of any kind with respect to third-party content, products, and services.
+* Oracle Corporation and its affiliates will not be responsible for any loss, costs,
+* or damages incurred due to your access to or use of third-party content, products, or services.
+</ORACLECOPYRIGHT>*/
+/* 8.1.1.14SIA[23044]PATCHSET7 */
+if(typeof(SiebelApp.S_App.PluginBuilder)==="undefined"){SiebelJS.Namespace("SiebelApp.S_App.PluginBuilder");SiebelApp.S_App.PluginBuilder=(function(){var s=SiebelJS.Dependency("SiebelApp.Constants"),B=SiebelJS.Dependency("SiebelApp.Utils"),g=s.get("SWE_CTRL_DATE_PICK"),x=s.get("SWE_CTRL_DATE_TIME_PICK"),w=s.get("SWE_CTRL_DATE_TZ_PICK"),A=s.get("SWE_CTRL_COMBOBOX"),z=s.get("SWE_CTRL_TEXT"),e=s.get("SWE_CTRL_TEXTAREA"),u=s.get("SWE_CTRL_PWD"),n=s.get("SWE_CTRL_MVG"),p=s.get("SWE_CTRL_PICK"),d=s.get("SWE_PST_BUTTON_CTRL"),v=s.get("SWE_CTRL_EFFDAT"),y=s.get("SWE_CTRL_CURRENCY_CALC"),m=s.get("SWE_CTRL_URL"),i=s.get("SWE_CTRL_MAILTO"),D=s.get("SWE_CTRL_LABEL"),t=s.get("SWE_CTRL_LINK"),r=s.get("SWE_CTRL_CHECKBOX"),b=s.get("SWE_CTRL_RADIO"),o=s.get("SWE_CTRL_PLAINTEXT"),f=s.get("SWE_CTRL_FILE"),l=s.get("SWE_CTRL_CALC"),q=s.get("SWE_CTRL_RTCEMBEDDED"),c=s.get("SWE_CTRL_IMAGECONTROL");CHART=s.get("SWE_CTRL_CHARTCONTROL");function C(){var J=[this],I=[[]],H=[[]],G=[],F={},K={};this.AddModObject=function(M){var L=false;if(J.indexOf(M)===-1){J.push(M);I.push([]);H.push([]);G.push(null);L=true}return L};this.GetIndex=function(L){return(J.indexOf(L))};this.DeletePWByControl=function(O,N){var L=this.GetIndex(O),P=L===-1?null:I[L],M=P?P.indexOf(N):-1;if(M!==-1){P.splice(M,1);H[L].splice(M,1)}};this.GetPwByControl=function(O,N){var L=this.GetIndex(O),P=L===-1?null:I[L],M=P?P.indexOf(N):-1;return M===-1?null:(H[L][M]?H[L][M]:null)};this.SetPwByControl=function(O,N,M){var L=this.GetIndex(O);if(L!==-1){var P=I[L]?I[L]:[];P.push(N);H[L]?H[L].push(M):""}};this.DeleteModObj=function(M){var L=this.GetIndex(M);if(L>-1){J.splice(L,1);I.splice(L,1);H.splice(L,1);G.splice(L,1)}};this.SetHoByName=function(L,M){if(L in F){return}F[L]=M};this.GetHoByName=function(L){return(L in F)?F[L]:null};this.AddPwObj=function(M,N,Q){var P=K[M]||[];var O,L;for(O=0,L=P.length;O<L;O++){if(P[O][0]===N&&P[O][1]===Q){break}}if(O===L){P.push([N,Q]);K[M]=P}};this.GetPwObjMap=function(L){return K[L]||[]};this.SetUIContext=function(N,M){var L=this.GetIndex(N);if(L>-1){G[L]=M}};this.GetUIContext=function(M){var L=this.GetIndex(M);return L===-1?null:G[L]}}C.prototype.GetUIWrapper=function(F,G){return k.call(this,this,F,G)};C.prototype.DecorateCapability=function(F){if(this.AddModObject(F)){F.GetUIWrapper=function(G,H){return k.call(SiebelApp.S_App.PluginBuilder,this,G,H)}}};C.prototype.DeleteCapability=function(F){if(!(F instanceof C)){this.DeleteModObj(F)}};function k(K,I,J){var H=null,G=this.GetIndex(K);if(G!==-1){var F=null;if(I&&typeof(I.GetName)==="function"){F=I.GetName()}else{}if(J&&F){this.DeletePWByControl(K,I)}H=this.GetPwByControl(K,I);if(!H&&F){H=j.call(this,I,K.GetPM().GetObjName());if(H){this.SetPwByControl(K,I,H);h.call(this,K,H);H.Init()}}}return H}function j(G,H){var F=null;F=a.call(this,G,H)||E.call(this,G);return F?new F(G):new SiebelAppFacade.BasePW(G)}function a(I,J){var H=null;var G=this.GetPwObjMap(I.GetUIType());for(var F=G.length-1;F>=0;F--){if(G[F][1].call(window,I,J)){H=G[F][0];break}}return H}function E(G){var F=SiebelAppFacade.BasePW;if(G&&typeof(G.GetUIType)==="function"){switch(G.GetUIType()){case g:case x:case w:F=SiebelAppFacade.DatePW;break;case A:F=SiebelAppFacade.DropDownPW;break;case z:case e:case u:case p:case n:case v:case y:F=SiebelAppFacade.FieldPW;break;case d:F=SiebelAppFacade.ButtonPW;break;case i:case m:case t:case D:F=SiebelAppFacade.LinkPW;break;case r:F=SiebelAppFacade.CheckBoxPW;break;case f:F=SiebelAppFacade.FilePW;break;case b:F=SiebelAppFacade.RadioPW;break;case o:F=SiebelAppFacade.PlainTextPW;break;case l:F=SiebelAppFacade.CalculatorPW;break;case q:F=SiebelAppFacade.RTCEditorPW;break;case c:F=SiebelAppFacade.ImgCtrlPW;break;case CHART:F=SiebelAppFacade.ChartsPW;break}}return F}function h(H,G){if(H&&typeof(H.GetPM)==="function"){var F=H.GetPM();G.GetUIWrapper=function(I){return function(){return I.GetUIWrapper.apply(I,arguments)}}(H);G.GetUIContext=function(I){return function(){var J=SiebelApp.S_App.PluginBuilder.GetUIContext(I);if(J){return J.apply(I,arguments)}}}(H);G.OnKey=function(I){return function(){return I.HandleKeyEvents.apply(I,arguments)}}(H);G.SetProperty=function(I){return function(){return I.SetProperty.apply(I,arguments)}}(F);G.Get=function(I){return function(){return I.Get.apply(I,arguments)}}(F);G.ExecuteMethod=function(I){return function(){return I.ExecuteMethod.apply(I,arguments)}}(F);G.OnControlEvent=function(I){return function(){return I.OnControlEvent.apply(I,arguments)}}(F);G.Helper=function(I){return B.IsEmpty(I)?null:SiebelApp.S_App.PluginBuilder.GetHoByName(I)}}}C.prototype.AttachHelper=function(F,G){if(G&&!B.IsEmpty(F)){this.SetHoByName(F,G);G.Init()}};C.prototype.AttachPW=function(F,H,G){if(H&&typeof(G)==="function"){this.AddPwObj(F,H,G)}};return new C()}())};

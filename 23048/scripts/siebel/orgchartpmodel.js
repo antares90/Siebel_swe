@@ -1,0 +1,39 @@
+/*<ORACLECOPYRIGHT>
+* Copyright (C) 1994-2014
+* Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+* Other names may be trademarks of their respective owners.
+* UNIX is a registered trademark of The Open Group.
+*
+* This software and related documentation are provided under a license agreement
+* containing restrictions on use and disclosure and are protected by intellectual property laws.
+* Except as expressly permitted in your license agreement or allowed by law, you may not use, copy,
+* reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish,
+* or display any part, in any form, or by any means. Reverse engineering, disassembly,
+* or decompilation of this software, unless required by law for interoperability, is prohibited.
+*
+* The information contained herein is subject to change without notice and is not warranted to be error-free.
+* If you find any errors, please report them to us in writing.
+*
+* U.S. GOVERNMENT RIGHTS Programs, software, databases, and related documentation and technical data delivered to U.S.
+* Government customers are "commercial computer software" or "commercial technical data" pursuant to the applicable
+* Federal Acquisition Regulation and agency-specific supplemental regulations.
+* As such, the use, duplication, disclosure, modification, and adaptation shall be subject to the restrictions and
+* license terms set forth in the applicable Government contract, and, to the extent applicable by the terms of the
+* Government contract, the additional rights set forth in FAR 52.227-19, Commercial Computer Software License
+* (December 2007). Oracle America, Inc., 500 Oracle Parkway, Redwood City, CA 94065.
+*
+* This software or hardware is developed for general use in a variety of information management applications.
+* It is not developed or intended for use in any inherently dangerous applications, including applications that
+* may create a risk of personal injury. If you use this software or hardware in dangerous applications,
+* then you shall be responsible to take all appropriate fail-safe, backup, redundancy,
+* and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any
+* damages caused by use of this software or hardware in dangerous applications.
+*
+* This software or hardware and documentation may provide access to or information on content,
+* products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and
+* expressly disclaim all warranties of any kind with respect to third-party content, products, and services.
+* Oracle Corporation and its affiliates will not be responsible for any loss, costs,
+* or damages incurred due to your access to or use of third-party content, products, or services.
+</ORACLECOPYRIGHT>*/
+/* 8.1.1.14SIA[23044]PATCHSET7 */
+if(typeof(SiebelAppFacade.OrgChartPModel)==="undefined"){SiebelJS.Namespace("SiebelAppFacade.OrgChartPModel");define("siebel/orgchartpmodel",["siebel/networkpmodel"],function(){SiebelAppFacade.OrgChartPModel=(function(){var i={},m=0,f=2;var k=SiebelJS.Dependency("SiebelApp.Constants");SiebelJS.Extend(a,SiebelAppFacade.NetworkPM);function a(){SiebelAppFacade.OrgChartPModel.superclass.constructor.apply(this,arguments)}a.prototype.Init=function(){SiebelAppFacade.OrgChartPModel.superclass.Init.apply(this,arguments);this.AddMethod("EventMenuClickHandler",function(r,s){j(this,r,s)},{override:true});this.AddMethod("BeforeConnectionHanlder",d,{override:true});this.AddMethod("InitiateConnectionHandler",h,{override:true});this.AddMethod("AddNewEndpointToList",g,{override:true});this.AddMethod("GetConnectionAnchorForConnId",e,{override:true});this.AddMethod("GetOverlay",n,{override:true});this.AddMethod("GetTargetDropOptions",c,{override:true});this.AddProperty("DeletedConnectionsInfluencer",[]);this.AddProperty("DeletedConnectionsList",[]);this.AddProperty("Deleted",false);this.AddProperty("saveActivated",false);this.AddProperty("BoxSize","");var o=this.Get("connectionStyle");o.connectorStyle=["Flowchart",{stub:[40,40],gap:5,cornerRadius:5}];o.endpointStyle=[];o.endpointStyle.RightMiddle={};o.endpointStyle.LeftMiddle={};o.endpointStyle.Direct={};o.endpointStyle.TopCenter={};o.endpointStyle.BottomCenter={};o.endpointStyle.RightMiddle.type=["Dot",{radius:4}];o.endpointStyle.RightMiddle.fillColor="#456";o.endpointStyle.LeftMiddle.type=["Dot",{radius:4}];o.endpointStyle.Direct.type=["Dot",{radius:4}];o.endpointStyle.TopCenter.type=["Dot",{radius:4}];o.endpointStyle.BottomCenter.type=["Dot",{radius:4}];o.detachable=false;this.SetProperty("connectionStyle",o);var p=this.Get("Handle");p.nodeDrag=false;p.AddNewNode=false;p.HandleCR=false;this.SetProperty("Handle",p);this.AddProperty("AcceptBackgroundColour",false);var q=CCFMiscUtil_CreatePropSet();q.SetProperty("hasPalette",false);this.ExecuteMethod("SetCanvasProperties",q);b();this.AttachNotificationHandler(k.get("SWE_PROP_BC_NOTI_GENERIC"),l)};function l(p){var s=p.GetProperty("type"),r,o,q;if(s==="MsgFCNotifyClient"){r=p.GetProperty("ArgsArray");r=r.substr(r.indexOf("@"));o=CCFMiscUtil_CreatePropSet();o.DecodeFromString(r);q=o.GetChildByType("PSFCWorkspace");if(q!=null){s=q.GetType();console.log(s);var t=q.GetProperty("szBox");this.SetProperty("BoxSize",t)}}}function d(p,r,o,q){this.SetProperty("HandleBeforeConnectionInUI","");if((o=="LeftMiddle"&&q=="Direct")||(o=="Direct"&&q=="LeftMiddle")||(o=="Direct"&&q=="RightMiddle")||(o=="RightMiddle"&&q=="Direct")){this.SetProperty("ContinueConnection",false)}else{this.SetProperty("ContinueConnection",true)}}function e(o){var q=this.Get("ConnectionsList");var p=q[o];if(typeof p.color==="undefined"){return["BottomCenter","TopCenter"]}return["RightMiddle","RightMiddle"]}function n(p,o){var r=this.Get("ConnectionsList");var q=r[p];if(typeof q.color==="undefined"){return[]}else{return[["Arrow",{location:1,width:10,length:5}]]}}function c(){var o={tolerance:"",hoverClass:"",activeClass:""};return{tolerance:"touch",hoverClass:"",activeClass:""}}function h(u,q,w,p,v,r){var o=CCFMiscUtil_CreatePropSet();var x=this.Get("waitingforConnections");var t=this.Get("localPos");var s=x.pop();if(s.connectionDrawn!==true){s.connectionDrawn=true;this.SetProperty("waitingforConnections",x);if(s.sourceEndpointType=="Direct"&&s.targetEndpointType=="Direct"){o.SetProperty("sel",s.to);o.SetProperty("ctrl","0");o.SetProperty("pt",t[s.from].left+" "+t[s.from].top)}else{o.SetProperty("sel",s.from);o.SetProperty("ctrl","1");o.SetProperty("pt",s.left+" "+s.top)}this.ExecuteMethod("NotifyServer","move",o)}}function g(r,t,p){var q=this.Get("NewEndpointsList");var u=this.Get("EndpointsList");if(typeof p=="undefined"||!p){var s=[];var o=this.Get("DefaultEnpointType");s.push({type:"Direct",id:"1",nodeId:t,location:"TopCenter"});s.push({type:"Direct",id:"2",nodeId:t,location:"BottomCenter"});s.push({type:"LeftMiddle",id:"3",nodeId:t,location:"LeftMiddle"});s.push({type:"RightMiddle",id:"4",nodeId:t,location:"RightMiddle"});u[t]=q[t]=[];u[t].push(s);if(!r){q[t].push(s)}}else{u[t].push(p);if(!r){q[t].push(p)}}this.SetProperty("EndpointsList",u);this.SetProperty("NewEndpointsList",q)}a.prototype.Setup=function(p){SiebelAppFacade.OrgChartPModel.superclass.Setup.apply(this,arguments);var o=p.GetChildByType("apm");this.SetProperty("hasPalette",false)};function j(r,s,u){var q=r.Get("obj").id;var o=r.Get("ConnectionsList");var v=o[q];var p=CCFMiscUtil_CreatePropSet();if(typeof v.color=="undefined"){p.SetProperty("ctrl","0");s=v.toId;p.SetProperty("pt","-1 -1");u="move"}else{s=q;var t=r.Get("DeletedConnectionsInfluencer");t.push(s);r.SetProperty("DeletedConnectionsInfluencer",t);u="Delete"}p.SetProperty("sel",s);r.ExecuteMethod("NotifyServer",u,p)}function b(){i.NodeDropped="newGfc"}return a}());return SiebelAppFacade.OrgChartPModel})};

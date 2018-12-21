@@ -1,0 +1,152 @@
+@import "../../files/3rdParty/magnific-popup/magnific-popup.css";
+@import "../../FONTS/custom/stylesheet.css";
+
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 660px;
+    margin: 20px auto;
+}
+
+
+.VoicePopup {
+    position: relative;
+    background: #FFF;
+    width: 622px;
+    display: block;
+    margin: 20px auto;
+}
+
+.VoiceHeader,
+.VoiceSubHeader,
+.VoiceFooter{
+    border-style: solid;
+    border-color: #E0E0E0;
+    border-width: thin;
+    display: flex;
+    align-items: center;
+}
+
+.VoiceFooter {
+    height: 90px;
+}
+
+.VoiceHeader {
+    height: 75px;
+}
+
+.VoiceSubHeader {
+    height: 110px;
+}
+
+.VoiceHeaderText,
+.VoiceSubHeaderText {
+    line-height: 46px;
+    margin-left: 30px;
+    color: rgb(28,29,33);
+    font-family: "HelveticaNeueCyr";
+}
+
+.VoiceHeaderText {
+    font-size: 20px;
+}
+
+.VoiceSubHeaderText {
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 20px;
+    margin-right: 30px;
+}
+.VoiceSystemErrorText ,
+.VoiceErrorText,
+.VoiceSuccessText {
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 46px;
+    font-family: "HelveticaNeueCyr";
+    font-weight: bold;
+}
+    .VoiceSystemErrorText ,
+    .VoiceErrorText {
+            color: rgb(255,0,0);
+    }
+
+.VoiceSuccessText{
+    color: rgb(31,160,65);
+}
+
+#VoicePopupCancel,
+#VoicePopupCheck,
+#VoicePopupSave {
+    font-family: "HelveticaNeueCyr";
+    color: rgb(255,255,255);    
+    width: 130px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(75, 112, 52);
+}
+
+#VoicePopupCancel {
+    background-color: #ff0000;
+    margin-left: 30px;
+}
+
+#VoicePopupCheck {
+    background-color: #00b3f9;
+    margin-left: 85px;
+}
+
+#VoicePopupSave {
+    background-color: #007f00;
+    margin-left: 85px;
+}
+
+    #VoicePopupSave:disabled,
+    #VoicePopupCheck:disabled {
+        background-color: rgb(239, 239, 239);
+        border: none;        
+    }
+
+.VoiceSystemErrorText ,
+.VoiceErrorText,
+.VoiceSuccessText {
+    width: 560px;
+    height: 50px;
+    border-radius: 2px;
+    margin-left: 30px;
+}
+.VoiceSystemErrorText 
+.VoiceErrorText {
+    background-color: #ffe3e3;
+}
+
+.VoiceSuccessText {
+    background-color: #e3f8e3;
+}
+
+    .VoiceSuccessText:before,
+    .VoiceErrorText:before,
+    .VoiceSystemErrorText:before {
+        padding-left: 15px;
+        position: relative;
+        top: 4px;
+        margin-right: 20px;
+    }
+
+    .VoiceSuccessText:before {
+        content: url(../../IMAGES/custom/VoiceRecorderImages/ic_check_circle_black_18px.png);
+    }
+.VoiceSystemErrorText:before,
+.VoiceErrorText:before {
+    content: url(../../IMAGES/custom/VoiceRecorderImages/ic_cancel_black_24px.png);
+}
